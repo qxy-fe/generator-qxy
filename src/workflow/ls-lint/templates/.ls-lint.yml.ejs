@@ -1,0 +1,37 @@
+# https://ls-lint.org
+
+ls:
+  .dir: kebab-case | regex:^[_\.].*
+  .js: kebab-case | regex:^[_\.].*
+  .png: snake_case
+  .gif: snake_case
+  .jpg: snake_case
+  .jpeg: snake_case
+  .svg: kebab-case
+  .vue: kebab-case | regex:^App$
+  .scss: kebab-case | regex:^[_\.].*
+  .json: kebab-case
+  .config.js: point.case
+
+  src/mixins:
+    .js: PascalCase | regex:^index
+
+  src/models:
+    .js: PascalCase | regex:^index
+
+  src/components:
+    .dir: PascalCase | regex:^components
+    .vue: PascalCase | regex:^index
+
+  src/{views,layout}/**/components:
+    .dir: PascalCase | regex:^components
+    .vue: PascalCase | regex:^index
+
+ignore:
+  - node_modules
+  - .git
+  - .vscode
+  - dist
+  - coverage
+  - public/static
+  - tests

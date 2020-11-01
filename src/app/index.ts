@@ -17,6 +17,7 @@ export = class QxyGenerator extends BaseGenerator {
     editorconfig: boolean
 
     // Dev Workflows
+    lsLint: boolean
     prettier: boolean
     sortPackageJson: boolean
   }
@@ -64,9 +65,10 @@ export = class QxyGenerator extends BaseGenerator {
         message: 'Select development workflow you want too initialize',
         choices: [
           { name: 'Prettier', value: 'prettier' },
+          { name: 'Files & Directories Lint', value: 'ls-lint' },
           { name: 'Sort package.json', value: 'sort-package-json' },
         ],
-        default: ['prettier', 'sort-package-json'],
+        default: ['prettier', 'ls-lint', 'sort-package-json'],
       },
     ])
 
@@ -79,6 +81,7 @@ export = class QxyGenerator extends BaseGenerator {
 
       // Dev workflow
       prettier: answers.workflow.includes('prettier'),
+      lsLint: answers.workflow.includes('ls-lint'),
       sortPackageJson: answers.workflow.includes('sort-package-json'),
     }
   }
@@ -104,6 +107,10 @@ export = class QxyGenerator extends BaseGenerator {
       this.composeWith(require.resolve('../workflow/prettier'), {
         sharedConfig: '@qxy/prettier-config',
       })
+    }
+
+    if (this.props.lsLint) {
+      this.composeWith(require.resolve('../workflow/ls-lint'), {})
     }
 
     if (this.props.sortPackageJson) {

@@ -1,25 +1,25 @@
 {
   "name": "generator-qxy",
-  "version": "0.0.0",
-  "main": "generators/app/index.js",
-  "types": "generators/app/index.d.ts",
+  "version": "0.0.1",
   "keywords": [
     "yeoman-generator",
     "qxy-fe"
   ],
-  "files": [
-    "generators"
-  ],
+  "license": "MIT",
   "author": {
     "name": "ntnyq",
     "email": "ntnyq13@gmail.com"
   },
-  "license": "MIT",
+  "main": "generators/app/index.js",
+  "types": "generators/app/index.d.ts",
+  "files": [
+    "generators"
+  ],
   "scripts": {
-    "clean": "rimraf generators *.tsbuildinfo",
     "build": "npm run clean && tsc && npm run copy",
-    "dev": "npm run clean && tsc-watch --incremental --onSuccess \"npm run copy\"",
+    "clean": "rimraf generators *.tsbuildinfo",
     "copy": "copyfiles -a -u 1 src/**/templates/**/* src/**/templates/**/.* generators",
+    "dev": "npm run clean && tsc-watch --incremental --onSuccess \"npm run copy\"",
     "lint": "eslint --ext .ts src",
     "prepublishOnly": "npm run build",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md"
@@ -40,8 +40,11 @@
     "*.{json,md}": "prettier --write",
     "package.json": "sort-package-json"
   },
+  "prettier": "@qxy/prettier-config",
   "eslintConfig": {
-    "root": true,
+    "plugins": [
+      "prettier"
+    ],
     "extends": [
       "@qxy",
       "plugin:@typescript-eslint/recommended",
@@ -49,19 +52,24 @@
       "prettier/standard",
       "prettier/@typescript-eslint"
     ],
-    "plugins": [
-      "prettier"
-    ],
     "rules": {
-      "prettier/prettier": "error",
-      "no-underscore-dangle": "off"
-    }
+      "no-underscore-dangle": "off",
+      "prettier/prettier": "error"
+    },
+    "root": true
   },
   "eslintIgnore": [
     "generators",
     "types",
     "src/**/templates/**/*"
   ],
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "has-yarn": "^2.1.0",
+    "ora": "^5.1.0",
+    "sort-package-json": "^1.46.1",
+    "yeoman-generator": "^4.12.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
@@ -83,13 +91,5 @@
     "rimraf": "^3.0.2",
     "tsc-watch": "^4.2.9",
     "typescript": "^4.0.5"
-  },
-  "prettier": "@qxy/prettier-config",
-  "dependencies": {
-    "ejs": "^3.1.5",
-    "has-yarn": "^2.1.0",
-    "ora": "^5.1.0",
-    "sort-package-json": "^1.46.1",
-    "yeoman-generator": "^4.12.0"
   }
 }

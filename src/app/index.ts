@@ -13,12 +13,21 @@ export = class QxyGenerator extends BaseGenerator {
     packageManager: 'npm' | 'yarn'
     registry: 'default' | 'yarn' | 'npm' | 'taobao'
 
+    // Languages
+    vue: boolean
+    typescript: boolean
+
     // Meta files
     editorconfig: boolean
+    readme: boolean
+    gitignore: boolean
 
-    // Dev Workflows
+    // Dev Workflow
+    husky: boolean
+    eslint: boolean
     lsLint: boolean
     prettier: boolean
+    lintStaged: boolean
     sortPackageJson: boolean
   }
 
@@ -55,20 +64,30 @@ export = class QxyGenerator extends BaseGenerator {
           { name: 'VsCode settings', value: 'vscode' },
           { name: 'Editor config', value: 'editorconfig' },
           { name: 'README.md', value: 'readme' },
-          { name: 'Git meta files', value: 'git' },
+          { name: 'Git Ignore files', value: 'gitignore' },
         ],
-        default: ['vscode', 'editorconfig', 'readme', 'git'],
+        default: ['vscode', 'editorconfig', 'readme', 'gitignore'],
       },
       {
         type: 'checkbox',
         name: 'workflow',
         message: 'Select development workflow you want too initialize',
         choices: [
+          { name: 'Husky', value: 'husky' },
+          { name: 'ESLint', value: 'eslint' },
           { name: 'Prettier', value: 'prettier' },
+          { name: 'Lint staged', value: 'lint-staged' },
           { name: 'Files & Directories Lint', value: 'ls-lint' },
           { name: 'Sort package.json', value: 'sort-package-json' },
         ],
-        default: ['prettier', 'ls-lint', 'sort-package-json'],
+        default: [
+          'husky',
+          'eslint',
+          'prettier',
+          'ls-lint',
+          'lint-staged',
+          'sort-package-json',
+        ],
       },
     ])
 
@@ -76,12 +95,21 @@ export = class QxyGenerator extends BaseGenerator {
       packageManager: answers.packageManager,
       registry: answers.registry,
 
+      // Languages
+      vue: ['vue', 'typescript-vue'].includes(answers.template),
+      typescript: ['typescript', ['typescript-vue']].includes(answers.template),
+
       // Meta files
       editorconfig: answers.meta.includes('editorconfig'),
+      readme: answers.meta.includes('readme'),
+      gitignore: answers.meta.includes('gitignore'),
 
       // Dev workflow
-      prettier: answers.workflow.includes('prettier'),
+      husky: answers.workflow.includes('husky'),
+      eslint: answers.workflow.includes('eslint'),
       lsLint: answers.workflow.includes('ls-lint'),
+      prettier: answers.workflow.includes('prettier'),
+      lintStaged: answers.workflow.includes('lint-staged'),
       sortPackageJson: answers.workflow.includes('sort-package-json'),
     }
   }
@@ -91,30 +119,62 @@ export = class QxyGenerator extends BaseGenerator {
     // meta files
     // ==================================
     if (this.props.packageManager === 'yarn') {
-      this.composeWith(require.resolve('../meta/yarnrc'), {
+      this.composeWith(require.resolve('../yarnrc'), {
         registry: registryUrls[this.props.registry],
       })
     }
 
     if (this.props.editorconfig) {
-      this.composeWith(require.resolve('../meta/editorconfig'), {})
+      this.composeWith(require.resolve('../editorconfig'), {})
+    }
+
+    if (this.props.gitignore) {
+      this.composeWith(require.resolve('../gitignore'), {
+        typescript: this.props.typescript,
+      })
+    }
+
+    if (this.props.readme) {
+      this.composeWith(require.resolve('../readme'), {
+        username: this.user.git.name(),
+        projectName: '',
+        projectDesc: '',
+        package: false,
+      })
     }
 
     // ==================================
     // workflow
     // ==================================
     if (this.props.prettier) {
-      this.composeWith(require.resolve('../workflow/prettier'), {
+      this.composeWith(require.resolve('../prettier'), {
         sharedConfig: '@qxy/prettier-config',
       })
     }
 
+    if (this.props.husky) {
+      this.composeWith(require.resolve('../husky'), {
+        // commitlint: this.props.commitlint,
+        lintStaged: this.props.lintStaged,
+      })
+    }
+
     if (this.props.lsLint) {
-      this.composeWith(require.resolve('../workflow/ls-lint'), {})
+      this.composeWith(require.resolve('../ls-lint'), {})
+    }
+
+    if (this.props.lintStaged) {
+      this.composeWith(require.resolve('../lint-staged'), {
+        typescript: this.props.typescript,
+        vue: this.props.vue,
+        eslint: this.props.eslint,
+        prettier: this.props.prettier,
+        sortPackageJson: this.props.sortPackageJson,
+      })
     }
 
     if (this.props.sortPackageJson) {
-      this.composeWith(require.resolve('../workflow/sort-package-json'), {})
+      this.composeWith(require.resolve('../sort-package-json'), {})
     }
   }
 

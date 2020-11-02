@@ -1,6 +1,7 @@
 {
   "files.associations": {
-    "*.yml.ejs": "yaml"
+    "*.yml.ejs": "yaml",
+    "*.md.ejs": "markdown"
   },
   "editor.tabSize": 2,
   "editor.insertSpaces": true,

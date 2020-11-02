@@ -1,4 +1,4 @@
-import BaseGenerator from '../../base-generator'
+import BaseGenerator from '../base-generator'
 import type { GeneratorOptions } from 'yeoman-generator'
 
 export = class PrettierGenerator extends BaseGenerator {

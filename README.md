@@ -1,6 +1,6 @@
 # generator-qxy
 
-[![npm](https://img.shields.io/npm/v/qxy-fe/generator-qxy.svg?style=flat-square)](https://www.npmjs.com/package/qxy-fe/generator-qxy)
+[![npm](https://img.shields.io/npm/v/generator-qxy.svg?style=flat-square)](https://www.npmjs.com/package/generator-qxy)
 
 ## Usage
 

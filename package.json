@@ -73,7 +73,7 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "@qxy/eslint-config": "^0.0.1",
+    "@qxy/eslint-config": "^0.0.2",
     "@qxy/prettier-config": "^0.0.1",
     "@types/ejs": "^3.0.5",
     "@types/yeoman-generator": "^4.11.3",

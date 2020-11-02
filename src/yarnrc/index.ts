@@ -1,6 +1,6 @@
 import fs from 'fs'
 import ejs from 'ejs'
-import BaseGenerator from '../../base-generator'
+import BaseGenerator from '../base-generator'
 import type { GeneratorOptions } from 'yeoman-generator'
 
 export = class YarnrcGenerator extends BaseGenerator {

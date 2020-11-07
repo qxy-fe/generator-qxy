@@ -1,7 +1,9 @@
 {
   "files.associations": {
     "*.yml.ejs": "yaml",
-    "*.md.ejs": "markdown"
+    "*.md.ejs": "markdown",
+    "*.json.ejs": "json",
+    ".gitignore.ejs": "ignore"
   },
   "editor.tabSize": 2,
   "editor.insertSpaces": true,

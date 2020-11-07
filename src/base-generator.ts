@@ -46,4 +46,8 @@ export = class BaseGenerator extends Generator {
     spinner.succeed(`${pkg}@${version}`)
     return version
   }
+
+  end(): void {
+    this.log('Bye... 👋')
+  }
 }

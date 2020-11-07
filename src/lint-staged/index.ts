@@ -2,29 +2,31 @@ import BaseGenerator from '../base-generator'
 import type { GeneratorOptions } from 'yeoman-generator'
 
 export = class LintStagedGenerator extends BaseGenerator {
-  protected typescript: boolean
-
   protected vue: boolean
+
+  protected vueCli: boolean
 
   protected eslint: boolean
 
   protected prettier: boolean
+
+  protected typescript: boolean
 
   protected sortPackageJson: boolean
 
   constructor(args: string | string[], options: GeneratorOptions) {
     super(args, options)
 
-    this.option('typescript', {
-      type: Boolean,
-      default: false,
-      description: 'use typescript or not',
-    })
-
     this.option('vue', {
       type: Boolean,
       default: false,
       description: 'use vue or not',
+    })
+
+    this.option('vueCli', {
+      type: Boolean,
+      default: false,
+      description: 'use vue-cli or not',
     })
 
     this.option('eslint', {
@@ -39,6 +41,12 @@ export = class LintStagedGenerator extends BaseGenerator {
       description: 'use prettier or not',
     })
 
+    this.option('typescript', {
+      type: Boolean,
+      default: false,
+      description: 'use typescript or not',
+    })
+
     this.option('sortPackageJson', {
       type: Boolean,
       default: false,
@@ -47,10 +55,11 @@ export = class LintStagedGenerator extends BaseGenerator {
   }
 
   initializing(): void {
-    this.typescript = this.options.typescript
     this.vue = this.options.vue
+    this.vueCli = this.options.vueCli
     this.eslint = this.options.eslint
     this.prettier = this.options.prettier
+    this.typescript = this.options.typescript
     this.sortPackageJson = this.options.sortPackageJson
   }
 
@@ -72,7 +81,9 @@ export = class LintStagedGenerator extends BaseGenerator {
 
       this.addFields({
         'lint-staged': {
-          [`*.{${lintExts.join(',')}}`]: 'eslint --fix',
+          [`*.{${lintExts.join(',')}}`]: this.vueCli
+            ? 'vue-cli-service lint'
+            : 'eslint --fix',
         },
       })
     }

@@ -1,7 +1,7 @@
 import BaseGenerator from '../base-generator'
 import type { GeneratorOptions } from 'yeoman-generator'
 
-export class GitIgnoreGenerator extends BaseGenerator {
+export = class GitGenerator extends BaseGenerator {
   protected typescript: boolean
 
   protected coverage: boolean
@@ -28,6 +28,11 @@ export class GitIgnoreGenerator extends BaseGenerator {
   }
 
   writing(): void {
+    this.fs.copy(
+      this.templatePath('.gitattributes'),
+      this.destinationPath('.gitattributes')
+    )
+
     this.fs.copyTpl(
       this.templatePath('.gitignore.ejs'),
       this.destinationPath('.gitignore'),

@@ -1,0 +1,17 @@
+# Enable lint dotfiles
+!.*
+node_modules/.*
+
+node_modules
+
+# Public resouces
+/public
+
+# Minified
+*.min.js
+
+# Production
+/dist
+
+# Docs
+/site

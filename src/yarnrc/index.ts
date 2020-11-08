@@ -19,7 +19,7 @@ export = class YarnrcGenerator extends BaseGenerator {
   async initializing(): Promise<void> {
     this.registry = this.options.registry
 
-    const yarnrc = await ejs.renderFile(this.templatePath('.yarnrc.ejs'), {
+    const yarnrc = await ejs.renderFile(this.templatePath('_yarnrc.ejs'), {
       registry: this.registry,
     })
 

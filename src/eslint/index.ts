@@ -77,12 +77,12 @@ export = class EslintGenerator extends BaseGenerator {
     }
 
     this.fs.copy(
-      this.templatePath('.eslintignore'),
+      this.templatePath('_eslintignore'),
       this.destinationPath('.eslintignore')
     )
 
     this.fs.copyTpl(
-      this.templatePath('.eslintrc.js.ejs'),
+      this.templatePath('_eslintrc.js.ejs'),
       this.destinationPath('.eslintrc.js'),
       {
         extendsConfig,

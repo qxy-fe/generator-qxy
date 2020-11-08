@@ -18,7 +18,7 @@
   "scripts": {
     "build": "npm run clean && tsc && npm run copy",
     "clean": "rimraf generators *.tsbuildinfo",
-    "copy": "copyfiles -a -u 1 src/**/templates/**/* src/**/templates/**/.* generators",
+    "copy": "copyfiles -a -u 1 -V src/*/templates/** generators",
     "dev": "npm run clean && tsc-watch --incremental --onSuccess \"npm run copy\"",
     "lint": "eslint --ext .ts src",
     "prepublishOnly": "npm run build"

@@ -5,10 +5,13 @@ export = class VuepressGenerator extends BaseGenerator {
     // TODO: custom docs content
     this.fs.copy(
       this.templatePath('config.js'),
-      this.destinationPath('docs/.vuepress')
+      this.destinationPath('docs/.vuepress/config.js')
     )
 
-    this.fs.copy(this.templatePath('README.md'), this.destinationPath('docs'))
+    this.fs.copy(
+      this.templatePath('README.md'),
+      this.destinationPath('docs/README.md')
+    )
 
     this.addFields({
       scripts: {

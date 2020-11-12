@@ -33,8 +33,8 @@ export = class CommitlintGenerator extends BaseGenerator {
     const devDeps = ['@commitlint/cli', this.sharedConfig]
 
     if (this.lerna) {
-      extendsConfig.push('@commitlint/config-lerna-scoped')
-      devDeps.push('@commitlint/config-lerna-scoped')
+      extendsConfig.push('@commitlint/config-lerna-scopes')
+      devDeps.push('@commitlint/config-lerna-scopes')
     }
 
     this.addFields({

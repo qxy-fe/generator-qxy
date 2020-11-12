@@ -68,6 +68,7 @@ export = class EslintGenerator extends BaseGenerator {
     }
 
     if (this.vue) {
+      extendsConfig.shift()
       extendsConfig.push('@qxy/eslint-config-vue')
       exts.push('.vue')
 

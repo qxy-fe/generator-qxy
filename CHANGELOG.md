@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/qxy-fe/generator-qxy/compare/v0.1.2...v0.1.3) (2020-11-12)
+
+### Bug Fixes
+
+- deps name ([a454d45](https://github.com/qxy-fe/generator-qxy/commit/a454d456052a0c9d87b79676ea699eb61e69bbe0))
+
 ### [0.1.2](https://github.com/qxy-fe/generator-qxy/compare/v0.1.1...v0.1.2) (2020-11-08)
 
 ### Bug Fixes

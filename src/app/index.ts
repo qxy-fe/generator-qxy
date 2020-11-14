@@ -96,10 +96,10 @@ export = class QxyGenerator extends BaseGenerator {
           { name: 'VsCode settings', value: 'vscode' },
           { name: 'Editor config', value: 'editorconfig' },
           { name: 'README.md', value: 'readme' },
-          { name: 'Git Ignore files', value: 'gitignore' },
+          { name: 'Git Meta files', value: 'git' },
           { name: 'JavaScript config', value: 'jsconfig' },
         ],
-        default: ['vscode', 'editorconfig', 'readme', 'gitignore'],
+        default: ['vscode', 'editorconfig', 'readme', 'git'],
       },
       {
         type: 'checkbox',

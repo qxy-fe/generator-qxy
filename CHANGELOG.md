@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/qxy-fe/generator-qxy/compare/v0.1.4...v0.1.5) (2020-11-17)
+
+### Bug Fixes
+
+- eslint script ([90f1dba](https://github.com/qxy-fe/generator-qxy/commit/90f1dbaa39e3e0e0288476fe6ca320e1614b34e1))
+
 ### [0.1.4](https://github.com/qxy-fe/generator-qxy/compare/v0.1.3...v0.1.4) (2020-11-14)
 
 ### Bug Fixes

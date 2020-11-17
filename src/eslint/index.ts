@@ -1,6 +1,19 @@
 import BaseGenerator from '../base-generator'
 import type { GeneratorOptions } from 'yeoman-generator'
 
+/**
+ * Get the shortcut of eslint config
+ *
+ * @param config input config
+ *
+ * @returns output config
+ */
+function getConfigShortcut(config: string): string {
+  config = config.replace('eslint-config', '')
+
+  return config.endsWith('/') ? config.slice(0, -1) : config
+}
+
 export = class EslintGenerator extends BaseGenerator {
   protected vue: boolean
 
@@ -49,14 +62,22 @@ export = class EslintGenerator extends BaseGenerator {
     // ===================
     // Generate config
     // ===================
-
-    const extendsConfig = ['@qxy/eslint-config']
-    const devDeps = ['eslint']
+    const devDeps = ['eslint', '@qxy/eslint-config']
     const exts = ['.js', '.jsx']
+    let extendsConfig = ['@qxy/eslint-config']
 
     const lintDirs = [
       this.lerna ? 'packages' : this.vue || this.typescript ? 'src' : 'lib',
     ]
+
+    if (this.vue) {
+      extendsConfig = ['@qxy/eslint-config-vue']
+      exts.push('.vue')
+
+      if (!this.typescript) {
+        devDeps.push('babel-eslint')
+      }
+    }
 
     if (this.typescript) {
       extendsConfig.push('plugin:@typescript-eslint/recommended')
@@ -67,15 +88,7 @@ export = class EslintGenerator extends BaseGenerator {
       exts.push('.tsx')
     }
 
-    if (this.vue) {
-      extendsConfig.shift()
-      extendsConfig.push('@qxy/eslint-config-vue')
-      exts.push('.vue')
-
-      if (!this.typescript) {
-        devDeps.push('babel-eslint')
-      }
-    }
+    extendsConfig = extendsConfig.map(getConfigShortcut)
 
     this.fs.copy(
       this.templatePath('_eslintignore'),
@@ -95,7 +108,7 @@ export = class EslintGenerator extends BaseGenerator {
 
     const lint = this.vueCli
       ? `vue-cli-service lint --no-fix`
-      : `eslint --ext ${exts.join('m')} ${lintDirs.join(' ')}`
+      : `eslint --ext ${exts.join(',')} ${lintDirs.join(' ')}`
 
     this.addFields({ scripts: { lint } })
 

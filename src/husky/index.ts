@@ -35,7 +35,7 @@ export = class HuskyGenerator extends BaseGenerator {
       this.addFields({
         husky: {
           hooks: {
-            'commit-msg': 'commit -E HUSKY_GIT_PARAMS',
+            'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
           },
         },
       })

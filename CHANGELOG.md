@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/qxy-fe/generator-qxy/compare/v0.1.5...v0.1.6) (2020-11-23)
+
+### Bug Fixes
+
+- husky hooks ([97ff09a](https://github.com/qxy-fe/generator-qxy/commit/97ff09a071f528f4854037819835e78beee0ac6c))
+
 ### [0.1.5](https://github.com/qxy-fe/generator-qxy/compare/v0.1.4...v0.1.5) (2020-11-17)
 
 ### Bug Fixes

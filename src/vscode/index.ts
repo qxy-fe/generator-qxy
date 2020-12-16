@@ -34,7 +34,7 @@ export = class VscodeGenerator extends BaseGenerator {
       {
         typescript: this.typescript,
         vue: this.vue,
-      }
+      },
     )
   }
 }

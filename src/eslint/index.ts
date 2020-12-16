@@ -92,7 +92,7 @@ export = class EslintGenerator extends BaseGenerator {
 
     this.fs.copy(
       this.templatePath('_eslintignore'),
-      this.destinationPath('.eslintignore')
+      this.destinationPath('.eslintignore'),
     )
 
     this.fs.copyTpl(
@@ -103,7 +103,7 @@ export = class EslintGenerator extends BaseGenerator {
         vue: this.vue,
         typescript: this.typescript,
         exts,
-      }
+      },
     )
 
     const lint = this.vueCli

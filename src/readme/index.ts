@@ -54,7 +54,7 @@ export = class ReadmeGenerator extends BaseGenerator {
         projectName: this.projectName,
         projectDesc: this.projectDesc,
         package: this.package,
-      }
+      },
     )
   }
 }

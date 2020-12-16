@@ -30,7 +30,7 @@ export = class GitGenerator extends BaseGenerator {
   writing(): void {
     this.fs.copy(
       this.templatePath('_gitattributes'),
-      this.destinationPath('.gitattributes')
+      this.destinationPath('.gitattributes'),
     )
 
     this.fs.copyTpl(
@@ -39,7 +39,7 @@ export = class GitGenerator extends BaseGenerator {
       {
         typescript: this.typescript,
         coverage: this.coverage,
-      }
+      },
     )
   }
 }

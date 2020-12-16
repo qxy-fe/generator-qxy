@@ -1,6 +1,8 @@
 import BaseGenerator from '../base-generator'
 import type { GeneratorOptions } from 'yeoman-generator'
 
+const prettierIgnore = ['node_modules', '/dist', '/static', '*.min.*']
+
 export = class PrettierGenerator extends BaseGenerator {
   protected sharedConfig: string | Record<string, string | number | boolean>
 
@@ -19,7 +21,7 @@ export = class PrettierGenerator extends BaseGenerator {
       semi: false,
       tabWidth: 2,
       singleQuote: true,
-      trailingComma: 'es5',
+      trailingComma: 'all',
     }
   }
 
@@ -32,6 +34,7 @@ export = class PrettierGenerator extends BaseGenerator {
 
     this.addFields({
       prettier: this.sharedConfig,
+      prettierIgnore,
     })
 
     this.addDependencies({ devDeps })

@@ -2,53 +2,59 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/qxy-fe/generator-qxy/compare/v0.1.6...v0.1.7) (2020-12-16)
+
+### Features
+
+-   add prettier ignore ([b887043](https://github.com/qxy-fe/generator-qxy/commit/b88704361f2406fd5bd3b0e16bf139b4ea851c85))
+
 ### [0.1.6](https://github.com/qxy-fe/generator-qxy/compare/v0.1.5...v0.1.6) (2020-11-23)
 
 ### Bug Fixes
 
-- husky hooks ([97ff09a](https://github.com/qxy-fe/generator-qxy/commit/97ff09a071f528f4854037819835e78beee0ac6c))
+-   husky hooks ([97ff09a](https://github.com/qxy-fe/generator-qxy/commit/97ff09a071f528f4854037819835e78beee0ac6c))
 
 ### [0.1.5](https://github.com/qxy-fe/generator-qxy/compare/v0.1.4...v0.1.5) (2020-11-17)
 
 ### Bug Fixes
 
-- eslint script ([90f1dba](https://github.com/qxy-fe/generator-qxy/commit/90f1dbaa39e3e0e0288476fe6ca320e1614b34e1))
+-   eslint script ([90f1dba](https://github.com/qxy-fe/generator-qxy/commit/90f1dbaa39e3e0e0288476fe6ca320e1614b34e1))
 
 ### [0.1.4](https://github.com/qxy-fe/generator-qxy/compare/v0.1.3...v0.1.4) (2020-11-14)
 
 ### Bug Fixes
 
-- generator git name ([ea31f95](https://github.com/qxy-fe/generator-qxy/commit/ea31f956dc831213b6c8c09174e977254ec59a5b))
+-   generator git name ([ea31f95](https://github.com/qxy-fe/generator-qxy/commit/ea31f956dc831213b6c8c09174e977254ec59a5b))
 
 ### [0.1.3](https://github.com/qxy-fe/generator-qxy/compare/v0.1.2...v0.1.3) (2020-11-12)
 
 ### Bug Fixes
 
-- deps name ([a454d45](https://github.com/qxy-fe/generator-qxy/commit/a454d456052a0c9d87b79676ea699eb61e69bbe0))
+-   deps name ([a454d45](https://github.com/qxy-fe/generator-qxy/commit/a454d456052a0c9d87b79676ea699eb61e69bbe0))
 
 ### [0.1.2](https://github.com/qxy-fe/generator-qxy/compare/v0.1.1...v0.1.2) (2020-11-08)
 
 ### Bug Fixes
 
-- template render ([b89ff33](https://github.com/qxy-fe/generator-qxy/commit/b89ff33eefec7067ad285bcec2adf7aa93a134f2))
+-   template render ([b89ff33](https://github.com/qxy-fe/generator-qxy/commit/b89ff33eefec7067ad285bcec2adf7aa93a134f2))
 
 ### [0.1.1](https://github.com/qxy-fe/generator-qxy/compare/v0.1.0...v0.1.1) (2020-11-08)
 
 ### Bug Fixes
 
-- copyfiles ([fc5823e](https://github.com/qxy-fe/generator-qxy/commit/fc5823e0711eb4f92441f4dd70c5eecc02afc8fc))
+-   copyfiles ([fc5823e](https://github.com/qxy-fe/generator-qxy/commit/fc5823e0711eb4f92441f4dd70c5eecc02afc8fc))
 
 ## 0.1.0 (2020-11-08)
 
 ### Features
 
-- more generators ([7781c9a](https://github.com/qxy-fe/generator-qxy/commit/7781c9abda654948053733149a839971b80fe5a3))
-- **workflow:** add more generator ([b155521](https://github.com/qxy-fe/generator-qxy/commit/b15552160d7bc2179f899fc236d2cf561cec4693))
-- **workflow:** ls-lint ([6b5485b](https://github.com/qxy-fe/generator-qxy/commit/6b5485ba29ddb1a2fb567e4747a66cf1f38e62e1))
+-   more generators ([7781c9a](https://github.com/qxy-fe/generator-qxy/commit/7781c9abda654948053733149a839971b80fe5a3))
+-   **workflow:** add more generator ([b155521](https://github.com/qxy-fe/generator-qxy/commit/b15552160d7bc2179f899fc236d2cf561cec4693))
+-   **workflow:** ls-lint ([6b5485b](https://github.com/qxy-fe/generator-qxy/commit/6b5485ba29ddb1a2fb567e4747a66cf1f38e62e1))
 
 ### Bug Fixes
 
-- dot template files ([20ce111](https://github.com/qxy-fe/generator-qxy/commit/20ce11145027ee0b160c33bf569678c51bff8702))
-- readme template ([dd676e3](https://github.com/qxy-fe/generator-qxy/commit/dd676e362f85381dd3beb4341214bdc0f814720b))
-- tweak directories ([dc50dcb](https://github.com/qxy-fe/generator-qxy/commit/dc50dcb0a78c4ebb95f6a1535a9af2cd413a28e5))
-- **yarnrc:** add generator ([7efd66a](https://github.com/qxy-fe/generator-qxy/commit/7efd66a8122a1140cf9b62938ac4330b3cad877e))
+-   dot template files ([20ce111](https://github.com/qxy-fe/generator-qxy/commit/20ce11145027ee0b160c33bf569678c51bff8702))
+-   readme template ([dd676e3](https://github.com/qxy-fe/generator-qxy/commit/dd676e362f85381dd3beb4341214bdc0f814720b))
+-   tweak directories ([dc50dcb](https://github.com/qxy-fe/generator-qxy/commit/dc50dcb0a78c4ebb95f6a1535a9af2cd413a28e5))
+-   **yarnrc:** add generator ([7efd66a](https://github.com/qxy-fe/generator-qxy/commit/7efd66a8122a1140cf9b62938ac4330b3cad877e))

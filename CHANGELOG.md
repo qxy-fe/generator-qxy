@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/qxy-fe/generator-qxy/compare/v0.1.8...v0.1.9) (2020-12-30)
+
+### Bug Fixes
+
+-   miss a ejs close tag ([2d7e87b](https://github.com/qxy-fe/generator-qxy/commit/2d7e87b7c20ec29e1f74d1aaf0aed58e6c26705d))
+
 ### [0.1.8](https://github.com/qxy-fe/generator-qxy/compare/v0.1.7...v0.1.8) (2020-12-30)
 
 ### Bug Fixes

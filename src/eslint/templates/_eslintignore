@@ -4,7 +4,7 @@ node_modules/.*
 
 node_modules
 
-# Public resouces
+# Public resources
 /public
 
 # Minified

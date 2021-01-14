@@ -1,5 +1,5 @@
 /**
-* @fileoverview ESLint 配置
+* @file ESLint 配置
 */
 
 module.exports = {
@@ -8,19 +8,15 @@ root: true,
 extends: [
 <%- extendsConfig.map(item => `'${item}',`).join('\n') %>
 ],
-
 <%_ if (vue) { _%>
+
 parserOptions: {
 parser: <% if (typescript) { %> '@typescript-eslint/parser' <% } else { %>'babel-eslint'<% } %>.
 },
-
 <%_ } else if (typescript) { _%>
 
 parser: '@typescript-eslint/parser',
-
 <%_ } _%>
-
-
 <%_ if (vue || typescript) { _%>
 
 plugins: [

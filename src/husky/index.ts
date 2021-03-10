@@ -1,7 +1,7 @@
 import BaseGenerator from '../base-generator'
 import type { GeneratorOptions } from 'yeoman-generator'
 
-export = class HuskyGenerator extends BaseGenerator {
+export default class HuskyGenerator extends BaseGenerator {
   protected commitlint: boolean
 
   protected lintStaged: boolean

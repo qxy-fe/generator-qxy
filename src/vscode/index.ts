@@ -1,7 +1,7 @@
 import BaseGenerator from '../base-generator'
 import type { GeneratorOptions } from 'yeoman-generator'
 
-export = class VscodeGenerator extends BaseGenerator {
+export default class VscodeGenerator extends BaseGenerator {
   protected typescript: boolean
 
   protected vue: boolean

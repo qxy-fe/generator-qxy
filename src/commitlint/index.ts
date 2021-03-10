@@ -1,7 +1,7 @@
 import BaseGenerator from '../base-generator'
 import type { GeneratorOptions } from 'yeoman-generator'
 
-export = class CommitlintGenerator extends BaseGenerator {
+export default class CommitlintGenerator extends BaseGenerator {
   protected lerna: boolean
 
   protected sharedConfig: string

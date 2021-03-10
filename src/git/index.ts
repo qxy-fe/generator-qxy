@@ -1,7 +1,7 @@
 import BaseGenerator from '../base-generator'
 import type { GeneratorOptions } from 'yeoman-generator'
 
-export = class GitGenerator extends BaseGenerator {
+export default class GitGenerator extends BaseGenerator {
   protected typescript: boolean
 
   protected coverage: boolean

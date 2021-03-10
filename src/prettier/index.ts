@@ -3,7 +3,7 @@ import type { GeneratorOptions } from 'yeoman-generator'
 
 const prettierIgnore = ['node_modules', '/dist', '/static', '*.min.*']
 
-export = class PrettierGenerator extends BaseGenerator {
+export default class PrettierGenerator extends BaseGenerator {
   protected sharedConfig: string | Record<string, string | number | boolean>
 
   constructor(args: string | string[], options: GeneratorOptions) {

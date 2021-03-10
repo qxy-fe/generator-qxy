@@ -1,6 +1,6 @@
 import BaseGenerator from '../base-generator'
 
-export = class JsconfigGenerator extends BaseGenerator {
+export default class JsconfigGenerator extends BaseGenerator {
   writing(): void {
     this.fs.copy(
       this.templatePath('jsconfig.json'),

@@ -1,6 +1,6 @@
 import BaseGenerator from '../base-generator'
 
-export = class LsLintGenerator extends BaseGenerator {
+export default class LsLintGenerator extends BaseGenerator {
   writing(): void {
     const devDeps = ['@ls-lint/ls-lint']
 

@@ -1,7 +1,7 @@
 import Generator from 'yeoman-generator'
 import ora from 'ora'
 
-export = class BaseGenerator extends Generator {
+export default class BaseGenerator extends Generator {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   protected addFields(fields: Record<string, any>): void {
     this.fs.extendJSON(this.destinationPath('package.json'), fields)

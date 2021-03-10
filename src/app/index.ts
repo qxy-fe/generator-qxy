@@ -8,7 +8,7 @@ const registryUrls = {
   default: '',
 }
 
-export = class QxyGenerator extends BaseGenerator {
+export default class QxyGenerator extends BaseGenerator {
   protected props: {
     packageManager: 'npm' | 'yarn'
     registry: 'default' | 'yarn' | 'npm' | 'taobao'

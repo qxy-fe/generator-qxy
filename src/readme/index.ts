@@ -1,7 +1,7 @@
 import BaseGenerator from '../base-generator'
 import type { GeneratorOptions } from 'yeoman-generator'
 
-export = class ReadmeGenerator extends BaseGenerator {
+export default class ReadmeGenerator extends BaseGenerator {
   protected username: string
 
   protected projectName: string

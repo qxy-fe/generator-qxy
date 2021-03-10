@@ -14,7 +14,7 @@ function getConfigShortcut(config: string): string {
   return config.endsWith('/') ? config.slice(0, -1) : config
 }
 
-export = class EslintGenerator extends BaseGenerator {
+export default class EslintGenerator extends BaseGenerator {
   protected vue: boolean
 
   protected vueCli: boolean

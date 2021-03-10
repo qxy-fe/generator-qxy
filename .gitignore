@@ -9,6 +9,3 @@ node_modules
 
 # Dist files
 /generators
-
-# We use Yarn
-package-lock.json

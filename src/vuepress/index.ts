@@ -1,6 +1,6 @@
 import BaseGenerator from '../base-generator'
 
-export = class VuepressGenerator extends BaseGenerator {
+export default class VuepressGenerator extends BaseGenerator {
   writing(): void {
     // TODO: custom docs content
     this.fs.copy(

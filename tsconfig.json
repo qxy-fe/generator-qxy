@@ -5,6 +5,7 @@
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
     "incremental": false,
     "module": "CommonJS",
     "newLine": "LF",
@@ -16,7 +17,5 @@
     "rootDir": "src",
     "outDir": "generators"
   },
-  "include": [
-    "src/**/*.ts"
-  ]
+  "include": ["src/**/*.ts"]
 }

@@ -1,7 +1,7 @@
 import BaseGenerator from '../base-generator'
 import type { GeneratorOptions } from 'yeoman-generator'
 
-export = class LintStagedGenerator extends BaseGenerator {
+export default class LintStagedGenerator extends BaseGenerator {
   protected vue: boolean
 
   protected vueCli: boolean

@@ -17,5 +17,6 @@
   },
   "[typescript]": {
     "editor.formatOnSave": false
-  }
+  },
+  "cSpell.words": ["tsbuildinfo"]
 }

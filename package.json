@@ -54,27 +54,27 @@
     "ejs": "^3.1.6",
     "has-yarn": "^2.1.0",
     "ora": "^5.4.0",
-    "sort-package-json": "^1.49.0",
+    "sort-package-json": "^1.50.0",
     "yeoman-generator": "^5.2.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.0.1",
-    "@commitlint/config-conventional": "^12.0.1",
-    "@qxy/eslint-config-prettier": "^0.2.0",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@qxy/eslint-config-prettier": "^0.2.3",
     "@qxy/prettier-config": "^0.2.0",
     "@types/ejs": "^3.0.6",
-    "@types/yeoman-generator": "^4.11.3",
-    "@typescript-eslint/eslint-plugin": "^4.19.0",
-    "@typescript-eslint/parser": "^4.19.0",
+    "@types/yeoman-generator": "^4.11.4",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
     "conventional-changelog": "^3.1.24",
     "conventional-changelog-cli": "^2.1.1",
     "copyfiles": "^2.4.1",
-    "eslint": "^7.23.0",
-    "husky": "^5.2.0",
+    "eslint": "^7.25.0",
+    "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "tsc-watch": "^4.2.9",
-    "typescript": "^4.2.3"
+    "typescript": "^4.2.4"
   }
 }

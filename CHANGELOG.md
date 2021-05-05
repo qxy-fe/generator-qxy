@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.12](https://github.com/qxy-fe/generator-qxy/compare/v0.1.11...v0.1.12) (2021-05-05)
+
+### Features
+
+-   migrate husky to v6 ([7e2ce2f](https://github.com/qxy-fe/generator-qxy/commit/7e2ce2fe9fae5883ecdd4f862978472ebb21bab1))
+
 ### [0.1.11](https://github.com/qxy-fe/generator-qxy/compare/v0.1.9...v0.1.11) (2021-03-10)
 
 ### Bug Fixes

@@ -32,23 +32,17 @@ export default class HuskyGenerator extends BaseGenerator {
     // Generate config
     // ====================
     if (this.commitlint) {
-      this.addFields({
-        husky: {
-          hooks: {
-            'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
-          },
-        },
-      })
+      this.fs.copy(
+        this.templatePath('commit-msg'),
+        this.destinationPath('.husky/commit-msg'),
+      )
     }
 
     if (this.lintStaged) {
-      this.addFields({
-        husky: {
-          hooks: {
-            'pre-commit': 'lint-staged',
-          },
-        },
-      })
+      this.fs.copy(
+        this.templatePath('pre-commit'),
+        this.destinationPath('.husky/pre-commit'),
+      )
     }
 
     // ====================

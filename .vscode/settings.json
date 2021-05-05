@@ -18,5 +18,5 @@
   "[typescript]": {
     "editor.formatOnSave": false
   },
-  "cSpell.words": ["tsbuildinfo"]
+  "cSpell.words": ["taobao", "tsbuildinfo", "yarnrc"]
 }

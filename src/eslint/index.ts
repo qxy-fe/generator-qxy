@@ -115,6 +115,6 @@ export default class EslintGenerator extends BaseGenerator {
     // ===================
     // Add devDependencies
     // ===================
-    this.addDependencies({ devDeps })
+    this.addDeps({ devDeps })
   }
 }

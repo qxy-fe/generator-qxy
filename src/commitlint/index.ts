@@ -43,6 +43,6 @@ export default class CommitlintGenerator extends BaseGenerator {
       },
     })
 
-    this.addDependencies({ devDeps })
+    this.addDeps({ devDeps })
   }
 }

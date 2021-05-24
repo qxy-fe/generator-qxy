@@ -48,6 +48,6 @@ export default class HuskyGenerator extends BaseGenerator {
     // ====================
     // Add devDependencies
     // ====================
-    this.addDependencies({ devDeps: ['husky'] })
+    this.addDeps({ devDeps: ['husky'] })
   }
 }

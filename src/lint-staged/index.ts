@@ -107,6 +107,6 @@ export default class LintStagedGenerator extends BaseGenerator {
     // ==================
     // Add devDependencies
     // ==================
-    this.addDependencies({ devDeps: ['lint-staged'] })
+    this.addDeps({ devDeps: ['lint-staged'] })
   }
 }

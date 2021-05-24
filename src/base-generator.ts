@@ -7,7 +7,7 @@ export default class BaseGenerator extends Generator {
     this.fs.extendJSON(this.destinationPath('package.json'), fields)
   }
 
-  protected addDependencies({
+  protected addDeps({
     deps = [],
     devDeps = [],
   }: {

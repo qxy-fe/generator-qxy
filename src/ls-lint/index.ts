@@ -18,6 +18,6 @@ export default class LsLintGenerator extends BaseGenerator {
     // ===================
     // Add devDependencies
     // ===================
-    this.addDependencies({ devDeps })
+    this.addDeps({ devDeps })
   }
 }

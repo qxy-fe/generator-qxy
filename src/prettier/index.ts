@@ -37,6 +37,6 @@ export default class PrettierGenerator extends BaseGenerator {
       prettierIgnore,
     })
 
-    this.addDependencies({ devDeps })
+    this.addDeps({ devDeps })
   }
 }

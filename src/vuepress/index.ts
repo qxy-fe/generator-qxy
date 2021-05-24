@@ -23,6 +23,6 @@ export default class VuepressGenerator extends BaseGenerator {
     // ==================
     // Add devDependencies
     // ==================
-    this.addDependencies({ devDeps: ['vuepress'] })
+    this.addDeps({ devDeps: ['vuepress'] })
   }
 }

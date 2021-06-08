@@ -53,28 +53,28 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "has-yarn": "^2.1.0",
-    "ora": "^5.4.0",
+    "ora": "^5.4.1",
     "sort-package-json": "^1.50.0",
     "yeoman-generator": "^5.3.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
-    "@qxy/eslint-config-prettier": "^0.2.5",
+    "@qxy/eslint-config-prettier": "^0.2.6",
     "@qxy/prettier-config": "^0.2.0",
     "@types/ejs": "^3.0.6",
     "@types/yeoman-generator": "^5.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.24.0",
-    "@typescript-eslint/parser": "^4.24.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
     "conventional-changelog": "^3.1.24",
     "conventional-changelog-cli": "^2.1.1",
     "copyfiles": "^2.4.1",
-    "eslint": "^7.27.0",
+    "eslint": "^7.28.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
-    "prettier": "^2.3.0",
+    "prettier": "^2.3.1",
     "rimraf": "^3.0.2",
-    "tsc-watch": "^4.2.9",
-    "typescript": "^4.2.4"
+    "tsc-watch": "^4.4.0",
+    "typescript": "^4.3.2"
   }
 }

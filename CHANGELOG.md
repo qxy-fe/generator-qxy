@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.14](https://github.com/qxy-fe/generator-qxy/compare/v0.1.13...v0.1.14) (2021-06-08)
+
+### Bug Fixes
+
+-   buffer string ([224210c](https://github.com/qxy-fe/generator-qxy/commit/224210c0015bf1610798c281542e379ee3b995ec))
+
 ### [0.1.13](https://github.com/qxy-fe/generator-qxy/compare/v0.1.12...v0.1.13) (2021-05-24)
 
 ### Features

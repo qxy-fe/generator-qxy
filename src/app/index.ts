@@ -265,11 +265,5 @@ export default class QxyGenerator extends BaseGenerator {
       require.resolve('sort-package-json'),
       this.destinationPath('package.json'),
     ])
-
-    if (this.props.packageManager === 'npm') {
-      this.npmInstall()
-    } else if (this.props.packageManager === 'yarn') {
-      this.yarnInstall()
-    }
   }
 }

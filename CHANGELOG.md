@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.15](https://github.com/qxy-fe/generator-qxy/compare/v0.1.13...v0.1.15) (2021-09-26)
+
+### Features
+
+-   cspell ([9bbb5d1](https://github.com/qxy-fe/generator-qxy/commit/9bbb5d19aa7131aeb80529a730f5d5be893a5ea5))
+-   husky install hook ([040953e](https://github.com/qxy-fe/generator-qxy/commit/040953ed3eea99f1127c0a1b7989d62b32b758b1))
+
 ### [0.1.13](https://github.com/qxy-fe/generator-qxy/compare/v0.1.12...v0.1.13) (2021-05-24)
 
 ### Features

@@ -7,8 +7,7 @@
     "vitepress",
     "pnpm",
     "copyfiles",
-    "commitlint",
-    "yoman"
+    "commitlint"
   ],
   "flagWords": [],
   "ignoreWords": [],

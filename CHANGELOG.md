@@ -13,7 +13,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
--   upgrade to yoman v5 ([2c09fc7](https://github.com/qxy-fe/generator-qxy/commit/2c09fc7dc8138a24138be22f47c9d57f77b9b1c6))
+-   upgrade to yeoman v5 ([2c09fc7](https://github.com/qxy-fe/generator-qxy/commit/2c09fc7dc8138a24138be22f47c9d57f77b9b1c6))
 
 ### [0.1.12](https://github.com/qxy-fe/generator-qxy/compare/v0.1.11...v0.1.12) (2021-05-05)
 

@@ -7,23 +7,23 @@ export default class BaseGenerator extends Generator {
     this.fs.extendJSON(this.destinationPath('package.json'), fields)
   }
 
-  protected addDeps({
+  protected async addDeps({
     deps = [],
     devDeps = [],
   }: {
     deps?: string[]
     devDeps?: string[]
-  }): void {
+  }): Promise<void> {
     const dependencies: Record<string, string> = {}
     const devDependencies: Record<string, string> = {}
 
-    deps.forEach(async item => {
+    for await (const item of deps) {
       dependencies[item] = `^${this.getPackageVersion(item)}`
-    })
+    }
 
-    devDeps.forEach(async item => {
+    for await (const item of devDeps) {
       devDependencies[item] = `^${this.getPackageVersion(item)}`
-    })
+    }
 
     this.fs.extendJSON(this.destinationPath('package.json'), {
       dependencies,

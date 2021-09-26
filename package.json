@@ -54,6 +54,7 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "has-yarn": "^2.1.0",
+    "latest-version": "^6.0.0",
     "ora": "^5.4.0",
     "sort-package-json": "^1.52.0",
     "yeoman-generator": "^5.4.2"

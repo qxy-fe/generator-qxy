@@ -28,7 +28,7 @@ export default class CommitlintGenerator extends BaseGenerator {
       this.options.sharedConfig || '@commitlint/config-conventional'
   }
 
-  writing(): void {
+  async writing(): Promise<void> {
     const extendsConfig = [this.sharedConfig]
     const devDeps = ['@commitlint/cli', this.sharedConfig]
 
@@ -43,6 +43,6 @@ export default class CommitlintGenerator extends BaseGenerator {
       },
     })
 
-    this.addDeps({ devDeps })
+    await this.addDeps({ devDeps })
   }
 }

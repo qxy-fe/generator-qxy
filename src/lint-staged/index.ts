@@ -63,7 +63,7 @@ export default class LintStagedGenerator extends BaseGenerator {
     this.sortPackageJson = this.options.sortPackageJson
   }
 
-  writing(): void {
+  async writing(): Promise<void> {
     // ==================
     // Generate config
     // ==================
@@ -107,6 +107,6 @@ export default class LintStagedGenerator extends BaseGenerator {
     // ==================
     // Add devDependencies
     // ==================
-    this.addDeps({ devDeps: ['lint-staged'] })
+    await this.addDeps({ devDeps: ['lint-staged'] })
   }
 }

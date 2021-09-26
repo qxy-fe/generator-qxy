@@ -1,7 +1,7 @@
 import BaseGenerator from '../base-generator'
 
 export default class VuepressGenerator extends BaseGenerator {
-  async writing(): Promise<void> {
+  writing(): void {
     // TODO: custom docs content
     this.fs.copy(
       this.templatePath('config.js'),
@@ -23,6 +23,6 @@ export default class VuepressGenerator extends BaseGenerator {
     // ==================
     // Add devDependencies
     // ==================
-    await this.addDeps({ devDeps: ['vuepress'] })
+    this.addDeps({ devDeps: ['vuepress'] })
   }
 }

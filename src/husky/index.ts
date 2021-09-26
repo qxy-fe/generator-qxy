@@ -27,7 +27,7 @@ export default class HuskyGenerator extends BaseGenerator {
     this.lintStaged = this.options.lintStaged
   }
 
-  async writing(): Promise<void> {
+  writing(): void {
     // ====================
     // Generate config
     // ====================
@@ -48,7 +48,7 @@ export default class HuskyGenerator extends BaseGenerator {
     // ====================
     // Add devDependencies
     // ====================
-    await this.addDeps({ devDeps: ['husky'] })
+    this.addDeps({ devDeps: ['husky'] })
 
     // ====================
     // Add Scripts

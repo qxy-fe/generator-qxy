@@ -25,7 +25,7 @@ export default class PrettierGenerator extends BaseGenerator {
     }
   }
 
-  async writing(): Promise<void> {
+  writing(): void {
     const devDeps = ['prettier']
 
     if (typeof this.sharedConfig === 'string') {
@@ -37,6 +37,6 @@ export default class PrettierGenerator extends BaseGenerator {
       prettierIgnore,
     })
 
-    await this.addDeps({ devDeps })
+    this.addDeps({ devDeps })
   }
 }

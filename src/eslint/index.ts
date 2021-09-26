@@ -58,7 +58,7 @@ export default class EslintGenerator extends BaseGenerator {
     this.typescript = this.options.typescript
   }
 
-  async writing(): Promise<void> {
+  writing(): void {
     // ===================
     // Generate config
     // ===================
@@ -115,6 +115,6 @@ export default class EslintGenerator extends BaseGenerator {
     // ===================
     // Add devDependencies
     // ===================
-    await this.addDeps({ devDeps })
+    this.addDeps({ devDeps })
   }
 }

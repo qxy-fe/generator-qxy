@@ -1,7 +1,7 @@
 import BaseGenerator from '../base-generator'
 
 export default class LsLintGenerator extends BaseGenerator {
-  async writing(): Promise<void> {
+  writing(): void {
     const devDeps = ['@ls-lint/ls-lint']
 
     this.addFields({
@@ -18,6 +18,6 @@ export default class LsLintGenerator extends BaseGenerator {
     // ===================
     // Add devDependencies
     // ===================
-    await this.addDeps({ devDeps })
+    this.addDeps({ devDeps })
   }
 }

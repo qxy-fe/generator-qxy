@@ -1,29 +1,28 @@
 import Generator from 'yeoman-generator'
 import ora from 'ora'
-import latestVersion from 'latest-version'
 
 export default class BaseGenerator extends Generator {
   protected addFields(fields: Record<string, unknown>): void {
     this.fs.extendJSON(this.destinationPath('package.json'), fields)
   }
 
-  protected async addDeps({
+  protected addDeps({
     deps = [],
     devDeps = [],
   }: {
     deps?: string[]
     devDeps?: string[]
-  }): Promise<void> {
+  }): void {
     const dependencies: Record<string, string> = {}
     const devDependencies: Record<string, string> = {}
 
-    for await (const item of deps) {
+    deps.forEach(item => {
       dependencies[item] = `^${this.getPackageVersion(item)}`
-    }
+    })
 
-    for await (const item of devDeps) {
+    devDeps.forEach(item => {
       devDependencies[item] = `^${this.getPackageVersion(item)}`
-    }
+    })
 
     this.fs.extendJSON(this.destinationPath('package.json'), {
       dependencies,
@@ -31,10 +30,18 @@ export default class BaseGenerator extends Generator {
     })
   }
 
-  protected async getPackageVersion(pkg: string): Promise<string> {
+  protected getStdoutString(cmd: string, args: string[]): string {
+    const result = this.spawnCommandSync(cmd, args, {
+      stdio: [process.stdout],
+    })
+
+    return Buffer.from(result.stdout).toString().slice(0, -1)
+  }
+
+  protected getPackageVersion(pkg: string): string {
     const spinner = ora(`Loading the latest version of package: ${pkg}`)
     spinner.start()
-    const version = await latestVersion(pkg)
+    const version = this.getStdoutString('npm', ['show', pkg, 'version'])
     spinner.succeed(`${pkg}@${version}`)
     return version
   }

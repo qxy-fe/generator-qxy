@@ -1,7 +1,7 @@
 import BaseGenerator from '../base-generator'
 
 export default class CSpellGenerator extends BaseGenerator {
-  async writing(): Promise<void> {
+  writing(): void {
     this.fs.copy(
       this.templatePath('cspell.json'),
       this.destinationPath('cspell.json'),
@@ -16,6 +16,6 @@ export default class CSpellGenerator extends BaseGenerator {
     // ==================
     // Add devDependencies
     // ==================
-    await this.addDeps({ devDeps: ['cspell'] })
+    this.addDeps({ devDeps: ['cspell'] })
   }
 }

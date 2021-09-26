@@ -1,0 +1,28 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "ntnyq",
+    "tsbuildinfo",
+    "vitepress",
+    "pnpm",
+    "copyfiles",
+    "commitlint",
+    "yoman"
+  ],
+  "flagWords": [],
+  "ignoreWords": [],
+  "dictionaries": [],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/vscode-extension/**",
+    "**/.git/objects/**",
+    "**/*.tsbuildinfo",
+    "**/yarn.lock",
+    "**/pnpm-lock.yaml",
+    "**/package-lock.json",
+    "*.spec.js.snap",
+    "*.min.*",
+    "*.log*"
+  ]
+}

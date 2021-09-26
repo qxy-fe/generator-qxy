@@ -28,6 +28,7 @@ export default class QxyGenerator extends BaseGenerator {
     vueCli: boolean
     lerna: boolean
     husky: boolean
+    cSpell: boolean
     eslint: boolean
     lsLint: boolean
     prettier: boolean
@@ -112,11 +113,13 @@ export default class QxyGenerator extends BaseGenerator {
           { name: 'Lint staged', value: 'lint-staged' },
           { name: 'CommitLint', value: 'commitlint' },
           { name: 'VuePress docs', value: 'vuepress' },
+          { name: 'Code Spell Check', value: 'cspell' },
           { name: 'Files & Directories Lint', value: 'ls-lint' },
           { name: 'Sort package.json', value: 'sort-package-json' },
         ],
         default: [
           'husky',
+          'cspell',
           'eslint',
           'prettier',
           'ls-lint',
@@ -154,6 +157,7 @@ export default class QxyGenerator extends BaseGenerator {
       lerna: answers.lerna,
       lernaVersionIndependent: answers.lernaVersionIndependent,
       husky: answers.workflow.includes('husky'),
+      cSpell: answers.workflow.includes('cspell'),
       eslint: answers.workflow.includes('eslint'),
       lsLint: answers.workflow.includes('ls-lint'),
       prettier: answers.workflow.includes('prettier'),
@@ -218,6 +222,10 @@ export default class QxyGenerator extends BaseGenerator {
         commitlint: this.props.commitlint,
         lintStaged: this.props.lintStaged,
       })
+    }
+
+    if (this.props.cSpell) {
+      this.composeWith(require.resolve('../cspell'), {})
     }
 
     if (this.props.eslint) {

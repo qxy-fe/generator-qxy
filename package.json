@@ -21,8 +21,8 @@
     "copy": "copyfiles -a -u 1 -V src/*/templates/** generators",
     "dev": "npm run clean && tsc-watch --incremental --onSuccess \"npm run copy\"",
     "lint": "eslint --ext .ts src",
-    "prepublishOnly": "npm run build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepublishOnly": "npm run build"
   },
   "commitlint": {
     "extends": [
@@ -54,27 +54,27 @@
     "ejs": "^3.1.6",
     "has-yarn": "^2.1.0",
     "ora": "^5.4.0",
-    "sort-package-json": "^1.50.0",
-    "yeoman-generator": "^5.3.0"
+    "sort-package-json": "^1.52.0",
+    "yeoman-generator": "^5.4.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
-    "@qxy/eslint-config-prettier": "^0.2.5",
-    "@qxy/prettier-config": "^0.2.0",
-    "@types/ejs": "^3.0.6",
-    "@types/yeoman-generator": "^5.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.28.4",
-    "@typescript-eslint/parser": "^4.28.4",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@qxy/eslint-config-prettier": "^0.2.11",
+    "@qxy/prettier-config": "^0.3.0",
+    "@types/ejs": "^3.1.0",
+    "@types/yeoman-generator": "^5.2.7",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
     "conventional-changelog": "^3.1.24",
     "conventional-changelog-cli": "^2.1.1",
     "copyfiles": "^2.4.1",
-    "eslint": "^7.27.0",
-    "husky": "^7.0.1",
-    "lint-staged": "^11.0.0",
-    "prettier": "^2.3.0",
+    "eslint": "^7.32.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
-    "tsc-watch": "^4.2.9",
-    "typescript": "^4.2.4"
+    "tsc-watch": "^4.5.0",
+    "typescript": "^4.4.3"
   }
 }

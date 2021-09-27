@@ -35,7 +35,7 @@ export default class BaseGenerator extends Generator {
       stdio: [process.stdout],
     })
 
-    return Buffer.from(result.stdout).toString().slice(0, -1)
+    return Buffer.from(result.stdout).toString()
   }
 
   protected getPackageVersion(pkg: string): string {

@@ -15,7 +15,8 @@
     "target": "ES2017",
     "baseUrl": ".",
     "rootDir": "src",
-    "outDir": "generators"
+    "outDir": "generators",
+    "resolveJsonModule": true
   },
   "include": ["src/**/*.ts"]
 }

@@ -1,7 +1,7 @@
-import fs from 'fs'
+import fs from 'node:fs'
 import ejs from 'ejs'
-import BaseGenerator from '../base-generator'
 import type { GeneratorOptions } from 'yeoman-generator'
+import BaseGenerator from '../base-generator.js'
 
 export default class YarnrcGenerator extends BaseGenerator {
   protected registry: string | false

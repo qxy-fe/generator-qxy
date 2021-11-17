@@ -1,4 +1,4 @@
-import BaseGenerator from '../base-generator'
+import BaseGenerator from '../base-generator.js'
 
 export default class SortPackageJsonGenerator extends BaseGenerator {
   writing(): void {

@@ -1,4 +1,4 @@
-import BaseGenerator from '../base-generator'
+import BaseGenerator from '../base-generator.js'
 
 export default class VuepressGenerator extends BaseGenerator {
   writing(): void {

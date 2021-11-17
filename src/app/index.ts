@@ -1,5 +1,5 @@
-import BaseGenerator from '../base-generator'
 import hasYarn from 'has-yarn'
+import BaseGenerator from '../base-generator.js'
 
 const registryUrls = {
   npm: 'https://registry.npmjs.org',

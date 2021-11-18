@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/qxy-fe/generator-qxy/compare/v0.2.0...v0.2.1) (2021-11-18)
+
+### Bug Fixes
+
+-   polyfill require.resolve ([9b53d9b](https://github.com/qxy-fe/generator-qxy/commit/9b53d9b9789d8ced1f4b071f155cd7e9c612e92f))
+
 ## [0.2.0](https://github.com/qxy-fe/generator-qxy/compare/v0.1.21...v0.2.0) (2021-11-17)
 
 ### Features

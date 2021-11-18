@@ -1,4 +1,5 @@
 import hasYarn from 'has-yarn'
+import { createRequire } from 'node:module'
 import BaseGenerator from '../base-generator.js'
 
 const registryUrls = {
@@ -7,6 +8,7 @@ const registryUrls = {
   taobao: 'https://registry.npm.taobao.org',
   default: '',
 }
+const require = createRequire(import.meta.url)
 
 export default class QxyGenerator extends BaseGenerator {
   protected props: {

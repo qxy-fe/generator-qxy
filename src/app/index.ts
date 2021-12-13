@@ -28,6 +28,7 @@ export default class QxyGenerator extends BaseGenerator {
 
     // Dev Workflow
     vueCli: boolean
+    svgo: boolean
     lerna: boolean
     husky: boolean
     cSpell: boolean
@@ -118,6 +119,7 @@ export default class QxyGenerator extends BaseGenerator {
           { name: 'Code Spell Check', value: 'cspell' },
           { name: 'Files & Directories Lint', value: 'ls-lint' },
           { name: 'Sort package.json', value: 'sort-package-json' },
+          { name: `SVGO`, value: `svgo` },
         ],
         default: [
           'husky',
@@ -158,6 +160,7 @@ export default class QxyGenerator extends BaseGenerator {
       vueCli: answers.vueCli,
       lerna: answers.lerna,
       lernaVersionIndependent: answers.lernaVersionIndependent,
+      svgo: answers.workflow.includes('svgo'),
       husky: answers.workflow.includes('husky'),
       cSpell: answers.workflow.includes('cspell'),
       eslint: answers.workflow.includes('eslint'),
@@ -224,6 +227,10 @@ export default class QxyGenerator extends BaseGenerator {
         commitlint: this.props.commitlint,
         lintStaged: this.props.lintStaged,
       })
+    }
+
+    if (this.props.svgo) {
+      this.composeWith(require.resolve('../svgo'), {})
     }
 
     if (this.props.cSpell) {

@@ -3,11 +3,13 @@
   "language": "en",
   "words": [
     "ntnyq",
-    "tsbuildinfo",
     "vitepress",
     "pnpm",
     "copyfiles",
-    "commitlint"
+    "commitlint",
+    "taobao",
+    "tsbuildinfo",
+    "yarnrc"
   ],
   "flagWords": [],
   "ignoreWords": [],

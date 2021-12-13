@@ -3,6 +3,7 @@
     "*.yml.ejs": "yaml",
     "*.md.ejs": "markdown",
     "*.json.ejs": "json",
+    "*.js.ejs": "javascript",
     ".gitignore.ejs": "ignore"
   },
   "editor.tabSize": 2,
@@ -17,6 +18,5 @@
   },
   "[typescript]": {
     "editor.formatOnSave": false
-  },
-  "cSpell.words": ["taobao", "tsbuildinfo", "yarnrc"]
+  }
 }

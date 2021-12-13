@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/qxy-fe/generator-qxy/compare/v0.2.1...v0.2.2) (2021-12-13)
+
+### Features
+
+-   svgo ([90fdb20](https://github.com/qxy-fe/generator-qxy/commit/90fdb20996c80b58306f9078f3ad57de6299cb32))
+
 ### [0.2.1](https://github.com/qxy-fe/generator-qxy/compare/v0.2.0...v0.2.1) (2021-11-18)
 
 ### Bug Fixes

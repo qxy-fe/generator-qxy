@@ -5,7 +5,7 @@ import BaseGenerator from '../base-generator.js'
 const registryUrls = {
   npm: 'https://registry.npmjs.org',
   yarn: 'https://registry.yarnpkg.com',
-  taobao: 'https://registry.npm.taobao.org',
+  taobao: 'https://registry.npmmirror.com',
   default: '',
 }
 const require = createRequire(import.meta.url)

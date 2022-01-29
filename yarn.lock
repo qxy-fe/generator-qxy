@@ -633,7 +633,7 @@
 
 "@types/ejs@*", "@types/ejs@^3.1.0":
   version "3.1.0"
-  resolved "https://registry.npmmirror.com/@types/ejs/download/@types/ejs-3.1.0.tgz#ab8109208106b5e764e5a6c92b2ba1c625b73020"
+  resolved "https://registry.npmmirror.com/@types/ejs/download/@types/ejs-3.1.0.tgz?cache=0&sync_timestamp=1637265991112&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fejs%2Fdownload%2F%40types%2Fejs-3.1.0.tgz#ab8109208106b5e764e5a6c92b2ba1c625b73020"
   integrity sha1-q4EJIIEGtedk5abJKyuhxiW3MCA=
 
 "@types/expect@^1.20.4":
@@ -2291,7 +2291,7 @@ has-tostringtag@^1.0.0:
 
 has-yarn@^3.0.0:
   version "3.0.0"
-  resolved "https://registry.nlark.com/has-yarn/download/has-yarn-3.0.0.tgz#c3c21e559730d1d3b57e28af1f30d06fac38147d"
+  resolved "https://registry.nlark.com/has-yarn/download/has-yarn-3.0.0.tgz?cache=0&sync_timestamp=1631299106681&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fhas-yarn%2Fdownload%2Fhas-yarn-3.0.0.tgz#c3c21e559730d1d3b57e28af1f30d06fac38147d"
   integrity sha1-w8IeVZcw0dO1fiivHzDQb6w4FH0=
 
 has@^1.0.3:
@@ -3000,7 +3000,7 @@ optionator@^0.9.1:
 
 ora@^6.0.1:
   version "6.0.1"
-  resolved "https://registry.npmmirror.com/ora/download/ora-6.0.1.tgz#68caa9fd6c485a40d6f46c50a3940fa3df99c7f3"
+  resolved "https://registry.nlark.com/ora/download/ora-6.0.1.tgz?cache=0&sync_timestamp=1631556430183&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fora%2Fdownload%2Fora-6.0.1.tgz#68caa9fd6c485a40d6f46c50a3940fa3df99c7f3"
   integrity sha1-aMqp/WxIWkDW9GxQo5QPo9+Zx/M=
   dependencies:
     bl "^5.0.0"
@@ -3511,7 +3511,7 @@ sort-object-keys@^1.1.3:
 sort-package-json@^1.53.1:
   version "1.53.1"
   resolved "https://registry.npmmirror.com/sort-package-json/download/sort-package-json-1.53.1.tgz#8f2672b06314cf04d9a6bcefc75a5f38d600b811"
-  integrity sha1-jyZysGMUzwTZprzvx1pfONYAuBE=
+  integrity sha512-ltLORrQuuPMpy23YkWCA8fO7zBOxM4P1j9LcGxci4K2Fk8jmSyCA/ATU6CFyy8qR2HQRx4RBYWzoi78FU/Anuw==
   dependencies:
     detect-indent "^6.0.0"
     detect-newline "3.1.0"

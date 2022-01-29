@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/qxy-fe/generator-qxy/compare/v0.2.2...v0.3.0) (2022-01-29)
+
+### Features
+
+-   use new cnpm registry ([df5749e](https://github.com/qxy-fe/generator-qxy/commit/df5749e88cf923677906858506a98c4263ce2fdf))
+
 ### [0.2.2](https://github.com/qxy-fe/generator-qxy/compare/v0.2.1...v0.2.2) (2021-12-13)
 
 ### Features

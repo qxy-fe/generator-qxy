@@ -9,20 +9,20 @@ export default class YarnrcGenerator extends BaseGenerator {
   constructor(args: string | string[], options: GeneratorOptions) {
     super(args, options)
 
-    this.option('registry', {
+    this.option(`registry`, {
       type: String,
-      default: '',
-      description: 'registry to use',
+      default: `https://registry.npmmirror.com`,
+      description: `registry to use`,
     })
   }
 
   async initializing(): Promise<void> {
     this.registry = this.options.registry
 
-    const yarnrc = await ejs.renderFile(this.templatePath('_yarnrc.ejs'), {
+    const yarnrc = await ejs.renderFile(this.templatePath(`_yarnrc.ejs`), {
       registry: this.registry,
     })
 
-    fs.writeFileSync(this.destinationPath('.yarnrc'), yarnrc)
+    fs.writeFileSync(this.destinationPath(`.yarnrc`), yarnrc)
   }
 }

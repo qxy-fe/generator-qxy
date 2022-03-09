@@ -3,7 +3,7 @@ import ora from 'ora'
 
 export default class BaseGenerator extends Generator {
   protected addFields(fields: Record<string, unknown>): void {
-    this.fs.extendJSON(this.destinationPath('package.json'), fields)
+    this.fs.extendJSON(this.destinationPath(`package.json`), fields)
   }
 
   protected addDeps({
@@ -24,7 +24,7 @@ export default class BaseGenerator extends Generator {
       devDependencies[item] = `^${this.getPackageVersion(item)}`
     })
 
-    this.fs.extendJSON(this.destinationPath('package.json'), {
+    this.fs.extendJSON(this.destinationPath(`package.json`), {
       dependencies,
       devDependencies,
     })
@@ -41,12 +41,12 @@ export default class BaseGenerator extends Generator {
   protected getPackageVersion(pkg: string): string {
     const spinner = ora(`Loading the latest version of package: ${pkg}`)
     spinner.start()
-    const version = this.getStdoutString('npm', ['show', pkg, 'version'])
+    const version = this.getStdoutString(`npm`, [`show`, pkg, `version`])
     spinner.succeed(`${pkg}@${version}`)
     return version
   }
 
   end(): void {
-    this.log('Bye... 👋')
+    this.log(`Bye... 👋`)
   }
 }

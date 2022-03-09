@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/qxy-fe/generator-qxy/compare/v0.3.0...v0.3.1) (2022-03-09)
+
+### Features
+
+-   set default yarn registry ([3d7caad](https://github.com/qxy-fe/generator-qxy/commit/3d7caad0de6f363698dd5740dcb83c9309dc4329))
+
 ## [0.3.0](https://github.com/qxy-fe/generator-qxy/compare/v0.2.2...v0.3.0) (2022-01-29)
 
 ### Features

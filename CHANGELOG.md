@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://github.com/qxy-fe/generator-qxy/compare/v0.3.1...v0.3.2) (2022-03-16)
+
+### Bug Fixes
+
+-   prettier ignore ([3f3f000](https://github.com/qxy-fe/generator-qxy/commit/3f3f000620e3aa03036cbd1b924db3d249004a5c))
+
 ### [0.3.1](https://github.com/qxy-fe/generator-qxy/compare/v0.3.0...v0.3.1) (2022-03-09)
 
 ### Features

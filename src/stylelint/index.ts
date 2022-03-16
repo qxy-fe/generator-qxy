@@ -36,8 +36,8 @@ export default class StylelintGenerator extends BaseGenerator {
     )
 
     this.fs.copy(
-      this.templatePath(`_stylelitignore`),
-      this.destinationPath(`.stylelitignore`),
+      this.templatePath(`_stylelintignore`),
+      this.destinationPath(`.stylelintignore`),
     )
 
     this.addFields({

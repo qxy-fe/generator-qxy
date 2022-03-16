@@ -68,6 +68,7 @@ export default class QxyGenerator extends BaseGenerator {
         choices: [
           { name: `npm`, value: `npm` },
           { name: `yarn`, value: `yarn` },
+          { name: `pnpm`, value: `pnpm` },
         ],
         default: hasYarn(this.destinationRoot()) ? `yarn` : `npm`,
       },

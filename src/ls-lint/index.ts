@@ -2,7 +2,7 @@ import BaseGenerator from '../base-generator.js'
 
 export default class LsLintGenerator extends BaseGenerator {
   writing(): void {
-    const devDeps = ['@ls-lint/ls-lint']
+    const devDeps = [`@ls-lint/ls-lint`]
 
     this.addFields({
       scripts: {
@@ -10,8 +10,8 @@ export default class LsLintGenerator extends BaseGenerator {
       },
     })
     this.fs.copyTpl(
-      this.templatePath('_ls-lint.yml.ejs'),
-      this.destinationPath('.ls-lint.yml'),
+      this.templatePath(`_ls-lint.yml.ejs`),
+      this.destinationPath(`.ls-lint.yml`),
       {},
     )
 

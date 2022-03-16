@@ -1,18 +1,16 @@
 import type { GeneratorOptions } from 'yeoman-generator'
 import BaseGenerator from '../base-generator.js'
 
-const prettierIgnore = ['node_modules', '/dist', '/static', '*.min.*']
-
 export default class PrettierGenerator extends BaseGenerator {
   protected sharedConfig: string | Record<string, string | number | boolean>
 
   constructor(args: string | string[], options: GeneratorOptions) {
     super(args, options)
 
-    this.option('sharedConfig', {
+    this.option(`sharedConfig`, {
       type: String,
-      default: '@qxy/prettier-config',
-      description: 'sharedConfig to use',
+      default: `@qxy/prettier-config`,
+      description: `sharedConfig to use`,
     })
   }
 
@@ -21,20 +19,26 @@ export default class PrettierGenerator extends BaseGenerator {
       semi: false,
       tabWidth: 2,
       singleQuote: true,
-      trailingComma: 'all',
+      trailingComma: `all`,
     }
   }
 
   writing(): void {
-    const devDeps = ['prettier']
+    const devDeps = [`prettier`]
 
-    if (typeof this.sharedConfig === 'string') {
+    if (typeof this.sharedConfig === `string`) {
       devDeps.push(this.sharedConfig)
     }
 
+    // prettierIgnore in package.json not supported
+    // https://github.com/prettier/prettier/issues/3460
+    this.fs.copy(
+      this.templatePath(`_prettierignore`),
+      this.destinationPath(`.prettierignore`),
+    )
+
     this.addFields({
       prettier: this.sharedConfig,
-      prettierIgnore,
     })
 
     this.addDeps({ devDeps })

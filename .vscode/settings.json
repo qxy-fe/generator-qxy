@@ -3,7 +3,7 @@
     "*.yml.ejs": "yaml",
     "*.md.ejs": "markdown",
     "*.json.ejs": "json",
-    "*.js.ejs": "javascript",
+    "*.js.ejs": "plaintext",
     ".gitignore.ejs": "ignore"
   },
   "editor.tabSize": 2,

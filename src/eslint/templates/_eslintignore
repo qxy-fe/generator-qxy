@@ -6,6 +6,7 @@ node_modules
 
 # Public resources
 /public
+/static
 
 # Minified
 *.min.js

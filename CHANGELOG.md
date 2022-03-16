@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.4](https://github.com/qxy-fe/generator-qxy/compare/v0.3.3...v0.3.4) (2022-03-16)
+
+### Bug Fixes
+
+-   typo ([b08d392](https://github.com/qxy-fe/generator-qxy/commit/b08d392d4dd7ca1eae94aa6b4b4172f41d437d90))
+
 ### [0.3.3](https://github.com/qxy-fe/generator-qxy/compare/v0.3.2...v0.3.3) (2022-03-16)
 
 ### Features

@@ -42,9 +42,6 @@
       "@qxy/prettier",
       "plugin:@typescript-eslint/recommended"
     ],
-    "rules": {
-      "no-underscore-dangle": "off"
-    },
     "root": true
   },
   "eslintIgnore": [
@@ -60,7 +57,7 @@
     "yeoman-generator": "^5.6.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.1",
+    "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "@qxy/eslint-config-prettier": "^0.2.15",
     "@qxy/prettier-config": "^0.3.0",

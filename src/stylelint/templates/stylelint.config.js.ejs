@@ -1,0 +1,14 @@
+/**
+ * @file Stylelint config
+ */
+
+module.exports = {
+  extends: [
+    `@qxy/stylelint-config-scss`,
+    <%_ if (vue) { _%>
+    `@qxy/stylelint-config-vue`,
+    <%_ } _%>
+    `@qxy/stylelint-config-order`,
+    `@qxy/stylelint-config-prettier`,
+  ],
+}

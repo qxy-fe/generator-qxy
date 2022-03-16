@@ -1,33 +1,31 @@
 /**
-* @file ESLint 配置
+* @file ESLint config
 */
 
 module.exports = {
-root: true,
+  root: true,
 
-extends: [
-<%- extendsConfig.map(item => `'${item}',`).join('\n') %>
-],
-<%_ if (vue) { _%>
+  extends: [
+  <%- extendsConfig.map(item => `'${item}',`).join('\n') %>
+  ],
+  <%_ if (vue) { _%>
+  parserOptions: {
+    parser: <% if (typescript) { %> `@typescript-eslint/parser` <% } else { %>`babel-eslint`<% } %>.
+  },
+  <%_ } else if (typescript) { _%>
+  parser: `@typescript-eslint/parser`,
+  <%_ } _%>
+  <%_ if (vue || typescript) { _%>
 
-parserOptions: {
-parser: <% if (typescript) { %> '@typescript-eslint/parser' <% } else { %>'babel-eslint'<% } %>.
-},
-<%_ } else if (typescript) { _%>
+  plugins: [
+    <%_ if (vue) { _%>
+    `vue`,
+    <%_ } _%>
+    <%_ if (typescript) { _%>
+    `@typescript-eslint`,
+    <%_ } _%>
+  ],
 
-parser: '@typescript-eslint/parser',
-<%_ } _%>
-<%_ if (vue || typescript) { _%>
-
-plugins: [
-<%_ if (vue) { _%>
-'vue',
-<%_ } _%>
-<%_ if (typescript) { _%>
-'@typescript-eslint',
-<%_ } _%>
-],
-
-rules: {}
-<%_ } _%>
+  rules: {}
+  <%_ } _%>
 }

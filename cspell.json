@@ -2,13 +2,14 @@
   "version": "0.2",
   "language": "en",
   "words": [
-    "ntnyq",
-    "vitepress",
-    "pnpm",
-    "copyfiles",
     "commitlint",
+    "copyfiles",
+    "ntnyq",
+    "pnpm",
     "taobao",
     "tsbuildinfo",
+    "vitepress",
+    "vuepress",
     "yarnrc"
   ],
   "flagWords": [],
@@ -22,6 +23,7 @@
     "**/yarn.lock",
     "**/pnpm-lock.yaml",
     "**/package-lock.json",
+    "**/*.ejs",
     "*.spec.js.snap",
     "*.min.*",
     "*.log*"

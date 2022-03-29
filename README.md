@@ -4,12 +4,38 @@
 
 ## Usage
 
-```sh
-$ npm i -g yo generator-qxy
-# OR
-$ yarn global add yo generator-qxy
+Install `yo` globally:
 
+```sh
+$ npm i -g yo
+# OR
+$ yarn global add yo
+```
+
+Install generator:
+
+```sh
+$ npm i -g generator-qxy
+```
+
+Use the generator:
+
+```sh
 $ yo qxy
+```
+
+## Update
+
+Reinstall generator globally:
+
+```
+$ npm i -g generator-qxy
+```
+
+or run `yo` to update generator interatively:
+
+```sh
+$ yo
 ```
 
 ## License

@@ -1,9 +1,9 @@
 {
   "version": "0.2",
   "language": "en",
+  "allowCompoundWords": true,
   "words": [
-    "commitlint",
-    "copyfiles",
+    "cnpm",
     "ntnyq",
     "pnpm",
     "taobao",

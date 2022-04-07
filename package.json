@@ -17,13 +17,16 @@
     "generators"
   ],
   "scripts": {
-    "build": "npm run clean && tsc && npm run copy",
+    "build": "run-s clean bundle copy",
+    "bundle": "tsc --build",
     "clean": "rimraf generators *.tsbuildinfo",
     "copy": "copyfiles -a -u 1 -V src/*/templates/** generators",
     "dev": "npm run clean && tsc-watch --incremental --onSuccess \"npm run copy\"",
-    "lint": "eslint --ext .ts src",
+    "lint": "run-p lint:*",
+    "lint:script": "eslint --ext .ts src",
     "lint:cspell": "cspell **",
     "prepare": "husky install",
+    "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
   "commitlint": {
@@ -53,29 +56,30 @@
     "ejs": "^3.1.6",
     "has-yarn": "^3.0.0",
     "ora": "^6.1.0",
-    "sort-package-json": "^1.54.0",
+    "sort-package-json": "^1.55.0",
     "yeoman-generator": "^5.6.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
-    "@qxy/eslint-config-prettier": "^0.2.15",
+    "@qxy/eslint-config-prettier": "^0.2.16",
     "@qxy/prettier-config": "^0.3.0",
     "@types/ejs": "^3.1.0",
-    "@types/yeoman-generator": "^5.2.9",
-    "@typescript-eslint/eslint-plugin": "^5.15.0",
-    "@typescript-eslint/parser": "^5.15.0",
+    "@types/yeoman-generator": "^5.2.10",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
     "conventional-changelog": "^3.1.25",
     "conventional-changelog-cli": "^2.2.2",
     "copyfiles": "^2.4.1",
-    "cspell": "^5.19.2",
-    "eslint": "^8.11.0",
+    "cspell": "^5.19.5",
+    "eslint": "^8.12.0",
     "husky": "^7.0.4",
-    "lint-staged": "^12.3.5",
-    "prettier": "^2.5.1",
+    "lint-staged": "^12.3.7",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
-    "tsc-watch": "^4.6.2",
-    "typescript": "^4.6.2"
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.6.3"
   },
   "engines": {
     "node": "^14.13.1 || >=16.0.0"

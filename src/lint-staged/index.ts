@@ -17,40 +17,40 @@ export default class LintStagedGenerator extends BaseGenerator {
   constructor(args: string | string[], options: GeneratorOptions) {
     super(args, options)
 
-    this.option('vue', {
+    this.option(`vue`, {
       type: Boolean,
       default: false,
-      description: 'use vue or not',
+      description: `use vue or not`,
     })
 
-    this.option('vueCli', {
+    this.option(`vueCli`, {
       type: Boolean,
       default: false,
-      description: 'use vue-cli or not',
+      description: `use vue-cli or not`,
     })
 
-    this.option('eslint', {
+    this.option(`eslint`, {
       type: Boolean,
       default: false,
-      description: 'use eslint or not',
+      description: `use eslint or not`,
     })
 
-    this.option('prettier', {
+    this.option(`prettier`, {
       type: Boolean,
       default: false,
-      description: 'use prettier or not',
+      description: `use prettier or not`,
     })
 
-    this.option('typescript', {
+    this.option(`typescript`, {
       type: Boolean,
       default: false,
-      description: 'use typescript or not',
+      description: `use typescript or not`,
     })
 
-    this.option('sortPackageJson', {
+    this.option(`sortPackageJson`, {
       type: Boolean,
       default: false,
-      description: 'use sort-package-json or not',
+      description: `use sort-package-json or not`,
     })
   }
 
@@ -68,22 +68,22 @@ export default class LintStagedGenerator extends BaseGenerator {
     // Generate config
     // ==================
     if (this.eslint) {
-      const lintExts = ['js', 'jsx']
+      const lintExts = [`js`, `jsx`]
 
       if (this.typescript) {
-        lintExts.push('ts')
-        lintExts.push('tsx')
+        lintExts.push(`ts`)
+        lintExts.push(`tsx`)
       }
 
       if (this.vue) {
-        lintExts.push('vue')
+        lintExts.push(`vue`)
       }
 
       this.addFields({
         'lint-staged': {
-          [`*.{${lintExts.join(',')}}`]: this.vueCli
-            ? 'vue-cli-service lint'
-            : 'eslint --fix',
+          [`*.{${lintExts.join(`,`)}}`]: this.vueCli
+            ? `vue-cli-service lint`
+            : `eslint --fix`,
         },
       })
     }
@@ -107,6 +107,6 @@ export default class LintStagedGenerator extends BaseGenerator {
     // ==================
     // Add devDependencies
     // ==================
-    this.addDeps({ devDeps: ['lint-staged'] })
+    this.addDeps({ devDeps: [`lint-staged`] })
   }
 }

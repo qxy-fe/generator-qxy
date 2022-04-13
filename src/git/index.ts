@@ -9,16 +9,16 @@ export default class GitGenerator extends BaseGenerator {
   constructor(args: string | string[], options: GeneratorOptions) {
     super(args, options)
 
-    this.option('typescript', {
+    this.option(`typescript`, {
       type: Boolean,
       default: false,
-      description: 'use typescript or not',
+      description: `use typescript or not`,
     })
 
-    this.option('coverage', {
+    this.option(`coverage`, {
       type: Boolean,
       default: false,
-      description: 'has coverage or not',
+      description: `has coverage or not`,
     })
   }
 
@@ -29,13 +29,13 @@ export default class GitGenerator extends BaseGenerator {
 
   writing(): void {
     this.fs.copy(
-      this.templatePath('_gitattributes'),
-      this.destinationPath('.gitattributes'),
+      this.templatePath(`_gitattributes`),
+      this.destinationPath(`.gitattributes`),
     )
 
     this.fs.copyTpl(
-      this.templatePath('_gitignore.ejs'),
-      this.destinationPath('.gitignore'),
+      this.templatePath(`_gitignore.ejs`),
+      this.destinationPath(`.gitignore`),
       {
         typescript: this.typescript,
         coverage: this.coverage,

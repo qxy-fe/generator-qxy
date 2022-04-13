@@ -1,10 +1,11 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["ntnyq", "tsbuildinfo", "vitepress"],
+  "allowCompoundWords": true,
+  "words": [],
   "flagWords": [],
   "ignoreWords": [],
-  "dictionaries": [],
+  "import": ["./node_modules/@qxy/cspell-dict/cspell-ext.json"],
   "ignorePaths": [
     "**/node_modules/**",
     "**/vscode-extension/**",
@@ -13,6 +14,7 @@
     "**/yarn.lock",
     "**/pnpm-lock.yaml",
     "**/package-lock.json",
+    "**/composer.json",
     "*.spec.js.snap",
     "*.min.*",
     "*.log*"

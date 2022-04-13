@@ -3,5 +3,5 @@
  */
 
 module.exports = {
-  title: 'docs',
+  title: `docs`,
 }

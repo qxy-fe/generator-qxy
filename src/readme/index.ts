@@ -1,4 +1,4 @@
-import type { GeneratorOptions } from 'yeoman-generator'
+import { type GeneratorOptions } from 'yeoman-generator'
 import BaseGenerator from '../base-generator.js'
 
 export default class ReadmeGenerator extends BaseGenerator {
@@ -10,45 +10,45 @@ export default class ReadmeGenerator extends BaseGenerator {
 
   protected package: boolean
 
-  constructor(args: string | string[], options: GeneratorOptions) {
+  constructor (args: string | string[], options: GeneratorOptions) {
     super(args, options)
 
-    this.option('username', {
+    this.option(`username`, {
       type: String,
       default: this.user.git.name(),
-      description: 'username',
+      description: `username`,
     })
 
-    this.option('projectName', {
+    this.option(`projectName`, {
       type: String,
-      default: '',
-      description: 'project name',
+      default: ``,
+      description: `project name`,
     })
 
-    this.option('projectDesc', {
+    this.option(`projectDesc`, {
       type: String,
-      default: '',
-      description: 'project description',
+      default: ``,
+      description: `project description`,
     })
 
-    this.option('package', {
+    this.option(`package`, {
       type: Boolean,
       default: false,
-      description: 'is this a package',
+      description: `is this a package`,
     })
   }
 
-  initializing(): void {
+  initializing () {
     this.username = this.options.username
     this.projectName = this.options.projectName
     this.projectDesc = this.options.projectDesc
     this.package = this.options.package
   }
 
-  writing(): void {
+  writing () {
     this.fs.copyTpl(
-      this.templatePath('README.md.ejs'),
-      this.destinationPath('README.md'),
+      this.templatePath(`README.md.ejs`),
+      this.destinationPath(`README.md`),
       {
         username: this.username,
         projectName: this.projectName,

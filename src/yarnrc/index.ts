@@ -1,12 +1,12 @@
 import fs from 'node:fs'
 import ejs from 'ejs'
-import type { GeneratorOptions } from 'yeoman-generator'
+import { type GeneratorOptions } from 'yeoman-generator'
 import BaseGenerator from '../base-generator.js'
 
 export default class YarnrcGenerator extends BaseGenerator {
   protected registry: string | false
 
-  constructor(args: string | string[], options: GeneratorOptions) {
+  constructor (args: string | string[], options: GeneratorOptions) {
     super(args, options)
 
     this.option(`registry`, {
@@ -16,7 +16,7 @@ export default class YarnrcGenerator extends BaseGenerator {
     })
   }
 
-  async initializing(): Promise<void> {
+  async initializing () {
     this.registry = this.options.registry
 
     const yarnrc = await ejs.renderFile(this.templatePath(`_yarnrc.ejs`), {

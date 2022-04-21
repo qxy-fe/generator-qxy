@@ -2,17 +2,14 @@ import Generator from 'yeoman-generator'
 import ora from 'ora'
 
 export default class BaseGenerator extends Generator {
-  protected addFields(fields: Record<string, unknown>): void {
+  protected addFields (fields: Record<string, unknown>) {
     this.fs.extendJSON(this.destinationPath(`package.json`), fields)
   }
 
-  protected addDeps({
-    deps = [],
-    devDeps = [],
-  }: {
+  protected addDeps ({ deps = [], devDeps = [] }: {
     deps?: string[]
     devDeps?: string[]
-  }): void {
+  }) {
     const dependencies: Record<string, string> = {}
     const devDependencies: Record<string, string> = {}
 
@@ -30,7 +27,7 @@ export default class BaseGenerator extends Generator {
     })
   }
 
-  protected getStdoutString(cmd: string, args: string[]): string {
+  protected getStdoutString (cmd: string, args: string[]) {
     const result = this.spawnCommandSync(cmd, args, {
       stdio: [process.stdout],
     })
@@ -38,7 +35,7 @@ export default class BaseGenerator extends Generator {
     return Buffer.from(result.stdout).toString()
   }
 
-  protected getPackageVersion(pkg: string): string {
+  protected getPackageVersion (pkg: string) {
     const spinner = ora(`Loading the latest version of package: ${pkg}`)
     spinner.start()
     const version = this.getStdoutString(`npm`, [`show`, pkg, `version`])
@@ -46,7 +43,7 @@ export default class BaseGenerator extends Generator {
     return version
   }
 
-  end(): void {
+  end () {
     this.log(`Bye... 👋`)
   }
 }

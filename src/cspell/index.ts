@@ -1,7 +1,7 @@
 import BaseGenerator from '../base-generator.js'
 
 export default class CSpellGenerator extends BaseGenerator {
-  writing(): void {
+  writing () {
     this.fs.copy(
       this.templatePath(`_cspell.json`),
       this.destinationPath(`cspell.json`),

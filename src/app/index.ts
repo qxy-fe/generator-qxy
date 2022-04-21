@@ -25,6 +25,7 @@ export default class QxyGenerator extends BaseGenerator {
     git: boolean
     vscode: boolean
     jsconfig: boolean
+    tsconfig: boolean
 
     // Dev Workflow
     vueCli: boolean
@@ -46,7 +47,7 @@ export default class QxyGenerator extends BaseGenerator {
   }
 
   // eslint-disable-next-line max-lines-per-function
-  async prompting(): Promise<void> {
+  async prompting () {
     const answers = await this.prompt([
       {
         type: `confirm`,
@@ -106,6 +107,7 @@ export default class QxyGenerator extends BaseGenerator {
           { name: `README.md`, value: `readme` },
           { name: `Git Meta files`, value: `git` },
           { name: `JavaScript config`, value: `jsconfig` },
+          { name: `TypeScript config`, value: `tsconfig` },
         ],
         default: [`vscode`, `editorconfig`, `readme`, `git`],
       },
@@ -161,6 +163,7 @@ export default class QxyGenerator extends BaseGenerator {
       git: answers.meta.includes(`git`),
       vscode: answers.meta.includes(`vscode`),
       jsconfig: answers.meta.includes(`jsconfig`),
+      tsconfig: answers.meta.includes(`tsconfig`),
 
       // Dev workflow
       vueCli: answers.vueCli,
@@ -180,7 +183,7 @@ export default class QxyGenerator extends BaseGenerator {
     }
   }
 
-  default(): void {
+  default () {
     // ==================================
     // meta files
     // ==================================
@@ -218,6 +221,10 @@ export default class QxyGenerator extends BaseGenerator {
 
     if (this.props.jsconfig) {
       this.composeWith(require.resolve(`../jsconfig`), {})
+    }
+
+    if (this.props.tsconfig) {
+      this.composeWith(require.resolve(`../tsconfig`), {})
     }
 
     // ==================================
@@ -290,7 +297,7 @@ export default class QxyGenerator extends BaseGenerator {
     }
   }
 
-  install(): void {
+  install () {
     this.spawnCommandSync(`node`, [
       require.resolve(`sort-package-json`),
       this.destinationPath(`package.json`),

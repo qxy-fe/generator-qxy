@@ -1,7 +1,7 @@
 import BaseGenerator from '../base-generator.js'
 
 export default class LsLintGenerator extends BaseGenerator {
-  writing(): void {
+  writing () {
     const devDeps = [`@ls-lint/ls-lint`]
 
     this.addFields({

@@ -1,4 +1,4 @@
-import type { GeneratorOptions } from 'yeoman-generator'
+import { type GeneratorOptions } from 'yeoman-generator'
 import BaseGenerator from '../base-generator.js'
 
 export default class LintStagedGenerator extends BaseGenerator {
@@ -14,7 +14,7 @@ export default class LintStagedGenerator extends BaseGenerator {
 
   protected sortPackageJson: boolean
 
-  constructor(args: string | string[], options: GeneratorOptions) {
+  constructor (args: string | string[], options: GeneratorOptions) {
     super(args, options)
 
     this.option(`vue`, {
@@ -54,7 +54,7 @@ export default class LintStagedGenerator extends BaseGenerator {
     })
   }
 
-  initializing(): void {
+  initializing () {
     this.vue = this.options.vue
     this.vueCli = this.options.vueCli
     this.eslint = this.options.eslint
@@ -63,7 +63,7 @@ export default class LintStagedGenerator extends BaseGenerator {
     this.sortPackageJson = this.options.sortPackageJson
   }
 
-  writing(): void {
+  writing () {
     // ==================
     // Generate config
     // ==================
@@ -91,7 +91,7 @@ export default class LintStagedGenerator extends BaseGenerator {
     if (this.prettier) {
       this.addFields({
         'lint-staged': {
-          '*.{json,md,yml}': 'prettier --write',
+          '*.{json,md,yml}': `prettier --write`,
         },
       })
     }
@@ -99,7 +99,7 @@ export default class LintStagedGenerator extends BaseGenerator {
     if (this.sortPackageJson) {
       this.addFields({
         'lint-staged': {
-          'package.json': 'sort-package-json',
+          'package.json': `sort-package-json`,
         },
       })
     }

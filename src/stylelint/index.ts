@@ -1,10 +1,10 @@
-import type { GeneratorOptions } from 'yeoman-generator'
+import { type GeneratorOptions } from 'yeoman-generator'
 import BaseGenerator from '../base-generator.js'
 
 export default class StylelintGenerator extends BaseGenerator {
   protected vue: boolean
 
-  constructor(args: string | string[], options: GeneratorOptions) {
+  constructor (args: string | string[], options: GeneratorOptions) {
     super(args, options)
 
     this.option(`vue`, {
@@ -14,11 +14,11 @@ export default class StylelintGenerator extends BaseGenerator {
     })
   }
 
-  initializing(): void {
+  initializing () {
     this.vue = this.options.vue
   }
 
-  writing(): void {
+  writing () {
     const devDeps = [
       `stylelint`,
       `@qxy/stylelint-config-scss`,

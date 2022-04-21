@@ -1,16 +1,16 @@
 import BaseGenerator from '../base-generator.js'
 
 export default class VuepressGenerator extends BaseGenerator {
-  writing(): void {
+  writing () {
     // TODO: custom docs content
     this.fs.copy(
-      this.templatePath('config.js'),
-      this.destinationPath('docs/.vuepress/config.js'),
+      this.templatePath(`config.js`),
+      this.destinationPath(`docs/.vuepress/config.js`),
     )
 
     this.fs.copy(
-      this.templatePath('README.md'),
-      this.destinationPath('docs/README.md'),
+      this.templatePath(`README.md`),
+      this.destinationPath(`docs/README.md`),
     )
 
     this.addFields({
@@ -23,6 +23,6 @@ export default class VuepressGenerator extends BaseGenerator {
     // ==================
     // Add devDependencies
     // ==================
-    this.addDeps({ devDeps: ['vuepress'] })
+    this.addDeps({ devDeps: [`vuepress`] })
   }
 }

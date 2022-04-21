@@ -1,4 +1,4 @@
-import type { GeneratorOptions } from 'yeoman-generator'
+import { type GeneratorOptions } from 'yeoman-generator'
 import BaseGenerator from '../base-generator.js'
 
 export default class HuskyGenerator extends BaseGenerator {
@@ -6,49 +6,49 @@ export default class HuskyGenerator extends BaseGenerator {
 
   protected lintStaged: boolean
 
-  constructor(args: string | string[], options: GeneratorOptions) {
+  constructor (args: string | string[], options: GeneratorOptions) {
     super(args, options)
 
-    this.option('commitlint', {
+    this.option(`commitlint`, {
       type: Boolean,
       default: false,
-      description: 'use commitlint or not',
+      description: `use commitlint or not`,
     })
 
-    this.option('lintStaged', {
+    this.option(`lintStaged`, {
       type: Boolean,
       default: false,
-      description: 'use lint-staged or not',
+      description: `use lint-staged or not`,
     })
   }
 
-  initializing(): void {
+  initializing () {
     this.commitlint = this.options.commitlint
     this.lintStaged = this.options.lintStaged
   }
 
-  writing(): void {
+  writing () {
     // ====================
     // Generate config
     // ====================
     if (this.commitlint) {
       this.fs.copy(
-        this.templatePath('commit-msg'),
-        this.destinationPath('.husky/commit-msg'),
+        this.templatePath(`commit-msg`),
+        this.destinationPath(`.husky/commit-msg`),
       )
     }
 
     if (this.lintStaged) {
       this.fs.copy(
-        this.templatePath('pre-commit'),
-        this.destinationPath('.husky/pre-commit'),
+        this.templatePath(`pre-commit`),
+        this.destinationPath(`.husky/pre-commit`),
       )
     }
 
     // ====================
     // Add devDependencies
     // ====================
-    this.addDeps({ devDeps: ['husky'] })
+    this.addDeps({ devDeps: [`husky`] })
 
     // ====================
     // Add Scripts

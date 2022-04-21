@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.6](https://github.com/qxy-fe/generator-qxy/compare/v0.3.5...v0.3.6) (2022-04-21)
+
+### Features
+
+-   tsconfig generator ([2547704](https://github.com/qxy-fe/generator-qxy/commit/25477049dff9cfa94643c167153792c5eda8b26d))
+
 ### [0.3.5](https://github.com/qxy-fe/generator-qxy/compare/v0.3.4...v0.3.5) (2022-04-13)
 
 ### Features

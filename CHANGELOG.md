@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.7](https://github.com/qxy-fe/generator-qxy/compare/v0.3.6...v0.3.7) (2022-04-24)
+
+### Bug Fixes
+
+-   cspell script ([e4fe92f](https://github.com/qxy-fe/generator-qxy/commit/e4fe92f91b8e6b2c81a991ab81b51ad92e71f163))
+
 ### [0.3.6](https://github.com/qxy-fe/generator-qxy/compare/v0.3.5...v0.3.6) (2022-04-21)
 
 ### Features

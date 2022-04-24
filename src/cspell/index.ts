@@ -9,7 +9,7 @@ export default class CSpellGenerator extends BaseGenerator {
 
     this.addFields({
       scripts: {
-        'lint:cspell': `cspell **`,
+        'lint:cspell': `cspell "**"`,
       },
     })
 

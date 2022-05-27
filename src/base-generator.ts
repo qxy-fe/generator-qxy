@@ -10,16 +10,10 @@ export default class BaseGenerator extends Generator {
     deps?: string[]
     devDeps?: string[]
   }) {
-    const dependencies: Record<string, string> = {}
-    const devDependencies: Record<string, string> = {}
-
-    deps.forEach(item => {
-      dependencies[item] = `^${this.getPackageVersion(item)}`
-    })
-
-    devDeps.forEach(item => {
-      devDependencies[item] = `^${this.getPackageVersion(item)}`
-    })
+    const dependencies: Record<string, string> = deps
+      .reduce((obj, dep) => ({ ...obj, [dep]: `^${this.getPackageVersion(dep)}` }), {})
+    const devDependencies: Record<string, string> = devDeps
+      .reduce((obj, dep) => ({ ...obj, [dep]: `^${this.getPackageVersion(dep)}` }), {})
 
     this.fs.extendJSON(this.destinationPath(`package.json`), {
       dependencies,

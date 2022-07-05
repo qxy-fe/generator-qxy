@@ -24,8 +24,7 @@ export default class CommitlintGenerator extends BaseGenerator {
 
   initializing () {
     this.lerna = this.options.lerna
-    this.sharedConfig =
-      this.options.sharedConfig || `@commitlint/config-conventional`
+    this.sharedConfig = this.options.sharedConfig || `@commitlint/config-conventional`
   }
 
   writing () {

@@ -1,5 +1,5 @@
-import hasYarn from 'has-yarn'
 import { createRequire } from 'node:module'
+import hasYarn from 'has-yarn'
 import BaseGenerator from '../base-generator.js'
 
 const registryUrls = {
@@ -145,7 +145,7 @@ export default class QxyGenerator extends BaseGenerator {
         name: `vueCli`,
         message: `Use vue-cli?`,
         default: false,
-        when: (ans): boolean => ans.template.includes(`vue`),
+        when: ans => ans.template.includes(`vue`),
       },
     ])
 
@@ -254,9 +254,6 @@ export default class QxyGenerator extends BaseGenerator {
     if (this.props.eslint) {
       this.composeWith(require.resolve(`../eslint`), {
         vue: this.props.vue,
-        vueCli: this.props.vueCli,
-        lerna: this.props.lerna,
-        typescript: this.props.typescript,
       })
     }
 

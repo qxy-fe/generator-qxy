@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.8](https://github.com/qxy-fe/generator-qxy/compare/v0.3.7...v0.3.8) (2022-07-05)
+
+
+### Features
+
+* sync linter config ([3bf4905](https://github.com/qxy-fe/generator-qxy/commit/3bf4905d6cbd5e93eac4c1cc36cd5f206fff6d11))
+
 ### [0.3.7](https://github.com/qxy-fe/generator-qxy/compare/v0.3.6...v0.3.7) (2022-04-24)
 
 ### Bug Fixes

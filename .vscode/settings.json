@@ -18,5 +18,16 @@
   ],
   "editor.codeActionsOnSave": {
     "source.eslint.fixAll": true
-  }
+  },
+  "cSpell.allowCompoundWords": true,
+  "cSpell.words": [
+    "cnpm",
+    "ntnyq",
+    "pnpm",
+    "taobao",
+    "tsbuildinfo",
+    "vitepress",
+    "vuepress",
+    "yarnrc"
+  ]
 }

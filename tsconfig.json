@@ -1,23 +1,17 @@
 {
   "compilerOptions": {
-    "allowJs": false,
-    "declaration": true,
-    "esModuleInterop": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "incremental": false,
-    "skipLibCheck": true,
-    "module": "ES2020",
-    "newLine": "LF",
-    "removeComments": true,
-    "sourceMap": false,
-    "strictNullChecks": true,
-    "target": "ES2020",
     "baseUrl": ".",
     "rootDir": "src",
     "outDir": "generators",
-    "moduleResolution": "node"
+    "module": "ESNext",
+    "target": "ES2020",
+    "moduleResolution": "NodeNext",
+    "declaration": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "strictNullChecks": true
   },
   "include": [
     "src/**/*.ts"

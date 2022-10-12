@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.9](https://github.com/qxy-fe/generator-qxy/compare/v0.3.8...v0.3.9) (2022-10-12)
+
+
+### Features
+
+* export generators ([619407f](https://github.com/qxy-fe/generator-qxy/commit/619407f53c778e4ced8d308e3513f6d783b586d7))
+
+
+### Bug Fixes
+
+* types ([0244aaf](https://github.com/qxy-fe/generator-qxy/commit/0244aaf84467e0881adb78577a02599b22c173d1))
+
 ### [0.3.8](https://github.com/qxy-fe/generator-qxy/compare/v0.3.7...v0.3.8) (2022-07-05)
 
 

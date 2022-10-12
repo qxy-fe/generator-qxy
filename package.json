@@ -12,8 +12,14 @@
     "name": "ntnyq",
     "email": "ntnyq13@gmail.com"
   },
-  "types": "generators/app/index.d.ts",
-  "exports": "./generators/app/index.js",
+  "main": "./generators/app/index.js",
+  "module": "./generators/app/index.js",
+  "types": "./generators/app/index.d.ts",
+  "exports": {
+    ".": "./generators/app/index.js",
+    "./generators/*": "./generators/*",
+    "./package.json": "./package.json"
+  },
   "files": [
     "generators"
   ],

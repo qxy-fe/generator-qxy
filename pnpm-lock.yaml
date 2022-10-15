@@ -9,6 +9,7 @@ specifiers:
   copyfiles: ^2.4.1
   ejs: ^3.1.8
   eslint: ^8.25.0
+  has-vite: ^0.0.1
   has-yarn: ^3.0.0
   husky: ^8.0.1
   lint-staged: ^13.0.3
@@ -20,6 +21,7 @@ specifiers:
 
 dependencies:
   ejs: 3.1.8
+  has-vite: 0.0.1
   has-yarn: 3.0.0
   ora: 6.1.2
   yeoman-generator: 5.7.0
@@ -1929,6 +1931,10 @@ packages:
     dependencies:
       has-symbols: 1.0.3
     dev: true
+
+  /has-vite/0.0.1:
+    resolution: {integrity: sha512-XWqnNOw/tIC+e/q0KzQ7anxTmx9m64H5BOuc1CHT+ZkbsRuQHNjUOlyGsPYaAbODUbhzqJoVSgtQOhmNZrWDzw==}
+    dev: false
 
   /has-yarn/3.0.0:
     resolution: {integrity: sha512-IrsVwUHhEULx3R8f/aA8AHuEzAorplsab/v8HBzEiIukwq5i/EC+xmOW+HfP1OaDP+2JkgT1yILHN2O3UFIbcA==}

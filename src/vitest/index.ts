@@ -1,3 +1,4 @@
+import { hasVite } from 'has-vite'
 import BaseGenerator from '../base-generator.js'
 
 export default class VitestGenerator extends BaseGenerator {
@@ -9,12 +10,16 @@ export default class VitestGenerator extends BaseGenerator {
 
     this.fs.copy(
       this.templatePath(`vite.config.ts.ejs`),
-      this.destinationPath(`vite.config.ts`),
+      hasVite(this.destinationPath())
+        ? this.destinationPath(`vitest.config.ts`)
+        : this.destinationPath(`vite.config.ts`),
     )
 
     this.addFields({
-      test: `vitest`,
-      coverage: `vitest --coverage`,
+      scripts: {
+        test: `vitest`,
+        coverage: `vitest --coverage`,
+      },
     })
 
     this.addDeps({ devDeps })

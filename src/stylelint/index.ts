@@ -14,7 +14,9 @@ export default class StylelintGenerator extends BaseGenerator {
     )
 
     this.addFields({
-      scripts: { 'lint:style': `stylelint "src/**/*.{vue,scss}"` },
+      scripts: {
+        'lint:style': `stylelint "src/**/*.{vue,scss}"`,
+      },
     })
 
     this.addDeps({ devDeps })

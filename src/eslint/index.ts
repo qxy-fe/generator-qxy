@@ -20,6 +20,10 @@ export default class EslintGenerator extends BaseGenerator {
       scripts: {
         lint: `eslint .`,
       },
+      eslintConfig: {
+        root: true,
+        extends: `@qxy`,
+      },
     })
 
     // ===================

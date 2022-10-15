@@ -4,6 +4,7 @@
     "*.md.ejs": "markdown",
     "*.json.ejs": "json",
     "*.js.ejs": "plaintext",
+    "*.ts.ejs": "plaintext",
     ".gitignore.ejs": "ignore"
   },
   "editor.tabSize": 2,
@@ -24,12 +25,14 @@
     "bumpp",
     "changelogithub",
     "cnpm",
+    "lcov",
     "ntnyq",
     "pnpm",
     "taobao",
     "tsbuildinfo",
     "tsup",
     "vitepress",
+    "vitest",
     "vuepress",
     "yarnrc"
   ]

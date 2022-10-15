@@ -1,6 +1,8 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+### [0.3.11](https://github.com/qxy-fe/generator-qxy/compare/v0.3.10...v0.3.11)(2022-10-15)
+
+Please check [Releases](https://github.com/qxy-fe/generator-qxy/releases) for CHANGELOG.
 
 ### [0.3.10](https://github.com/qxy-fe/generator-qxy/compare/v0.3.9...v0.3.10) (2022-10-12)
 

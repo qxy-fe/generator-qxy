@@ -21,11 +21,14 @@
   },
   "cSpell.allowCompoundWords": true,
   "cSpell.words": [
+    "bumpp",
+    "changelogithub",
     "cnpm",
     "ntnyq",
     "pnpm",
     "taobao",
     "tsbuildinfo",
+    "tsup",
     "vitepress",
     "vuepress",
     "yarnrc"

@@ -56,17 +56,6 @@
     "*.{js,ts,json,jsonc,md,yaml,yml}": "eslint --fix"
   },
   "prettier": "@qxy/prettier-config",
-  "eslintConfig": {
-    "extends": [
-      "@qxy/typescript"
-    ],
-    "root": true
-  },
-  "eslintIgnore": [
-    "generators",
-    "types",
-    "src/**/templates/**/*"
-  ],
   "engines": {
     "node": ">=14.18"
   }

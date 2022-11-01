@@ -1,0 +1,11 @@
+{
+  "root": true,
+  "extends": [
+    "@qxy/typescript"
+  ],
+  "ignorePatterns": [
+    "generators",
+    "types",
+    "src/**/templates/**/*"
+  ]
+}

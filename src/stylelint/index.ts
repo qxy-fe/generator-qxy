@@ -9,8 +9,8 @@ export default class StylelintGenerator extends BaseGenerator {
     ]
 
     this.fs.copyTpl(
-      this.templatePath(`_stylelint.config.js`),
-      this.destinationPath(`stylelint.config.js`),
+      this.templatePath(`stylelint.config.cjs`),
+      this.destinationPath(`stylelint.config.cjs`),
     )
 
     this.addFields({

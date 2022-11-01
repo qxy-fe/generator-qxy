@@ -30,7 +30,7 @@ export default class PrettierGenerator extends BaseGenerator {
       devDeps.push(this.sharedConfig)
     }
 
-    // prettierIgnore in package.json not supported
+    // prettierIgnore in package.json is not supported
     // https://github.com/prettier/prettier/issues/3460
     this.fs.copy(
       this.templatePath(`_prettierignore`),

@@ -12,17 +12,13 @@ export default class EslintGenerator extends BaseGenerator {
     ]
 
     this.fs.copy(
-      this.templatePath(`_eslintrc.js`),
-      this.destinationPath(`.eslintrc.js`),
+      this.templatePath(`_eslintrc.json`),
+      this.destinationPath(`.eslintrc.json`),
     )
 
     this.addFields({
       scripts: {
         lint: `eslint .`,
-      },
-      eslintConfig: {
-        root: true,
-        extends: `@qxy`,
       },
     })
 

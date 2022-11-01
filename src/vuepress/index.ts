@@ -2,10 +2,9 @@ import BaseGenerator from '../base-generator.js'
 
 export default class VuepressGenerator extends BaseGenerator {
   writing () {
-    // TODO: custom docs content
     this.fs.copy(
-      this.templatePath(`config.js`),
-      this.destinationPath(`docs/.vuepress/config.js`),
+      this.templatePath(`config.ts`),
+      this.destinationPath(`docs/.vuepress/config.ts`),
     )
 
     this.fs.copy(

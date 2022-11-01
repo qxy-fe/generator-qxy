@@ -12,7 +12,6 @@ export default class LsLintGenerator extends BaseGenerator {
     this.fs.copyTpl(
       this.templatePath(`_ls-lint.yml.ejs`),
       this.destinationPath(`.ls-lint.yml`),
-      {},
     )
 
     // ===================

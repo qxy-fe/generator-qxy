@@ -2,18 +2,11 @@ import { createRequire } from 'node:module'
 import hasYarn from 'has-yarn'
 import BaseGenerator from '../base-generator.js'
 
-const registryUrls = {
-  npm: `https://registry.npmjs.org`,
-  yarn: `https://registry.yarnpkg.com`,
-  taobao: `https://registry.npmmirror.com`,
-  default: ``,
-}
 const require = createRequire(import.meta.url)
 
 export default class QxyGenerator extends BaseGenerator {
   protected props: {
     packageManager: `npm` | `yarn` | `pnpm`
-    registry: `default` | `yarn` | `npm` | `taobao`
 
     // Languages
     vue: boolean
@@ -58,18 +51,6 @@ export default class QxyGenerator extends BaseGenerator {
           { name: `pnpm`, value: `pnpm` },
         ],
         default: hasYarn(this.destinationRoot()) ? `yarn` : `npm`,
-      },
-      {
-        type: `list`,
-        name: `registry`,
-        message: `Select a registry to use`,
-        choices: [
-          { name: `default`, value: `default` },
-          { name: `npm`, value: `npm` },
-          { name: `yarn`, value: `yarn` },
-          { name: `taobao`, value: `taobao` },
-        ],
-        default: `default`,
       },
       {
         type: `checkbox`,
@@ -139,7 +120,6 @@ export default class QxyGenerator extends BaseGenerator {
 
     this.props = {
       packageManager: answers.packageManager,
-      registry: answers.registry,
 
       // Languages
       vue: [`vue`, `typescript-vue`].includes(answers.template),
@@ -175,9 +155,7 @@ export default class QxyGenerator extends BaseGenerator {
     // meta files
     // ==================================
     if (this.props.packageManager === `yarn`) {
-      this.composeWith(require.resolve(`../yarnrc/index.js`), {
-        registry: registryUrls[this.props.registry],
-      })
+      this.composeWith(require.resolve(`../yarnrc/index.js`))
     }
 
     if (this.props.editorconfig) {
@@ -207,11 +185,11 @@ export default class QxyGenerator extends BaseGenerator {
     }
 
     if (this.props.jsconfig) {
-      this.composeWith(require.resolve(`../jsconfig/index.js`), {})
+      this.composeWith(require.resolve(`../jsconfig/index.js`))
     }
 
     if (this.props.tsconfig) {
-      this.composeWith(require.resolve(`../tsconfig/index.js`), {})
+      this.composeWith(require.resolve(`../tsconfig/index.js`))
     }
 
     // ==================================

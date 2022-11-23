@@ -34,6 +34,7 @@ export default class QxyGenerator extends BaseGenerator {
     prettier: boolean
     vuepress: boolean
     lintStaged: boolean
+    nanoStaged: boolean
     sortPackageJson: boolean
     vitest: boolean
   }
@@ -88,6 +89,7 @@ export default class QxyGenerator extends BaseGenerator {
           { name: `Stylelint`, value: `stylelint` },
           { name: `Prettier`, value: `prettier` },
           { name: `Lint staged`, value: `lint-staged` },
+          { name: `Nano staged`, value: `nano-staged` },
           { name: `CommitLint`, value: `commitlint` },
           { name: `VuePress docs`, value: `vuepress` },
           { name: `Code Spell Check`, value: `cspell` },
@@ -145,6 +147,7 @@ export default class QxyGenerator extends BaseGenerator {
       prettier: answers.workflow.includes(`prettier`),
       vuepress: answers.workflow.includes(`vuepress`),
       lintStaged: answers.workflow.includes(`lint-staged`),
+      nanoStaged: answers.workflow.includes(`nano-staged`),
       commitlint: answers.workflow.includes(`commitlint`),
       sortPackageJson: answers.workflow.includes(`sort-package-json`),
     }
@@ -205,6 +208,7 @@ export default class QxyGenerator extends BaseGenerator {
       this.composeWith(require.resolve(`../husky/index.js`), {
         commitlint: this.props.commitlint,
         lintStaged: this.props.lintStaged,
+        nanoStaged: this.props.nanoStaged,
       })
     }
 
@@ -234,6 +238,10 @@ export default class QxyGenerator extends BaseGenerator {
 
     if (this.props.lintStaged) {
       this.composeWith(require.resolve(`../lint-staged/index.js`))
+    }
+
+    if (this.props.nanoStaged) {
+      this.composeWith(require.resolve(`../nano-staged/index.js`))
     }
 
     if (this.props.vuepress) {

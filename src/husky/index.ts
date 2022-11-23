@@ -6,6 +6,8 @@ export default class HuskyGenerator extends BaseGenerator {
 
   protected lintStaged: boolean
 
+  protected nanoStaged: boolean
+
   constructor (args: string | string[], options: GeneratorOptions) {
     super(args, options)
 
@@ -20,11 +22,18 @@ export default class HuskyGenerator extends BaseGenerator {
       default: false,
       description: `use lint-staged or not`,
     })
+
+    this.option(`nanoStaged`, {
+      type: Boolean,
+      default: false,
+      description: `use nano-staged or not`,
+    })
   }
 
   initializing () {
     this.commitlint = this.options.commitlint
     this.lintStaged = this.options.lintStaged
+    this.nanoStaged = this.options.nanoStaged
   }
 
   writing () {
@@ -40,7 +49,14 @@ export default class HuskyGenerator extends BaseGenerator {
 
     if (this.lintStaged) {
       this.fs.copy(
-        this.templatePath(`pre-commit`),
+        this.templatePath(`pre-commit-lint`),
+        this.destinationPath(`.husky/pre-commit`),
+      )
+    }
+
+    if (this.nanoStaged) {
+      this.fs.copy(
+        this.templatePath(`pre-commit-nano`),
         this.destinationPath(`.husky/pre-commit`),
       )
     }

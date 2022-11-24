@@ -6,6 +6,6 @@
   "ignorePatterns": [
     "generators",
     "types",
-    "src/**/templates/**/*"
+    "src/**/templates/**/*.ejs"
   ]
 }

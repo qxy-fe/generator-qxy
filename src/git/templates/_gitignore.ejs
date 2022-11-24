@@ -1,17 +1,15 @@
 .DS_Store
 node_modules
-
-# local env files
-.env.local
-.env.*.local
-
-# Log files
 *.log*
+*.local
 
-# Linter report
-.report
+# Typescript build info
+*.tsbuildinfo
 
-# Editor directories and files
+# Coverage directory
+/coverage
+
+# Editor
 .idea
 *.suo
 *.ntvs*
@@ -19,18 +17,4 @@ node_modules
 *.sln
 *.sw?
 
-# We use Yarn
-package-lock.json
-
-# Production
 /dist
-<%_ if (typescript) { _%>
-
-# Typescript build info
-*.tsbuildinfo
-<%_ } _%>
-<%_ if (coverage) { _%>
-
-# Coverage directory
-/coverage
-<%_ } _%>

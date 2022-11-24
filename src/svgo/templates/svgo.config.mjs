@@ -5,7 +5,7 @@
 /**
  * @type {import('svgo').Config}
  */
- export default {
+export default {
   plugins: [
     `cleanupAttrs`,
     `cleanupEnableBackground`,

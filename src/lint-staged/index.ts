@@ -7,7 +7,7 @@ export default class LintStagedGenerator extends BaseGenerator {
     // ==================
     this.addFields({
       'lint-staged': {
-        '*.{js,ts,vue,json,yaml,md}': `eslint --fix`,
+        '*.{js,ts,vue,json,yml,yaml,md}': `eslint --fix`,
       },
     })
 

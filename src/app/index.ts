@@ -37,6 +37,7 @@ export default class QxyGenerator extends BaseGenerator {
     nanoStaged: boolean
     sortPackageJson: boolean
     vitest: boolean
+    renovate: boolean
   }
 
   // eslint-disable-next-line max-lines-per-function
@@ -97,12 +98,14 @@ export default class QxyGenerator extends BaseGenerator {
           { name: `Sort package.json`, value: `sort-package-json` },
           { name: `SVGO`, value: `svgo` },
           { name: `Vitest`, value: `vitest` },
+          { name: `Renovate`, value: `renovate` },
         ],
         default: [
           `husky`,
           `cspell`,
           `vitest`,
           `eslint`,
+          `renovate`,
           `stylelint`,
           `prettier`,
           `ls-lint`,
@@ -142,6 +145,7 @@ export default class QxyGenerator extends BaseGenerator {
       cSpell: answers.workflow.includes(`cspell`),
       eslint: answers.workflow.includes(`eslint`),
       vitest: answers.workflow.includes(`vitest`),
+      renovate: answers.workflow.includes(`renovate`),
       stylelint: answers.workflow.includes(`stylelint`),
       lsLint: answers.workflow.includes(`ls-lint`),
       prettier: answers.workflow.includes(`prettier`),
@@ -234,6 +238,10 @@ export default class QxyGenerator extends BaseGenerator {
 
     if (this.props.vitest) {
       this.composeWith(require.resolve(`../vitest/index.js`))
+    }
+
+    if (this.props.renovate) {
+      this.composeWith(require.resolve(`../renovate/index.js`))
     }
 
     if (this.props.lintStaged) {

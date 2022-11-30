@@ -14,8 +14,9 @@
     "typescript",
     "json",
     "jsonc",
-    "markdown",
-    "yaml"
+    "json5",
+    "yaml",
+    "markdown"
   ],
   "editor.codeActionsOnSave": {
     "source.eslint.fixAll": true
@@ -29,7 +30,7 @@
     "lcov",
     "ntnyq",
     "pnpm",
-    "SVGO",
+    "svgo",
     "taobao",
     "tsbuildinfo",
     "tsup",

@@ -1,32 +1,6 @@
-import { type GeneratorOptions } from 'yeoman-generator'
 import BaseGenerator from '../base-generator.js'
 
 export default class GitGenerator extends BaseGenerator {
-  protected typescript: boolean
-
-  protected coverage: boolean
-
-  constructor (args: string | string[], options: GeneratorOptions) {
-    super(args, options)
-
-    this.option(`typescript`, {
-      type: Boolean,
-      default: false,
-      description: `use typescript or not`,
-    })
-
-    this.option(`coverage`, {
-      type: Boolean,
-      default: false,
-      description: `has coverage or not`,
-    })
-  }
-
-  initializing () {
-    this.typescript = this.options.typescript
-    this.coverage = this.options.coverage
-  }
-
   writing () {
     this.fs.copy(
       this.templatePath(`_gitattributes`),
@@ -36,10 +10,6 @@ export default class GitGenerator extends BaseGenerator {
     this.fs.copyTpl(
       this.templatePath(`_gitignore.ejs`),
       this.destinationPath(`.gitignore`),
-      {
-        typescript: this.typescript,
-        coverage: this.coverage,
-      },
     )
   }
 }

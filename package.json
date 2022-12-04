@@ -12,6 +12,7 @@
     "name": "ntnyq",
     "email": "ntnyq13@gmail.com"
   },
+  "repository": "qxy-fe/generator-qxy",
   "main": "./generators/app/index.cjs",
   "module": "./generators/app/index.js",
   "types": "./generators/app/index.d.ts",

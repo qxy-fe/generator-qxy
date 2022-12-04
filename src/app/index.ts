@@ -31,13 +31,14 @@ export default class QxyGenerator extends BaseGenerator {
     stylelint: boolean
     commitlint: boolean
 
+    bumpp: boolean
+    vitest: boolean
+    renovate: boolean
     prettier: boolean
     vuepress: boolean
     lintStaged: boolean
     nanoStaged: boolean
     sortPackageJson: boolean
-    vitest: boolean
-    renovate: boolean
   }
 
   // eslint-disable-next-line max-lines-per-function
@@ -99,8 +100,10 @@ export default class QxyGenerator extends BaseGenerator {
           { name: `SVGO`, value: `svgo` },
           { name: `Vitest`, value: `vitest` },
           { name: `Renovate`, value: `renovate` },
+          { name: `Bumpp`, value: `bumpp` },
         ],
         default: [
+          `bumpp`,
           `husky`,
           `cspell`,
           `vitest`,
@@ -141,6 +144,7 @@ export default class QxyGenerator extends BaseGenerator {
       // Dev workflow
       vueCli: answers.vueCli,
       svgo: answers.workflow.includes(`svgo`),
+      bumpp: answers.workflow.includes(`bumpp`),
       husky: answers.workflow.includes(`husky`),
       cSpell: answers.workflow.includes(`cspell`),
       eslint: answers.workflow.includes(`eslint`),
@@ -170,9 +174,7 @@ export default class QxyGenerator extends BaseGenerator {
     }
 
     if (this.props.git) {
-      this.composeWith(require.resolve(`../git/index.js`), {
-        typescript: this.props.typescript,
-      })
+      this.composeWith(require.resolve(`../git/index.js`))
     }
 
     if (this.props.readme) {
@@ -218,6 +220,10 @@ export default class QxyGenerator extends BaseGenerator {
 
     if (this.props.svgo) {
       this.composeWith(require.resolve(`../svgo/index.js`))
+    }
+
+    if (this.props.bumpp) {
+      this.composeWith(require.resolve(`../bumpp/index.js`))
     }
 
     if (this.props.cSpell) {

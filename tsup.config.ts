@@ -8,8 +8,9 @@ export default defineConfig({
     `src/**/templates/*`,
   ],
   outDir: `generators`,
+  shims: true,
   clean: true,
-  format: [`esm`],
+  format: [`esm`, `cjs`],
   dts: true,
   onSuccess: `npm run copy`,
 })

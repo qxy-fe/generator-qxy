@@ -33,6 +33,7 @@ Support generators:
 - vscode
 - vuepress
 - yarnrc
+- changeset
 
 ## Usage
 

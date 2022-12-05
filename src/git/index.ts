@@ -7,7 +7,7 @@ export default class GitGenerator extends BaseGenerator {
       this.destinationPath(`.gitattributes`),
     )
 
-    this.fs.copyTpl(
+    this.fs.copy(
       this.templatePath(`_gitignore.ejs`),
       this.destinationPath(`.gitignore`),
     )

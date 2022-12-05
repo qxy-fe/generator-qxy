@@ -2,7 +2,7 @@ import BaseGenerator from '../base-generator.js'
 
 export default class BumppGenerator extends BaseGenerator {
   writing () {
-    this.fs.copyTpl(
+    this.fs.copy(
       this.templatePath(`release.yml`),
       this.destinationPath(`.github/workflows/release.yml`),
     )

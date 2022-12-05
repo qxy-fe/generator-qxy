@@ -1,40 +1,10 @@
-import { type GeneratorOptions } from 'yeoman-generator'
 import BaseGenerator from '../base-generator.js'
 
 export default class VscodeGenerator extends BaseGenerator {
-  protected typescript: boolean
-
-  protected vue: boolean
-
-  constructor (args: string | string[], options: GeneratorOptions) {
-    super(args, options)
-
-    this.option(`vue`, {
-      type: Boolean,
-      default: false,
-      description: `use typescript or not?`,
-    })
-
-    this.option(`vue`, {
-      type: Boolean,
-      default: false,
-      description: `use vue or not?`,
-    })
-  }
-
-  initializing () {
-    this.typescript = this.options.typescript
-    this.vue = this.options.vue
-  }
-
   writing () {
-    this.fs.copyTpl(
-      this.templatePath(`settings.json.ejs`),
+    this.fs.copy(
+      this.templatePath(`settings.json`),
       this.destinationPath(`.vscode/settings.json`),
-      {
-        typescript: this.typescript,
-        vue: this.vue,
-      },
     )
   }
 }

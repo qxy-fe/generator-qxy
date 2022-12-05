@@ -8,7 +8,7 @@ export default class StylelintGenerator extends BaseGenerator {
       `@qxy/stylelint-config`,
     ]
 
-    this.fs.copyTpl(
+    this.fs.copy(
       this.templatePath(`stylelint.config.cjs`),
       this.destinationPath(`stylelint.config.cjs`),
     )

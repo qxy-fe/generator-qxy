@@ -6,11 +6,16 @@
   "editor.formatOnSave": true,
   "eslint.validate": [
     "javascript",
-    "javascriptreact",
     "typescript",
+    "javascriptreact",
     "typescriptreact",
     "vue",
-    "vue-html"
+    "yaml",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "json5"
   ],
   "editor.codeActionsOnSave": {
     "source.eslint.fixAll": true

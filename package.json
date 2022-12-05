@@ -13,12 +13,11 @@
     "email": "ntnyq13@gmail.com"
   },
   "repository": "qxy-fe/generator-qxy",
-  "main": "./generators/app/index.cjs",
+  "main": "./generators/app/index.js",
   "module": "./generators/app/index.js",
   "types": "./generators/app/index.d.ts",
   "exports": {
     ".": {
-      "require": "./generators/app/index.cjs",
       "import": "./generators/app/index.js",
       "types": "./generators/app/index.d.ts"
     },

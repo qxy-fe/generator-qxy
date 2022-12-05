@@ -10,7 +10,7 @@ export default defineConfig({
   outDir: `generators`,
   shims: true,
   clean: true,
-  format: [`esm`, `cjs`],
+  format: [`esm`],
   dts: true,
   onSuccess: `npm run copy`,
 })

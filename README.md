@@ -9,7 +9,7 @@
 
 ## Feature
 
-Support generators:
+Supported generators:
 
 - bumpp
 - commitlint

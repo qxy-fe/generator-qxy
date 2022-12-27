@@ -5,7 +5,9 @@
   "words": [],
   "flagWords": [],
   "ignoreWords": [],
-  "import": ["./node_modules/@qxy/cspell-dict/cspell-ext.json"],
+  "import": [
+    "./node_modules/@qxy/cspell-dict/cspell-ext.json"
+  ],
   "ignorePaths": [
     "**/node_modules/**",
     "**/vscode-extension/**",

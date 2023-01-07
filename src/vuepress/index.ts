@@ -3,7 +3,7 @@ import BaseGenerator from '../base-generator.js'
 export default class VuepressGenerator extends BaseGenerator {
   writing () {
     this.fs.copy(
-      this.templatePath(`config.ts`),
+      this.templatePath(`config.ts.ejs`),
       this.destinationPath(`docs/.vuepress/config.ts`),
     )
 
@@ -22,6 +22,8 @@ export default class VuepressGenerator extends BaseGenerator {
     // ==================
     // Add devDependencies
     // ==================
-    this.addDeps({ devDeps: [`vuepress`] })
+    this.addDeps({
+      devDeps: [`vue`, `vuepress@next`, `@vuepress/client@next`],
+    })
   }
 }

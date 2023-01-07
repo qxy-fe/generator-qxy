@@ -1,0 +1,21 @@
+/**
+ * @file VuePress 配置
+ */
+
+import {
+  defaultTheme,
+  defineUserConfig,
+} from 'vuepress'
+
+export default defineUserConfig({
+  title: `VuePress`,
+
+  theme: defaultTheme({
+    repo: `ntnyq/vuepress`,
+    docsRepo: `ntnyq/vuepress`,
+    docsDir: `docs`,
+    docsBranch: `main`,
+  }),
+
+  plugins: [],
+})

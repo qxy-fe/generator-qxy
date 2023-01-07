@@ -61,6 +61,6 @@
     "*.{js,ts,json,jsonc,md,yaml,yml}": "eslint --fix"
   },
   "engines": {
-    "node": ">=14.18"
+    "node": ">=14.19.0"
   }
 }

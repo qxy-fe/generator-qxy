@@ -55,17 +55,20 @@ Use the generator:
 
 ```sh
 $ yo qxy
+
+# Run specifield generator
+$ yo qxy:eslint
 ```
 
 ## Update
 
-Reinstall generator globally:
+1. Reinstall generator globally:
 
 ```
 $ npm i -g generator-qxy
 ```
 
-or run `yo` to update generator interatively:
+2. Run `yo` to update generator interatively:
 
 ```sh
 $ yo
@@ -73,4 +76,4 @@ $ yo
 
 ## License
 
-[MIT](./LICENSE)
+[MIT](./LICENSE) License © 2020-PRESENT [ntnyq](https://github.com/ntnyq)

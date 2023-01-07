@@ -1,5 +1,5 @@
-import Generator from 'yeoman-generator'
 import ora from 'ora'
+import Generator from 'yeoman-generator'
 
 export default class BaseGenerator extends Generator {
   protected addFields (fields: Record<string, unknown>) {
@@ -11,9 +11,15 @@ export default class BaseGenerator extends Generator {
     devDeps?: string[]
   }) {
     const dependencies: Record<string, string> = deps
-      .reduce((obj, dep) => ({ ...obj, [dep]: `^${this.getPackageVersion(dep)}` }), {})
+      .reduce((obj, dep) => ({
+        ...obj,
+        [dep]: `^${this.getPackageVersion(dep)}`,
+      }), {})
     const devDependencies: Record<string, string> = devDeps
-      .reduce((obj, dep) => ({ ...obj, [dep]: `^${this.getPackageVersion(dep)}` }), {})
+      .reduce((obj, dep) => ({
+        ...obj,
+        [dep]: `^${this.getPackageVersion(dep)}`,
+      }), {})
 
     this.fs.extendJSON(this.destinationPath(`package.json`), {
       dependencies,

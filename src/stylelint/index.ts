@@ -5,6 +5,7 @@ export default class StylelintGenerator extends BaseGenerator {
     const devDeps = [
       `stylelint`,
       `prettier`,
+      `postcss`,
       `@qxy/stylelint-config`,
     ]
 

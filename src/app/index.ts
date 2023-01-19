@@ -28,6 +28,7 @@ export default class QxyGenerator extends BaseGenerator {
     cSpell: boolean
     eslint: boolean
     lsLint: boolean
+    publint: boolean
     stylelint: boolean
     commitlint: boolean
 
@@ -88,6 +89,7 @@ export default class QxyGenerator extends BaseGenerator {
         choices: [
           { name: `Husky`, value: `husky` },
           { name: `ESLint`, value: `eslint` },
+          { name: `Publint`, value: `publint` },
           { name: `Stylelint`, value: `stylelint` },
           { name: `Prettier`, value: `prettier` },
           { name: `Lint staged`, value: `lint-staged` },
@@ -108,6 +110,7 @@ export default class QxyGenerator extends BaseGenerator {
           `cspell`,
           `vitest`,
           `eslint`,
+          `publint`,
           `renovate`,
           `stylelint`,
           `prettier`,
@@ -152,6 +155,7 @@ export default class QxyGenerator extends BaseGenerator {
       renovate: answers.workflow.includes(`renovate`),
       stylelint: answers.workflow.includes(`stylelint`),
       lsLint: answers.workflow.includes(`ls-lint`),
+      publint: answers.workflow.includes(`publint`),
       prettier: answers.workflow.includes(`prettier`),
       vuepress: answers.workflow.includes(`vuepress`),
       lintStaged: answers.workflow.includes(`lint-staged`),
@@ -232,6 +236,10 @@ export default class QxyGenerator extends BaseGenerator {
 
     if (this.props.eslint) {
       this.composeWith(require.resolve(`../eslint/index.js`))
+    }
+
+    if (this.props.publint) {
+      this.composeWith(require.resolve(`../publint/index.js`))
     }
 
     if (this.props.stylelint) {

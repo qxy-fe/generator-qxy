@@ -18,10 +18,10 @@
   "types": "./generators/app/index.d.ts",
   "exports": {
     ".": {
-      "import": "./generators/app/index.js",
-      "types": "./generators/app/index.d.ts"
+      "types": "./generators/app/index.d.ts",
+      "import": "./generators/app/index.js"
     },
-    "./*": "./*"
+    "./generators/*": "./generators/*"
   },
   "files": [
     "generators"

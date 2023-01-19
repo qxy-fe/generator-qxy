@@ -12,28 +12,41 @@
 Supported generators:
 
 - bumpp
-- commitlint
 - cspell
 - editorconfig
-- eslint
-- git
-- husky
 - jsconfig
-- lint-staged
-- ls-lint
-- nano-staged
 - prettier
-- readme
-- renovate
 - sort-package-json
-- stylelint
 - svgo
 - tsconfig
 - vitest
 - vscode
 - vuepress
 - yarnrc
+
+### Git Flow
+
+- git
+- husky
+- commitlint
+- lint-staged
+- nano-staged
+
+### Linters
+
+- stylelint
+- eslint
+- publint
+- ls-lint
+
+### Auto runner
+
+- renovate
 - changeset
+
+### Misc
+
+- readme
 
 ## Usage
 

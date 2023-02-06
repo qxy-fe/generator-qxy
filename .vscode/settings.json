@@ -5,6 +5,7 @@
     "*.json.ejs": "json",
     "*.js.ejs": "plaintext",
     "*.ts.ejs": "plaintext",
+    "LICENSE.ejs": "plaintext",
     ".gitignore.ejs": "ignore"
   },
   "editor.tabSize": 2,

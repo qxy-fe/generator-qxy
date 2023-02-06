@@ -34,6 +34,7 @@ export default class QxyGenerator extends BaseGenerator {
 
     bumpp: boolean
     vitest: boolean
+    license: boolean
     renovate: boolean
     prettier: boolean
     vuepress: boolean
@@ -103,12 +104,14 @@ export default class QxyGenerator extends BaseGenerator {
           { name: `Vitest`, value: `vitest` },
           { name: `Renovate`, value: `renovate` },
           { name: `Bumpp`, value: `bumpp` },
+          { name: `License`, value: `license` },
         ],
         default: [
           `bumpp`,
           `husky`,
           `cspell`,
           `vitest`,
+          `license`,
           `eslint`,
           `publint`,
           `renovate`,
@@ -152,6 +155,7 @@ export default class QxyGenerator extends BaseGenerator {
       cSpell: answers.workflow.includes(`cspell`),
       eslint: answers.workflow.includes(`eslint`),
       vitest: answers.workflow.includes(`vitest`),
+      license: answers.workflow.includes(`license`),
       renovate: answers.workflow.includes(`renovate`),
       stylelint: answers.workflow.includes(`stylelint`),
       lsLint: answers.workflow.includes(`ls-lint`),
@@ -252,6 +256,10 @@ export default class QxyGenerator extends BaseGenerator {
 
     if (this.props.vitest) {
       this.composeWith(require.resolve(`../vitest/index.js`))
+    }
+
+    if (this.props.license) {
+      this.composeWith(require.resolve(`../license/index.js`))
     }
 
     if (this.props.renovate) {

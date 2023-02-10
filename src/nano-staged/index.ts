@@ -1,19 +1,19 @@
 import BaseGenerator from '../base-generator.js'
 
 export default class NanoStagedGenerator extends BaseGenerator {
-  writing () {
+  writing() {
     // ==================
     // Generate config
     // ==================
     this.addFields({
       'nano-staged': {
-        '*.{js,ts,vue,json,yaml,yml,md}': `eslint --fix`,
+        '*.{js,ts,vue,json,yaml,yml,md}': 'eslint --fix',
       },
     })
 
     // ==================
     // Add devDependencies
     // ==================
-    this.addDeps({ devDeps: [`nano-staged`] })
+    this.addDeps({ devDeps: ['nano-staged'] })
   }
 }

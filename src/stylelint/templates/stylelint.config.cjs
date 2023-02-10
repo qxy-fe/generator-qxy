@@ -6,6 +6,6 @@ module.exports = {
   root: true,
 
   extends: [
-    `@qxy/stylelint-config`,
+    '@qxy/stylelint-config',
   ],
 }

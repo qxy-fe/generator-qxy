@@ -1,14 +1,14 @@
 import BaseGenerator from '../base-generator.js'
 
 export default class PublintGenerator extends BaseGenerator {
-  writing () {
+  writing() {
     const devDeps = [
-      `publint`,
+      'publint',
     ]
 
     this.addFields({
       scripts: {
-        'lint:pkg': `publint`,
+        'lint:pkg': 'publint',
       },
     })
 

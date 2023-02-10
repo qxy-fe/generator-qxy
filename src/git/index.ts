@@ -1,15 +1,15 @@
 import BaseGenerator from '../base-generator.js'
 
 export default class GitGenerator extends BaseGenerator {
-  writing () {
+  writing() {
     this.fs.copy(
-      this.templatePath(`_gitattributes`),
-      this.destinationPath(`.gitattributes`),
+      this.templatePath('_gitattributes'),
+      this.destinationPath('.gitattributes'),
     )
 
     this.fs.copy(
-      this.templatePath(`_gitignore.ejs`),
-      this.destinationPath(`.gitignore`),
+      this.templatePath('_gitignore.ejs'),
+      this.destinationPath('.gitignore'),
     )
   }
 }

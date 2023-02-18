@@ -1,17 +1,10 @@
 import { createRequire } from 'node:module'
-import hasYarn from 'has-yarn'
 import BaseGenerator from '../base-generator.js'
 
 const require = createRequire(import.meta.url)
 
 export default class QxyGenerator extends BaseGenerator {
   protected props: {
-    packageManager: 'npm' | 'yarn' | 'pnpm'
-
-    // Languages
-    vue: boolean
-    typescript: boolean
-
     // Meta files
     editorconfig: boolean
     readme: boolean
@@ -21,9 +14,9 @@ export default class QxyGenerator extends BaseGenerator {
     tsconfig: boolean
 
     // Dev Workflow
-    vueCli: boolean
     svgo: boolean
     husky: boolean
+    yarnrc: boolean
 
     cSpell: boolean
     eslint: boolean
@@ -45,32 +38,8 @@ export default class QxyGenerator extends BaseGenerator {
     sortPackageJson: boolean
   }
 
-  // eslint-disable-next-line max-lines-per-function
   async prompting() {
     const answers = await this.prompt([
-      {
-        type: 'list',
-        name: 'packageManager',
-        message: 'Select a package manager',
-        choices: [
-          { name: 'npm', value: 'npm' },
-          { name: 'yarn', value: 'yarn' },
-          { name: 'pnpm', value: 'pnpm' },
-        ],
-        default: hasYarn(this.destinationRoot()) ? 'yarn' : 'npm',
-      },
-      {
-        type: 'checkbox',
-        name: 'template',
-        message: 'Select a template to use',
-        choices: [
-          { name: 'Base', value: 'base' },
-          { name: 'Vue', value: 'vue' },
-          { name: 'Typescript', value: 'typescript' },
-          { name: 'Typescript + Vue', value: 'typescript-vue' },
-        ],
-        default: 'base',
-      },
       {
         type: 'checkbox',
         name: 'meta',
@@ -107,6 +76,7 @@ export default class QxyGenerator extends BaseGenerator {
           { name: 'Renovate', value: 'renovate' },
           { name: 'Bumpp', value: 'bumpp' },
           { name: 'License', value: 'license' },
+          { name: 'Yarnrc', value: 'yarnrc' },
           { name: 'Turbo', value: 'turbo' },
           { name: 'Vercel', value: 'vercel' },
         ],
@@ -127,22 +97,9 @@ export default class QxyGenerator extends BaseGenerator {
           'sort-package-json',
         ],
       },
-      {
-        type: 'confirm',
-        name: 'vueCli',
-        message: 'Use vue-cli?',
-        default: false,
-        when: ans => ans.template.includes('vue'),
-      },
     ])
 
     this.props = {
-      packageManager: answers.packageManager,
-
-      // Languages
-      vue: ['vue', 'typescript-vue'].includes(answers.template),
-      typescript: ['typescript', 'typescript-vue'].includes(answers.template),
-
       // Meta files
       editorconfig: answers.meta.includes('editorconfig'),
       readme: answers.meta.includes('readme'),
@@ -152,11 +109,11 @@ export default class QxyGenerator extends BaseGenerator {
       tsconfig: answers.meta.includes('tsconfig'),
 
       // Dev workflow
-      vueCli: answers.vueCli,
       svgo: answers.workflow.includes('svgo'),
       turbo: answers.workflow.includes('turbo'),
       bumpp: answers.workflow.includes('bumpp'),
       husky: answers.workflow.includes('husky'),
+      yarnrc: answers.workflow.includes('yarnrc'),
       vercel: answers.workflow.includes('vercel'),
       cSpell: answers.workflow.includes('cspell'),
       eslint: answers.workflow.includes('eslint'),
@@ -179,16 +136,16 @@ export default class QxyGenerator extends BaseGenerator {
     // ==================================
     // meta files
     // ==================================
-    if (this.props.packageManager === 'yarn') {
+    if (this.props.git) {
+      this.composeWith(require.resolve('../git/index.js'))
+    }
+
+    if (this.props.yarnrc) {
       this.composeWith(require.resolve('../yarnrc/index.js'))
     }
 
     if (this.props.editorconfig) {
       this.composeWith(require.resolve('../editorconfig/index.js'))
-    }
-
-    if (this.props.git) {
-      this.composeWith(require.resolve('../git/index.js'))
     }
 
     if (this.props.readme) {
@@ -201,10 +158,7 @@ export default class QxyGenerator extends BaseGenerator {
     }
 
     if (this.props.vscode) {
-      this.composeWith(require.resolve('../vscode/index.js'), {
-        typescript: this.props.typescript,
-        vue: this.props.vue,
-      })
+      this.composeWith(require.resolve('../vscode/index.js'))
     }
 
     if (this.props.jsconfig) {

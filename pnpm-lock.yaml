@@ -11,7 +11,6 @@ specifiers:
   copyfiles: ^2.4.1
   eslint: ^8.34.0
   has-vite: ^0.0.3
-  has-yarn: ^3.0.0
   husky: ^8.0.3
   nano-staged: ^0.8.0
   ora: ^6.1.2
@@ -24,7 +23,6 @@ specifiers:
 dependencies:
   '@types/yeoman-generator': 5.2.11
   has-vite: 0.0.3
-  has-yarn: 3.0.0
   ora: 6.1.2
   sort-package-json: 2.4.1
   yeoman-generator: 5.8.0
@@ -2009,11 +2007,6 @@ packages:
 
   /has-vite/0.0.3:
     resolution: {integrity: sha512-6TGDy+VAWtY2TFu+t/fBfZb2dv8BTS3oevR75pdYBFLbaGq+tLVAyLR1v1EUCVDZsXb27AwrlWeJA/IQ/044KA==}
-    dev: false
-
-  /has-yarn/3.0.0:
-    resolution: {integrity: sha512-IrsVwUHhEULx3R8f/aA8AHuEzAorplsab/v8HBzEiIukwq5i/EC+xmOW+HfP1OaDP+2JkgT1yILHN2O3UFIbcA==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: false
 
   /has/1.0.3:

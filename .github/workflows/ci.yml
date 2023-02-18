@@ -17,6 +17,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: pnpm
+        env:
+          NODE_OPTIONS: --max_old_space_size=4096
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm run lint

@@ -11,18 +11,20 @@
 
 Supported generators:
 
-- bumpp
-- cspell
-- editorconfig
-- jsconfig
-- prettier
-- sort-package-json
 - svgo
-- tsconfig
+- bumpp
+- turbo
 - vitest
 - vscode
-- vuepress
+- cspell
 - yarnrc
+- vercel
+- tsconfig
+- jsconfig
+- prettier
+- vuepress
+- editorconfig
+- sort-package-json
 
 ### Git Flow
 

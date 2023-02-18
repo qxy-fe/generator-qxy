@@ -33,6 +33,8 @@ export default class QxyGenerator extends BaseGenerator {
     commitlint: boolean
 
     bumpp: boolean
+    turbo: boolean
+    vercel: boolean
     vitest: boolean
     license: boolean
     renovate: boolean
@@ -105,6 +107,8 @@ export default class QxyGenerator extends BaseGenerator {
           { name: 'Renovate', value: 'renovate' },
           { name: 'Bumpp', value: 'bumpp' },
           { name: 'License', value: 'license' },
+          { name: 'Turbo', value: 'turbo' },
+          { name: 'Vercel', value: 'vercel' },
         ],
         default: [
           'bumpp',
@@ -150,8 +154,10 @@ export default class QxyGenerator extends BaseGenerator {
       // Dev workflow
       vueCli: answers.vueCli,
       svgo: answers.workflow.includes('svgo'),
+      turbo: answers.workflow.includes('turbo'),
       bumpp: answers.workflow.includes('bumpp'),
       husky: answers.workflow.includes('husky'),
+      vercel: answers.workflow.includes('vercel'),
       cSpell: answers.workflow.includes('cspell'),
       eslint: answers.workflow.includes('eslint'),
       vitest: answers.workflow.includes('vitest'),
@@ -228,6 +234,14 @@ export default class QxyGenerator extends BaseGenerator {
 
     if (this.props.svgo) {
       this.composeWith(require.resolve('../svgo/index.js'))
+    }
+
+    if (this.props.turbo) {
+      this.composeWith(require.resolve('../turbo/index.js'))
+    }
+
+    if (this.props.vercel) {
+      this.composeWith(require.resolve('../vercel/index.js'))
     }
 
     if (this.props.bumpp) {

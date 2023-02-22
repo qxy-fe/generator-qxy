@@ -117,12 +117,12 @@ export default class QxyGenerator extends BaseGenerator {
       editorconfig: answers.meta.includes('editorconfig'),
 
       // Linter
-      cSpell: answers.lint.includes('cspell'),
-      eslint: answers.lint.includes('eslint'),
-      stylelint: answers.lint.includes('stylelint'),
-      lsLint: answers.lint.includes('ls-lint'),
-      publint: answers.lint.includes('publint'),
-      commitlint: answers.lint.includes('commitlint'),
+      cSpell: answers.linter.includes('cspell'),
+      eslint: answers.linter.includes('eslint'),
+      stylelint: answers.linter.includes('stylelint'),
+      lsLint: answers.linter.includes('ls-lint'),
+      publint: answers.linter.includes('publint'),
+      commitlint: answers.linter.includes('commitlint'),
 
       // Service
       vercel: answers.service.includes('vercel'),

@@ -1,4 +1,4 @@
-import { type GeneratorOptions } from 'yeoman-generator'
+import type { GeneratorOptions } from 'yeoman-generator'
 import BaseGenerator from '../base-generator.js'
 
 export default class HuskyGenerator extends BaseGenerator {

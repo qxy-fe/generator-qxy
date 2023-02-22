@@ -30,10 +30,7 @@ export default class BaseGenerator extends Generator {
   }
 
   protected getStdoutString(cmd: string, args: string[]) {
-    const result = this.spawnCommandSync(cmd, args, {
-      stdio: [process.stdout],
-    })
-
+    const result = this.spawnCommandSync(cmd, args, { stdio: [process.stdout] })
     return Buffer.from(result.stdout).toString()
   }
 

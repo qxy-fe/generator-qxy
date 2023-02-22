@@ -9,16 +9,8 @@
     ".gitignore.ejs": "ignore"
   },
   "editor.tabSize": 2,
-  "editor.formatOnSave": false,
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "json",
-    "jsonc",
-    "json5",
-    "yaml",
-    "markdown"
-  ],
+  "editor.formatOnSave": true,
+  "eslint.validate": ["javascript", "typescript", "json", "jsonc", "json5", "yaml", "markdown"],
   "editor.codeActionsOnSave": {
     "source.eslint.fixAll": true
   },

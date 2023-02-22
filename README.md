@@ -11,44 +11,44 @@
 
 Supported generators:
 
+### Meta
+
+- git
+- readme
+- vscode
+- yarnrc
+- license
+- tsconfig
+- jsconfig
+- editorconfig
+
+### Linter
+
+- cspell
+- eslint
+- publint
+- ls-lint
+- stylelint
+- commitlint
+
+### Service
+
+- vercel
+- renovate
+
+### Tool
+
 - svgo
 - bumpp
 - turbo
 - vitest
-- vscode
-- cspell
-- yarnrc
-- vercel
-- tsconfig
-- jsconfig
-- prettier
-- vuepress
-- editorconfig
-- sort-package-json
-
-### Git Flow
-
-- git
 - husky
-- commitlint
 - lint-staged
 - nano-staged
-
-### Linters
-
-- stylelint
-- eslint
-- publint
-- ls-lint
-
-### Auto runner
-
-- renovate
+- prettier
+- vuepress
 - changeset
-
-### Misc
-
-- readme
+- sort-package-json
 
 ## Usage
 

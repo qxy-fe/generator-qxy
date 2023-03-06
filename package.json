@@ -2,7 +2,7 @@
   "name": "generator-qxy",
   "type": "module",
   "version": "0.6.1",
-  "packageManager": "pnpm@7.28.0",
+  "packageManager": "pnpm@7.29.0",
   "keywords": [
     "yeoman-generator",
     "qxy-fe"
@@ -44,8 +44,8 @@
     "yeoman-generator": "^5.8.0"
   },
   "devDependencies": {
-    "@qxy/eslint-config": "^1.2.1",
-    "@qxy/prettier-config": "^1.2.1",
+    "@qxy/eslint-config": "^1.2.2",
+    "@qxy/prettier-config": "^1.2.2",
     "bumpp": "^9.0.0",
     "copyfiles": "^2.4.1",
     "eslint": "^8.35.0",

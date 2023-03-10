@@ -4,6 +4,14 @@ import BaseGenerator from '../base-generator.js'
 
 const require = createRequire(import.meta.url)
 
+interface PromptAnswers {
+  meta: string[]
+  linter: string[]
+  service: string[]
+  tool: string[]
+  snippet: string[]
+}
+
 export default class QxyGenerator extends BaseGenerator {
   protected props: {
     // Meta
@@ -39,6 +47,9 @@ export default class QxyGenerator extends BaseGenerator {
     lintStaged: boolean
     nanoStaged: boolean
     sortPackageJson: boolean
+
+    // Snippet
+    utils: boolean
   }
 
   protected questions: Questions = [
@@ -100,10 +111,17 @@ export default class QxyGenerator extends BaseGenerator {
       ],
       default: ['bumpp', 'husky', 'vitest', 'prettier', 'nano-staged'],
     },
+    {
+      type: 'checkbox',
+      name: 'snippet',
+      message: 'Select snippets you wanna:',
+      choices: [{ name: 'Utils', value: 'utils' }],
+      default: ['utils'],
+    },
   ]
 
   async prompting() {
-    const answers = await this.prompt(this.questions)
+    const answers = await this.prompt<PromptAnswers>(this.questions)
 
     this.props = {
       // Meta
@@ -139,6 +157,9 @@ export default class QxyGenerator extends BaseGenerator {
       lintStaged: answers.tool.includes('lint-staged'),
       nanoStaged: answers.tool.includes('nano-staged'),
       sortPackageJson: answers.tool.includes('sort-package-json'),
+
+      // Snippet
+      utils: answers.snippet.includes('utils'),
     }
   }
 
@@ -270,6 +291,11 @@ export default class QxyGenerator extends BaseGenerator {
 
     if (this.props.sortPackageJson) {
       this.composeWith(require.resolve('../sort-package-json/index.js'))
+    }
+
+    // Snippet
+    if (this.props.utils) {
+      this.composeWith(require.resolve('../utils/index.js'))
     }
   }
 

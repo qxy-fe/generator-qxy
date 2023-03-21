@@ -1,5 +1,5 @@
-import type { GeneratorOptions } from 'yeoman-generator'
 import BaseGenerator from '../base-generator.js'
+import type { GeneratorOptions } from 'yeoman-generator'
 
 export default class PrettierGenerator extends BaseGenerator {
   protected sharedConfig: string | Record<string, string | number | boolean>

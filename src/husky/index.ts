@@ -1,5 +1,5 @@
-import type { GeneratorOptions } from 'yeoman-generator'
 import BaseGenerator from '../base-generator.js'
+import type { GeneratorOptions } from 'yeoman-generator'
 
 export default class HuskyGenerator extends BaseGenerator {
   protected commitlint: boolean

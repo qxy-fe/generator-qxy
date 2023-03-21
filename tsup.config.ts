@@ -9,4 +9,7 @@ export default defineConfig({
   format: ['esm'],
   dts: true,
   onSuccess: 'npm run copy',
+  esbuildOptions: options => {
+    options.charset = 'utf8'
+  },
 })

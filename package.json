@@ -2,7 +2,7 @@
   "name": "generator-qxy",
   "type": "module",
   "version": "0.6.5",
-  "packageManager": "pnpm@7.30.0",
+  "packageManager": "pnpm@7.30.3",
   "keywords": [
     "yeoman-generator",
     "qxy-fe"
@@ -39,7 +39,7 @@
   "dependencies": {
     "@types/yeoman-generator": "^5.2.11",
     "has-vite": "^0.0.4",
-    "ora": "^6.2.0",
+    "ora": "^6.3.0",
     "sort-package-json": "^2.4.1",
     "yeoman-generator": "^5.8.0"
   },
@@ -51,7 +51,7 @@
     "eslint": "^8.36.0",
     "husky": "^8.0.3",
     "nano-staged": "^0.8.0",
-    "prettier": "^2.8.5",
+    "prettier": "^2.8.7",
     "tsup": "^6.7.0",
     "typescript": "^5.0.2"
   },

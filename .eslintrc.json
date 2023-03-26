@@ -1,11 +1,5 @@
 {
   "root": true,
-  "extends": [
-    "@qxy"
-  ],
-  "ignorePatterns": [
-    "generators",
-    "types",
-    "src/**/templates/**/*.ejs"
-  ]
+  "extends": ["@ntnyq"],
+  "ignorePatterns": ["generators", "types", "src/**/templates/**/*.ejs"]
 }

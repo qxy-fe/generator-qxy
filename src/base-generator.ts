@@ -8,18 +8,18 @@ export default class BaseGenerator extends Generator {
   }
 
   protected reduceDeps(deps: string[]): Record<string, string> {
-    return deps.reduce((obj, dep) => ({
-      ...obj,
-      [dep.replace(/@next$/, '')]: isNextVersionPackage(dep)
-        ? this.getPackageVersion(dep) // pin dep version
-        : `^${this.getPackageVersion(dep)}`,
-    }), {})
+    return deps.reduce(
+      (obj, dep) => ({
+        ...obj,
+        [dep.replace(/@next$/, '')]: isNextVersionPackage(dep)
+          ? this.getPackageVersion(dep) // pin dep version
+          : `^${this.getPackageVersion(dep)}`,
+      }),
+      {},
+    )
   }
 
-  protected addDeps({ deps = [], devDeps = [] }: {
-    deps?: string[]
-    devDeps?: string[]
-  }) {
+  protected addDeps({ deps = [], devDeps = [] }: { deps?: string[]; devDeps?: string[] }) {
     const dependencies: Record<string, string> = this.reduceDeps(deps)
     const devDependencies: Record<string, string> = this.reduceDeps(devDeps)
 

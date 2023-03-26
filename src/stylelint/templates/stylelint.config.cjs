@@ -5,7 +5,5 @@
 module.exports = {
   root: true,
 
-  extends: [
-    '@qxy/stylelint-config',
-  ],
+  extends: ['@qxy/stylelint-config'],
 }

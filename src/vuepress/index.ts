@@ -7,10 +7,7 @@ export default class VuepressGenerator extends BaseGenerator {
       this.destinationPath('docs/.vuepress/config.ts'),
     )
 
-    this.fs.copy(
-      this.templatePath('README.md'),
-      this.destinationPath('docs/README.md'),
-    )
+    this.fs.copy(this.templatePath('README.md'), this.destinationPath('docs/README.md'))
 
     this.addFields({
       scripts: {

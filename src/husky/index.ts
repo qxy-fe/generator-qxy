@@ -41,24 +41,15 @@ export default class HuskyGenerator extends BaseGenerator {
     // Generate config
     // ====================
     if (this.commitlint) {
-      this.fs.copy(
-        this.templatePath('commit-msg'),
-        this.destinationPath('.husky/commit-msg'),
-      )
+      this.fs.copy(this.templatePath('commit-msg'), this.destinationPath('.husky/commit-msg'))
     }
 
     if (this.lintStaged) {
-      this.fs.copy(
-        this.templatePath('pre-commit-lint'),
-        this.destinationPath('.husky/pre-commit'),
-      )
+      this.fs.copy(this.templatePath('pre-commit-lint'), this.destinationPath('.husky/pre-commit'))
     }
 
     if (this.nanoStaged) {
-      this.fs.copy(
-        this.templatePath('pre-commit-nano'),
-        this.destinationPath('.husky/pre-commit'),
-      )
+      this.fs.copy(this.templatePath('pre-commit-nano'), this.destinationPath('.husky/pre-commit'))
     }
 
     // ====================

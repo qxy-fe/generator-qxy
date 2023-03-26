@@ -5,16 +5,9 @@ export default class EslintGenerator extends BaseGenerator {
     // ===================
     // Generate config
     // ===================
-    const devDeps = [
-      'eslint',
-      'typescript',
-      '@qxy/eslint-config',
-    ]
+    const devDeps = ['eslint', 'typescript', '@qxy/eslint-config']
 
-    this.fs.copy(
-      this.templatePath('_eslintrc.json'),
-      this.destinationPath('.eslintrc.json'),
-    )
+    this.fs.copy(this.templatePath('_eslintrc.json'), this.destinationPath('.eslintrc.json'))
 
     this.addFields({
       scripts: {

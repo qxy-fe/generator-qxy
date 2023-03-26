@@ -46,15 +46,11 @@ export default class ReadmeGenerator extends BaseGenerator {
   }
 
   writing() {
-    this.fs.copyTpl(
-      this.templatePath('README.md.ejs'),
-      this.destinationPath('README.md'),
-      {
-        username: this.username,
-        projectName: this.projectName,
-        projectDesc: this.projectDesc,
-        package: this.package,
-      },
-    )
+    this.fs.copyTpl(this.templatePath('README.md.ejs'), this.destinationPath('README.md'), {
+      username: this.username,
+      projectName: this.projectName,
+      projectDesc: this.projectDesc,
+      package: this.package,
+    })
   }
 }

@@ -17,10 +17,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: pnpm
-        env:
-          NODE_OPTIONS: --max-old-space-size=8192
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm run lint
-      - run: pnpm run typecheck
       - run: pnpm run build
+      - run: pnpm run typecheck

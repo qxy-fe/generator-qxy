@@ -36,6 +36,9 @@ export default class PrettierGenerator extends BaseGenerator {
 
     this.addFields({
       prettier: this.sharedConfig,
+      scripts: {
+        format: 'prettier --uw .',
+      },
     })
 
     this.addDeps({ devDeps })

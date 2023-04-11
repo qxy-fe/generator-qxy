@@ -8,9 +8,21 @@
     "LICENSE.ejs": "plaintext",
     ".gitignore.ejs": "ignore"
   },
-  "editor.tabSize": 2,
   "editor.formatOnSave": true,
-  "eslint.validate": ["javascript", "typescript", "json", "jsonc", "json5", "yaml", "markdown"],
+  "eslint.experimental.useFlatConfig": true,
+  "eslint.validate": [
+    "vue",
+    "yaml",
+    "html",
+    "json",
+    "jsonc",
+    "json5",
+    "markdown",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
   "editor.codeActionsOnSave": {
     "source.eslint.fixAll": true
   },

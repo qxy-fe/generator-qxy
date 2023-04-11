@@ -1,5 +1,3 @@
-# https://ls-lint.org
-
 ls:
   .dir: kebab-case | regex:^[_\.].*
   .js: kebab-case | regex:^[_\.].*

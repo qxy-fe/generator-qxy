@@ -7,11 +7,11 @@
 
 > 🤟 Yeoman generator for scaffold project of qxy team.
 
-## Feature
+## Features
 
 Supported generators:
 
-### Meta
+### Metas
 
 - git
 - readme
@@ -22,7 +22,7 @@ Supported generators:
 - jsconfig
 - editorconfig
 
-### Linter
+### Linters
 
 - cspell
 - eslint
@@ -31,12 +31,12 @@ Supported generators:
 - stylelint
 - commitlint
 
-### Service
+### Services
 
 - vercel
 - renovate
 
-### Tool
+### Tools
 
 - svgo
 - bumpp
@@ -50,43 +50,53 @@ Supported generators:
 - changeset
 - sort-package-json
 
+### Snippets
+
+- utils
+
 ## Usage
 
 Install `yo` globally:
 
-```sh
-$ npm i -g yo
-# OR
-$ yarn global add yo
+```bash
+npm i -g yo
+```
+
+```bash
+yarn global add yo
+```
+
+```bash
+pnpm add yo --global
 ```
 
 Install generator:
 
-```sh
-$ npm i -g generator-qxy
+```bash
+npm i -g generator-qxy
 ```
 
 Use the generator:
 
-```sh
-$ yo qxy
+```bash
+yo qxy
 
 # Run specifield generator
-$ yo qxy:eslint
+yo qxy:eslint
 ```
 
 ## Update
 
 1. Reinstall generator globally:
 
-```
-$ npm i -g generator-qxy
+```bash
+npm i -g generator-qxy
 ```
 
 2. Run `yo` to update generator interatively:
 
-```sh
-$ yo
+```bash
+yo
 ```
 
 ## License

@@ -31,6 +31,7 @@ export default class QxyGenerator extends BaseGenerator {
     publint: boolean
     stylelint: boolean
     commitlint: boolean
+    eslintFlatConfig: boolean
 
     // Third party service
     vercel: boolean
@@ -80,6 +81,7 @@ export default class QxyGenerator extends BaseGenerator {
         { name: 'CommitLint', value: 'commitlint' },
         { name: 'Code Spell Check', value: 'cspell' },
         { name: 'Files & Directories Lint', value: 'ls-lint' },
+        { name: 'ESLint flat config', value: 'eslintFlatConfig' },
       ],
       default: ['eslint'],
     },
@@ -141,6 +143,7 @@ export default class QxyGenerator extends BaseGenerator {
       lsLint: answers.linter.includes('ls-lint'),
       publint: answers.linter.includes('publint'),
       commitlint: answers.linter.includes('commitlint'),
+      eslintFlatConfig: answers.linter.includes('eslintFlatConfig'),
 
       // Service
       vercel: answers.service.includes('vercel'),
@@ -230,6 +233,10 @@ export default class QxyGenerator extends BaseGenerator {
 
     if (this.props.commitlint) {
       this.composeWith(require.resolve('../commitlint/index.js'))
+    }
+
+    if (this.props.eslintFlatConfig) {
+      this.composeWith(require.resolve('../eslint-flat-config/index.js'))
     }
 
     // ==================================

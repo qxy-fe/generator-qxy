@@ -42,6 +42,18 @@ export default class BaseGenerator extends Generator {
     return version
   }
 
+  protected extendVSCodeSettings(fields: Record<string, unknown>) {
+    this.fs.extendJSON(this.destinationPath('.vscode/settings.json'), fields)
+  }
+
+  protected appendToFile(file: string, contents: string) {
+    if (this.fs.exists(file)) {
+      this.fs.append(file, contents)
+    } else {
+      this.fs.write(file, contents)
+    }
+  }
+
   end() {
     this.log('Bye... 👋')
   }

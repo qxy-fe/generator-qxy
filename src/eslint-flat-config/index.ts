@@ -23,7 +23,7 @@ export default class ESLintFlatConfigGenerator extends BaseGenerator {
       prettier: '@ntnyq/prettier-config',
     })
 
-    this.appendToFile(this.destinationPath('.npmrc'), '\nshell-emulator=true')
+    this.appendToFile(this.destinationPath('.npmrc'), 'shell-emulator=true')
 
     this.extendVSCodeSettings({
       'editor.formatOnSave': true,

@@ -5,11 +5,12 @@ export default defineFlatConfig(
   ntnyq(
     [
       {
-        ignores: ['generators', 'types', 'src/**/templates/**/*.ejs'],
+        ignores: ['generators'],
       },
     ],
     {
-      vue: false,
+      prettier: true,
+      markdown: true,
     },
   ),
 )

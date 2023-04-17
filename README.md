@@ -41,8 +41,9 @@ Supported generators:
 - svgo
 - bumpp
 - turbo
-- vitest
 - husky
+- unocss
+- vitest
 - lint-staged
 - nano-staged
 - prettier

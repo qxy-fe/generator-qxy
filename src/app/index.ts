@@ -43,6 +43,7 @@ export default class QxyGenerator extends BaseGenerator {
     bumpp: boolean
     turbo: boolean
     vitest: boolean
+    unocss: boolean
     prettier: boolean
     vuepress: boolean
     lintStaged: boolean
@@ -109,6 +110,7 @@ export default class QxyGenerator extends BaseGenerator {
         { name: 'Vitest', value: 'vitest' },
         { name: 'Bumpp', value: 'bumpp' },
         { name: 'Turbo', value: 'turbo' },
+        { name: 'UnoCSS', value: 'unocss' },
         { name: 'Sort package.json', value: 'sort-package-json' },
       ],
       default: ['bumpp', 'husky', 'vitest', 'prettier', 'nano-staged'],
@@ -155,6 +157,7 @@ export default class QxyGenerator extends BaseGenerator {
       bumpp: answers.tool.includes('bumpp'),
       husky: answers.tool.includes('husky'),
       vitest: answers.tool.includes('vitest'),
+      unocss: answers.tool.includes('unocss'),
       prettier: answers.tool.includes('prettier'),
       vuepress: answers.tool.includes('vuepress'),
       lintStaged: answers.tool.includes('lint-staged'),
@@ -282,6 +285,10 @@ export default class QxyGenerator extends BaseGenerator {
 
     if (this.props.vitest) {
       this.composeWith(require.resolve('../vitest/index.js'))
+    }
+
+    if (this.props.unocss) {
+      this.composeWith(require.resolve('../unocss/index.js'))
     }
 
     if (this.props.lintStaged) {

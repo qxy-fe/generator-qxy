@@ -22,8 +22,8 @@ devDependencies:
     specifier: 2.0.0-beta.8
     version: 2.0.0-beta.8(eslint@8.39.0)(typescript@5.0.4)
   '@ntnyq/prettier-config':
-    specifier: ^1.7.1
-    version: 1.7.1
+    specifier: ^1.7.2
+    version: 1.7.2
   bumpp:
     specifier: ^9.1.0
     version: 9.1.0
@@ -408,8 +408,8 @@ packages:
       - typescript
     dev: true
 
-  /@ntnyq/prettier-config@1.7.1:
-    resolution: {integrity: sha512-lvNye/FEzLlB1yMdlHVFmpXUzlYQR08BeBOETivGIb/5U0EXWuGCCHyzUPyu5/G5uW73a78CgOMTt9FnlYAhnQ==}
+  /@ntnyq/prettier-config@1.7.2:
+    resolution: {integrity: sha512-TrsEpQnrcRe6nbDrQaNXJFGhNvz2ltbXlLB5hX7H/+7snZC6ToP9RvlQfBXB5wxOtMEI9ZSYrwXMKJR/+TVh1g==}
     dev: true
 
   /@octokit/auth-token@2.5.0:

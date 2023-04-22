@@ -1,8 +1,10 @@
+import { ensurePrefix, ensureSuffix } from '../utils.js'
 import BaseGenerator from '../base-generator.js'
 import type { GeneratorOptions } from 'yeoman-generator'
 
 export default class PrettierGenerator extends BaseGenerator {
   protected sharedConfig: string | Record<string, string | number | boolean>
+  protected overrides: boolean
 
   constructor(args: string | string[], options: GeneratorOptions) {
     super(args, options)
@@ -11,6 +13,12 @@ export default class PrettierGenerator extends BaseGenerator {
       type: String,
       default: '@qxy/prettier-config',
       description: 'sharedConfig to use',
+    })
+
+    this.option('overrides', {
+      type: Boolean,
+      default: false,
+      description: 'Overrides sharedConfig',
     })
   }
 
@@ -23,11 +31,22 @@ export default class PrettierGenerator extends BaseGenerator {
     }
   }
 
+  ensureConfigPattern(config: string) {
+    return ensurePrefix('@', ensureSuffix('/prettier-config', config))
+  }
+
   writing() {
     const devDeps = ['prettier']
 
     if (typeof this.sharedConfig === 'string') {
-      devDeps.push(this.sharedConfig)
+      devDeps.push(this.ensureConfigPattern(this.sharedConfig))
+
+      if (!this.overrides) return // overrides
+      this.fs.copyTpl(
+        this.templatePath('prettier.config.cjs'),
+        this.destinationPath('prettier.config.cjs'),
+        { sharedConfig: this.ensureConfigPattern(this.sharedConfig) },
+      )
     }
 
     // prettierIgnore in package.json is not supported
@@ -35,10 +54,17 @@ export default class PrettierGenerator extends BaseGenerator {
     this.fs.copy(this.templatePath('_prettierignore'), this.destinationPath('.prettierignore'))
 
     this.addFields({
-      prettier: this.sharedConfig,
       scripts: {
         format: 'prettier --uw .',
       },
+      ...(this.overrides
+        ? {}
+        : {
+            prettier:
+              typeof this.sharedConfig === 'string'
+                ? this.ensureConfigPattern(this.sharedConfig)
+                : this.sharedConfig,
+          }),
     })
 
     this.addDeps({ devDeps })

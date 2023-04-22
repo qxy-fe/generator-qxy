@@ -36,9 +36,7 @@ export default class ReadmeGenerator extends BaseGenerator {
       default: false,
       description: 'is this a package',
     })
-  }
 
-  initializing() {
     this.username = this.options.username
     this.projectName = this.options.projectName
     this.projectDesc = this.options.projectDesc

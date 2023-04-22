@@ -28,9 +28,7 @@ export default class HuskyGenerator extends BaseGenerator {
       default: false,
       description: 'use nano-staged or not',
     })
-  }
 
-  initializing() {
     this.commitlint = this.options.commitlint
     this.lintStaged = this.options.lintStaged
     this.nanoStaged = this.options.nanoStaged

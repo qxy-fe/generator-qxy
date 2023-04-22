@@ -20,9 +20,7 @@ export default class PrettierGenerator extends BaseGenerator {
       default: false,
       description: 'overrides sharedConfig',
     })
-  }
 
-  initializing() {
     this.sharedConfig = this.options.sharedConfig
     this.overrides = this.options.overrides
   }

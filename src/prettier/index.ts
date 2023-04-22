@@ -7,6 +7,10 @@ interface PromptAnswers {
   overrides: boolean
 }
 
+function ensurePrettierConfig(config: string) {
+  return ensurePrefix('@', ensureSuffix('/prettier-config', config))
+}
+
 export default class PrettierGenerator extends BaseGenerator {
   protected sharedConfig: string
   protected overrides: boolean
@@ -26,10 +30,6 @@ export default class PrettierGenerator extends BaseGenerator {
     },
   ]
 
-  ensureConfigPattern(config: string) {
-    return ensurePrefix('@', ensureSuffix('/prettier-config', config))
-  }
-
   async prompting() {
     const answers = await this.prompt<PromptAnswers>(this.questions)
 
@@ -38,7 +38,7 @@ export default class PrettierGenerator extends BaseGenerator {
   }
 
   writing() {
-    const sharedConfig = this.ensureConfigPattern(this.sharedConfig)
+    const sharedConfig = ensurePrettierConfig(this.sharedConfig)
     const devDeps = ['prettier', sharedConfig]
 
     this.addFields({
@@ -52,7 +52,7 @@ export default class PrettierGenerator extends BaseGenerator {
 
     if (!this.overrides) return // overrides
     this.fs.copyTpl(
-      this.templatePath('prettier.config.cjs'),
+      this.templatePath('prettier.config.cjs.ejs'),
       this.destinationPath('prettier.config.cjs'),
       { sharedConfig },
     )

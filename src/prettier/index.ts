@@ -1,32 +1,40 @@
 import { ensurePrefix, ensureSuffix } from '../utils.js'
 import BaseGenerator from '../base-generator.js'
-import type { GeneratorOptions } from 'yeoman-generator'
+import type { Questions } from 'yeoman-generator'
+
+interface PromptAnswers {
+  sharedConfig: string
+  overrides: boolean
+}
 
 export default class PrettierGenerator extends BaseGenerator {
   protected sharedConfig: string
   protected overrides: boolean
 
-  constructor(args: string | string[], options: GeneratorOptions) {
-    super(args, options)
-
-    this.option('sharedConfig', {
-      type: String,
+  private questions: Questions = [
+    {
+      type: 'input',
+      name: 'sharedConfig',
+      message: 'sharedConfig to use',
       default: '@qxy/prettier-config',
-      description: 'sharedConfig to use',
-    })
-
-    this.option('overrides', {
-      type: Boolean,
+    },
+    {
+      type: 'confirm',
+      name: 'overrides',
+      message: 'overrides sharedConfig',
       default: false,
-      description: 'overrides sharedConfig',
-    })
-
-    this.sharedConfig = this.options.sharedConfig
-    this.overrides = this.options.overrides
-  }
+    },
+  ]
 
   ensureConfigPattern(config: string) {
     return ensurePrefix('@', ensureSuffix('/prettier-config', config))
+  }
+
+  async prompting() {
+    const answers = await this.prompt<PromptAnswers>(this.questions)
+
+    this.sharedConfig = answers.sharedConfig
+    this.overrides = answers.overrides
   }
 
   writing() {

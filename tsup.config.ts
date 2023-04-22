@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-  entry: ['src/**/*.ts'],
+  entry: ['src/**/*.ts', '!**/templates/*.ts'],
   ignoreWatch: ['src/**/templates/*'],
   outDir: 'generators',
   shims: true,

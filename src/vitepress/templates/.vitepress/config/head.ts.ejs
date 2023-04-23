@@ -1,0 +1,12 @@
+import type { HeadConfig } from 'vitepress'
+
+const ogTitle = '<%- repoName %>'
+const ogUrl = 'https://github.com/<%- username %>/<%- repoName %>'
+
+export const head: HeadConfig[] = [
+  ['link', { rel: 'icon', href: '/favicon.ico' }],
+  ['meta', { name: 'theme-color', href: '#ffffff' }],
+  ['meta', { property: 'og:type', content: 'website' }],
+  ['meta', { property: 'og:title', content: ogTitle }],
+  ['meta', { property: 'og:title', content: ogUrl }],
+]

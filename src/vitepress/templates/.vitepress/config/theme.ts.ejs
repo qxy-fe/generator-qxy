@@ -1,0 +1,19 @@
+import type { DefaultTheme } from 'vitepress'
+
+export const themeConfig: DefaultTheme.Config = {
+  search: {
+    provider: 'local',
+  },
+
+  editLink: {
+    pattern: 'https://github.com/<%- username %>/<%- repoName %>/edit/main/docs/:path',
+  },
+
+  socialLinks: [{ icon: 'github', link: 'https://github.com/<%- username %>/<%- repoName %>' }],
+
+  nav: [{ text: 'Home', link: '/' }],
+
+  sidebar: {
+    '/': [],
+  },
+}

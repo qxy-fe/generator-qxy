@@ -46,6 +46,7 @@
     "svgo",
     "tsbuildinfo",
     "tsup",
+    "vite",
     "vitepress",
     "vitest",
     "vuepress",

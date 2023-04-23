@@ -49,6 +49,7 @@ Supported generators:
 - nano-staged
 - prettier
 - vuepress
+- vitepress
 - changeset
 - sort-package-json
 

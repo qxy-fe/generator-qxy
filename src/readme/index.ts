@@ -1,7 +1,13 @@
 import BaseGenerator from '../base-generator.js'
-import type { GeneratorOptions } from 'yeoman-generator'
 
-export default class ReadmeGenerator extends BaseGenerator {
+interface Options {
+  username: string
+  projectName: string
+  projectDesc: string
+  package: boolean
+}
+
+export default class ReadmeGenerator extends BaseGenerator<Options> {
   protected username: string
 
   protected projectName: string
@@ -10,7 +16,7 @@ export default class ReadmeGenerator extends BaseGenerator {
 
   protected package: boolean
 
-  constructor(args: string | string[], options: GeneratorOptions) {
+  constructor(args: string | string[], options: Options) {
     super(args, options)
 
     this.option('username', {

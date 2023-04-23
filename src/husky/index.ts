@@ -1,14 +1,19 @@
 import BaseGenerator from '../base-generator.js'
-import type { GeneratorOptions } from 'yeoman-generator'
 
-export default class HuskyGenerator extends BaseGenerator {
+interface Options {
+  commitlint: boolean
+  lintStaged: boolean
+  nanoStaged: boolean
+}
+
+export default class HuskyGenerator extends BaseGenerator<Options> {
   protected commitlint: boolean
 
   protected lintStaged: boolean
 
   protected nanoStaged: boolean
 
-  constructor(args: string | string[], options: GeneratorOptions) {
+  constructor(args: string | string[], options: Options) {
     super(args, options)
 
     this.option('commitlint', {

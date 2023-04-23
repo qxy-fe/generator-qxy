@@ -1,7 +1,7 @@
 import ora from 'ora'
 import Generator from 'yeoman-generator'
 
-export default class BaseGenerator extends Generator {
+export default class BaseGenerator<T extends Record<string, any> = {}> extends Generator<T> {
   protected addFields(fields: Record<string, unknown>) {
     this.fs.extendJSON(this.destinationPath('package.json'), fields)
   }

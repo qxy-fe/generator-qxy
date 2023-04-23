@@ -1,6 +1,5 @@
 import ora from 'ora'
 import Generator from 'yeoman-generator'
-import { isNextVersionPackage } from './utils.js'
 
 export default class BaseGenerator extends Generator {
   protected addFields(fields: Record<string, unknown>) {
@@ -8,15 +7,7 @@ export default class BaseGenerator extends Generator {
   }
 
   protected reduceDeps(deps: string[]): Record<string, string> {
-    return deps.reduce(
-      (obj, dep) => ({
-        ...obj,
-        [dep.replace(/@next$/, '')]: isNextVersionPackage(dep)
-          ? this.getPackageVersion(dep) // pin dep version
-          : `^${this.getPackageVersion(dep)}`,
-      }),
-      {},
-    )
+    return deps.reduce((obj, dep) => ({ ...obj, [dep]: this.getPackageVersion(dep) }), {})
   }
 
   protected addDeps({ deps = [], devDeps = [] }: { deps?: string[]; devDeps?: string[] }) {
@@ -35,12 +26,12 @@ export default class BaseGenerator extends Generator {
   }
 
   protected getPackageVersion(pkg: string) {
-    if (process.env.NODE_ENV === 'test') return '0.0.0' // speedUp test
+    if (process.env.NODE_ENV === 'test') return '^0.0.0' // speedUp test
     const spinner = ora(`Loading the latest version of package: ${pkg}`)
     spinner.start()
     const version = this.getStdoutString('npm', ['show', pkg, 'version'])
     spinner.succeed(`${pkg}@${version}`)
-    return version
+    return pkg.includes('@') ? version : `^${version}` // pin version for non latest pkg
   }
 
   protected extendVSCodeSettings(fields: Record<string, unknown>) {

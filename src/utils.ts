@@ -1,9 +1,4 @@
 /**
- * Check if package is next version
- */
-export const isNextVersionPackage = (pkg: string) => pkg.endsWith('@next')
-
-/**
  * Ensure prefix of a string
  */
 export function ensurePrefix(prefix: string, str: string) {

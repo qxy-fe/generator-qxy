@@ -2,6 +2,7 @@
 node_modules
 *.log*
 *.local
+coverage
 
 # Typescript build info
 *.tsbuildinfo

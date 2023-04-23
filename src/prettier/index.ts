@@ -43,7 +43,7 @@ export default class PrettierGenerator extends BaseGenerator {
 
     this.addFields({
       scripts: {
-        format: 'prettier --uw .',
+        format: 'prettier -uw .',
       },
       ...(this.overrides ? {} : { prettier: sharedConfig }),
     })

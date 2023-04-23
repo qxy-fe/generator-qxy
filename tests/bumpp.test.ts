@@ -18,6 +18,9 @@ describe('Generator bumpp', () => {
       scripts: {
         release: 'bumpp && pnpm publish',
       },
+      devDependencies: {
+        bumpp: '^0.0.0',
+      },
     })
   })
 })

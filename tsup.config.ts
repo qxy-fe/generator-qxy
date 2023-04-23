@@ -8,6 +8,13 @@ export default defineConfig({
   clean: true,
   format: ['esm'],
   dts: true,
+  define:
+    process.env.NODE_ENV === 'test'
+      ? {}
+      : {
+          'process.env.NODE_ENV': 'undefined',
+        },
+  treeshake: 'safest',
   onSuccess: 'npm run copy',
   esbuildOptions: options => {
     options.charset = 'utf8'

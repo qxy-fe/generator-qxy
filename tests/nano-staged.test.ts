@@ -15,6 +15,9 @@ describe('Generator nano-staged', () => {
       'nano-staged': {
         '*.{js,ts,cjs,vue,json,yaml,yml,md}': 'eslint --fix',
       },
+      devDependencies: {
+        'nano-staged': '^0.0.0',
+      },
     })
   })
 })

@@ -19,6 +19,10 @@ describe('Generator vitest', () => {
         test: 'vitest',
         coverage: 'vitest --coverage',
       },
+      devDependencies: {
+        vitest: '^0.0.0',
+        '@vitest/coverage-c8': '^0.0.0',
+      },
     })
   })
 })

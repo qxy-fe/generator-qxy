@@ -14,5 +14,12 @@ describe('Generator unocss', () => {
     const expected = ['unocss.config.ts']
 
     assert.file(expected)
+
+    assert.JSONFileContent('package.json', {
+      devDependencies: {
+        unocss: '^0.0.0',
+        '@unocss/reset': '^0.0.0',
+      },
+    })
   })
 })

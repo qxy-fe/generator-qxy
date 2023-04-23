@@ -18,6 +18,9 @@ describe('Generator ls-lint', () => {
       scripts: {
         'lint:ls': 'ls-lint',
       },
+      devDependencies: {
+        '@ls-lint/ls-lint': '^0.0.0',
+      },
     })
   })
 })

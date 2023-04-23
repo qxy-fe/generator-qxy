@@ -18,6 +18,9 @@ describe('Generator svgo', () => {
       scripts: {
         svgo: 'svgo -f src/icons/svg',
       },
+      devDependencies: {
+        svgo: '^0.0.0',
+      },
     })
   })
 })

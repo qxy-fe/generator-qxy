@@ -15,6 +15,9 @@ describe('Generator publint', () => {
       scripts: {
         'lint:pkg': 'publint',
       },
+      devDependencies: {
+        publint: '^0.0.0',
+      },
     })
   })
 })

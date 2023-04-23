@@ -18,6 +18,9 @@ describe('Generator cspell', () => {
       scripts: {
         'lint:cspell': 'cspell "**"',
       },
+      devDependencies: {
+        cspell: '^0.0.0',
+      },
     })
   })
 })

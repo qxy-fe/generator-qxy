@@ -35,6 +35,7 @@ export default class BaseGenerator extends Generator {
   }
 
   protected getPackageVersion(pkg: string) {
+    if (process.env.NODE_ENV === 'test') return '0.0.0' // speedUp test
     const spinner = ora(`Loading the latest version of package: ${pkg}`)
     spinner.start()
     const version = this.getStdoutString('npm', ['show', pkg, 'version'])

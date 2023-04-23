@@ -3,6 +3,7 @@
 [![CI](https://github.com/qxy-fe/generator-qxy/workflows/CI/badge.svg)](https://github.com/qxy-fe/generator-qxy/actions)
 [![NPM VERSION](https://img.shields.io/npm/v/generator-qxy.svg)](https://www.npmjs.com/package/generator-qxy)
 [![NPM DOWNLOADS](https://img.shields.io/npm/dy/generator-qxy.svg)](https://www.npmjs.com/package/generator-qxy)
+[![COVERAGE](https://coveralls.io/repos/github/qxy-fe/generator-qxy/badge.svg?branch=main)](https://coveralls.io/github/qxy-fe/generator-qxy?branch=main)
 [![LICENSE](https://img.shields.io/github/license/qxy-fe/generator-qxy.svg)](https://github.com/qxy-fe/generator-qxy/blob/main/LICENSE)
 
 > 🤟 Yeoman generator for scaffold project of qxy team.

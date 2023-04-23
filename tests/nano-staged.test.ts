@@ -10,7 +10,7 @@ describe('Generator nano-staged', () => {
     await helpers.run(GENERATOR)
   })
 
-  it('creates expected files', () => {
+  it('extends package.json', () => {
     assert.JSONFileContent('package.json', {
       'nano-staged': {
         '*.{js,ts,cjs,vue,json,yaml,yml,md}': 'eslint --fix',

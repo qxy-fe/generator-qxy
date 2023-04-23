@@ -3,26 +3,23 @@ import assert from 'yeoman-assert'
 import { beforeEach, describe, it } from 'vitest'
 import { resolve } from './utils'
 
-const GENERATOR = resolve('generators/bumpp/index.js')
+const GENERATOR = resolve('generators/turbo/index.js')
 
-describe('Generator bumpp', () => {
+describe('Generator turbo', () => {
   beforeEach(async () => {
     await helpers.run(GENERATOR)
   })
 
   it('creates expected files', () => {
-    const expected = ['.github/workflows/release.yml']
+    const expected = ['turbo.json']
 
     assert.file(expected)
   })
 
   it('extends package.json', () => {
     assert.JSONFileContent('package.json', {
-      scripts: {
-        release: 'bumpp && pnpm publish',
-      },
       devDependencies: {
-        bumpp: '^0.0.0',
+        turbo: '^0.0.0',
       },
     })
   })

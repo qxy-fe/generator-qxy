@@ -14,6 +14,9 @@ describe('Generator ls-lint', () => {
     const expected = ['.ls-lint.yml']
 
     assert.file(expected)
+  })
+
+  it('extends package.json', () => {
     assert.JSONFileContent('package.json', {
       scripts: {
         'lint:ls': 'ls-lint',

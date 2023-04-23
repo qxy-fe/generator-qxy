@@ -10,7 +10,7 @@ describe('Generator publint', () => {
     await helpers.run(GENERATOR)
   })
 
-  it('creates expected files', () => {
+  it('extends package.json', () => {
     assert.JSONFileContent('package.json', {
       scripts: {
         'lint:pkg': 'publint',

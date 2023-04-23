@@ -3,15 +3,15 @@ import assert from 'yeoman-assert'
 import { beforeEach, describe, it } from 'vitest'
 import { resolve } from './utils'
 
-const GENERATOR = resolve('generators/bumpp/index.js')
+const GENERATOR = resolve('generators/stylelint/index.js')
 
-describe('Generator bumpp', () => {
+describe('Generator stylelint', () => {
   beforeEach(async () => {
     await helpers.run(GENERATOR)
   })
 
   it('creates expected files', () => {
-    const expected = ['.github/workflows/release.yml']
+    const expected = ['stylelint.config.cjs']
 
     assert.file(expected)
   })
@@ -19,10 +19,13 @@ describe('Generator bumpp', () => {
   it('extends package.json', () => {
     assert.JSONFileContent('package.json', {
       scripts: {
-        release: 'bumpp && pnpm publish',
+        'lint:style': 'stylelint "src/**/*.{vue,scss}"',
       },
       devDependencies: {
-        bumpp: '^0.0.0',
+        stylelint: '^0.0.0',
+        prettier: '^0.0.0',
+        postcss: '^0.0.0',
+        '@qxy/stylelint-config': '^0.0.0',
       },
     })
   })

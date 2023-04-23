@@ -3,26 +3,21 @@ import assert from 'yeoman-assert'
 import { beforeEach, describe, it } from 'vitest'
 import { resolve } from './utils'
 
-const GENERATOR = resolve('generators/bumpp/index.js')
+const GENERATOR = resolve('generators/commitlint/index.js')
 
-describe('Generator bumpp', () => {
+describe('Generator commitlint', () => {
   beforeEach(async () => {
     await helpers.run(GENERATOR)
   })
 
-  it('creates expected files', () => {
-    const expected = ['.github/workflows/release.yml']
-
-    assert.file(expected)
-  })
-
   it('extends package.json', () => {
     assert.JSONFileContent('package.json', {
-      scripts: {
-        release: 'bumpp && pnpm publish',
+      commitlint: {
+        extends: ['@commitlint/config-conventional'],
       },
       devDependencies: {
-        bumpp: '^0.0.0',
+        '@commitlint/cli': '^0.0.0',
+        '@commitlint/config-conventional': '^0.0.0',
       },
     })
   })

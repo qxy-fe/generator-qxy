@@ -14,6 +14,9 @@ describe('Generator svgo', () => {
     const expected = ['svgo.config.mjs']
 
     assert.file(expected)
+  })
+
+  it('extends package.json', () => {
     assert.JSONFileContent('package.json', {
       scripts: {
         svgo: 'svgo -f src/icons/svg',

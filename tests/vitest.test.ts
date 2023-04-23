@@ -14,6 +14,9 @@ describe('Generator vitest', () => {
     const expected = ['vitest.config.ts']
 
     assert.file(expected)
+  })
+
+  it('extends package.json', () => {
     assert.JSONFileContent('package.json', {
       scripts: {
         test: 'vitest',

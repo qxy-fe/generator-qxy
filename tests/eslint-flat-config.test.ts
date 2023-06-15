@@ -27,7 +27,7 @@ describe('Generator editorconfig', () => {
         typescript: '^0.0.0',
         'eslint-define-config': '^0.0.0',
         '@ntnyq/prettier-config': '^0.0.0',
-        '@ntnyq/eslint-config@next': '^0.0.0',
+        '@ntnyq/eslint-config': '^0.0.0',
       },
     })
   })

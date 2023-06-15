@@ -1,16 +1,25 @@
 import ora from 'ora'
 import Generator from 'yeoman-generator'
+import type { Dep } from './types.js'
 
 export default class BaseGenerator<T extends Record<string, any> = {}> extends Generator<T> {
   protected addFields(fields: Record<string, unknown>) {
     this.fs.extendJSON(this.destinationPath('package.json'), fields)
   }
 
-  protected reduceDeps(deps: string[]): Record<string, string> {
-    return deps.reduce((obj, dep) => ({ ...obj, [dep]: this.getPackageVersion(dep) }), {})
+  protected reduceDeps(deps: Dep[]): Record<string, string> {
+    return deps.reduce(
+      (obj, dep) => ({
+        ...obj,
+        [typeof dep === 'string' ? dep : dep.name]: this.getPackageVersion(
+          typeof dep === 'string' ? dep : `${dep.name}@${dep.tag}`,
+        ),
+      }),
+      {},
+    )
   }
 
-  protected addDeps({ deps = [], devDeps = [] }: { deps?: string[]; devDeps?: string[] }) {
+  protected addDeps({ deps = [], devDeps = [] }: { deps?: Dep[]; devDeps?: Dep[] }) {
     const dependencies: Record<string, string> = this.reduceDeps(deps)
     const devDependencies: Record<string, string> = this.reduceDeps(devDeps)
 

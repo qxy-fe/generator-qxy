@@ -5,15 +5,6 @@ export default class ESLintFlatConfigGenerator extends BaseGenerator {
     // ===================
     // Generate config
     // ===================
-    const devDeps = [
-      'eslint',
-      'prettier',
-      'typescript',
-      'eslint-define-config',
-      '@ntnyq/prettier-config',
-      '@ntnyq/eslint-config@next',
-    ]
-
     this.fs.copy(this.templatePath('eslint.config.mjs'), this.destinationPath('eslint.config.mjs'))
 
     this.addFields({
@@ -49,6 +40,18 @@ export default class ESLintFlatConfigGenerator extends BaseGenerator {
     // ===================
     // Add devDependencies
     // ===================
-    this.addDeps({ devDeps })
+    this.addDeps({
+      devDeps: [
+        'eslint',
+        'prettier',
+        'typescript',
+        'eslint-define-config',
+        '@ntnyq/prettier-config',
+        {
+          name: '@ntnyq/eslint-config',
+          tag: 'next',
+        },
+      ],
+    })
   }
 }

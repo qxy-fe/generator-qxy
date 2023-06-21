@@ -7,12 +7,13 @@ export default defineConfig({
   shims: true,
   clean: true,
   format: ['esm'],
+  target: 'es2020',
   dts: true,
   define:
     process.env.NODE_ENV === 'test'
       ? {}
       : {
-          'process.env.NODE_ENV': 'undefined',
+          'process.env.NODE_ENV': `'undefined'`,
         },
   treeshake: 'safest',
   onSuccess: 'npm run copy',

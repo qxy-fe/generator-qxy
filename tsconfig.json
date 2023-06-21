@@ -4,7 +4,6 @@
     "rootDir": "src",
     "outDir": "generators",
     "module": "ESNext",
-    "target": "ES2020",
     "moduleResolution": "NodeNext",
     "declaration": true,
     "noImplicitAny": true,

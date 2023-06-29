@@ -8,7 +8,6 @@ export default defineConfig({
   clean: true,
   format: ['esm'],
   target: 'es2020',
-  dts: true,
   define:
     process.env.NODE_ENV === 'test'
       ? {}

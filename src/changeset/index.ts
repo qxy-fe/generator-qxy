@@ -2,8 +2,6 @@ import BaseGenerator from '../base-generator.js'
 
 export default class ChangesetGenerator extends BaseGenerator {
   writing() {
-    const devDeps = ['@changesets/cli', '@changesets/changelog-github']
-
     this.fs.copy(
       this.templatePath('release.yml'),
       this.destinationPath('.github/workflows/release.yml'),
@@ -19,6 +17,6 @@ export default class ChangesetGenerator extends BaseGenerator {
       },
     })
 
-    this.addDeps({ devDeps })
+    this.addDeps({ devDeps: ['@changesets/cli', '@changesets/changelog-github'] })
   }
 }

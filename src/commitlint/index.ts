@@ -2,15 +2,12 @@ import BaseGenerator from '../base-generator.js'
 
 export default class CommitlintGenerator extends BaseGenerator {
   writing() {
-    const extendsConfig = ['@commitlint/config-conventional']
-    const devDeps = ['@commitlint/cli', '@commitlint/config-conventional']
-
     this.addFields({
       commitlint: {
-        extends: extendsConfig,
+        extends: ['@commitlint/config-conventional'],
       },
     })
 
-    this.addDeps({ devDeps })
+    this.addDeps({ devDeps: ['@commitlint/cli', '@commitlint/config-conventional'] })
   }
 }

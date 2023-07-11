@@ -12,5 +12,5 @@
     "removeComments": true,
     "strictNullChecks": true
   },
-  "include": ["./src/**/*.ts"]
+  "include": ["./src", "./tests", "./tsup.config.ts", "./vitest.config.ts"]
 }

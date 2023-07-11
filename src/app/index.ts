@@ -1,5 +1,5 @@
 import { createRequire } from 'node:module'
-import BaseGenerator from '../base-generator.js'
+import BaseGenerator from '../base-generator'
 import type { Questions } from 'yeoman-generator'
 
 const require = createRequire(import.meta.url)

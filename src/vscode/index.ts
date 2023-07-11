@@ -1,4 +1,4 @@
-import BaseGenerator from '../base-generator.js'
+import BaseGenerator from '../base-generator'
 
 export default class VscodeGenerator extends BaseGenerator {
   writing() {

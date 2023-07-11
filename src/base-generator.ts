@@ -1,6 +1,6 @@
 import ora from 'ora'
 import Generator from 'yeoman-generator'
-import type { Dep } from './types.js'
+import type { Dep } from './types'
 
 export default class BaseGenerator<T extends Record<string, any> = {}> extends Generator<T> {
   protected addFields(fields: Record<string, unknown>) {

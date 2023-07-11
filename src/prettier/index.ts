@@ -1,5 +1,5 @@
-import { ensurePrefix, ensureSuffix } from '../utils.js'
-import BaseGenerator from '../base-generator.js'
+import { ensurePrefix, ensureSuffix } from '../utils'
+import BaseGenerator from '../base-generator'
 import type { Questions } from 'yeoman-generator'
 
 interface PromptAnswers {

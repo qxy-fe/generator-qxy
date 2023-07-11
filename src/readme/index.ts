@@ -1,4 +1,4 @@
-import BaseGenerator from '../base-generator.js'
+import BaseGenerator from '../base-generator'
 
 interface Options {
   username: string

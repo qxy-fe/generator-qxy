@@ -1,16 +1,14 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "rootDir": "src",
     "outDir": "generators",
     "module": "ESNext",
-    "moduleResolution": "NodeNext",
-    "declaration": true,
+    "moduleResolution": "Bundler",
     "noImplicitAny": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "removeComments": true,
     "strictNullChecks": true
   },
-  "include": ["./src", "./tests", "./tsup.config.ts", "./vitest.config.ts"]
+  "include": ["./src", "./tests", "./vitest.config.ts", "./tsup.config.ts"]
 }

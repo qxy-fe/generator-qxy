@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@types/yeoman-generator": "^5.2.11",
-    "ora": "^6.3.1",
+    "ora": "^7.0.0",
     "sort-package-json": "^2.5.1",
     "yeoman-generator": "^5.9.0"
   },

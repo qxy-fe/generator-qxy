@@ -10,6 +10,7 @@ interface PromptAnswers {
   service: string[]
   tool: string[]
   snippet: string[]
+  action: string[]
 }
 
 export default class QxyGenerator extends BaseGenerator {
@@ -52,6 +53,9 @@ export default class QxyGenerator extends BaseGenerator {
 
     // Snippet
     utils: boolean
+
+    // Action
+    autofix: boolean
   }
 
   protected questions: Questions = [
@@ -122,6 +126,13 @@ export default class QxyGenerator extends BaseGenerator {
       choices: [{ name: 'Utils', value: 'utils' }],
       default: ['utils'],
     },
+    {
+      type: 'checkbox',
+      name: 'action',
+      message: 'Select actions you wanna:',
+      choices: [{ name: 'AutoFix CI', value: 'autofix' }],
+      default: ['autofix'],
+    },
   ]
 
   async prompting() {
@@ -166,9 +177,13 @@ export default class QxyGenerator extends BaseGenerator {
 
       // Snippet
       utils: answers.snippet.includes('utils'),
+
+      // Action
+      autofix: answers.action.includes('autofix'),
     }
   }
 
+  // eslint-disable-next-line complexity, max-lines-per-function
   default() {
     // ==================================
     // Meta
@@ -307,9 +322,18 @@ export default class QxyGenerator extends BaseGenerator {
       this.composeWith(require.resolve('../sort-package-json/index.js'))
     }
 
+    // ==================================
     // Snippet
+    // ==================================
     if (this.props.utils) {
       this.composeWith(require.resolve('../utils/index.js'))
+    }
+
+    // ==================================
+    // Action
+    // ==================================
+    if (this.props.autofix) {
+      this.composeWith(require.resolve('../autofix-ci/index.js'))
     }
   }
 

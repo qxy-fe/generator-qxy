@@ -1,0 +1,29 @@
+name: AutoFix
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request: {}
+
+permissions:
+  contents: read
+
+jobs:
+  autofix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run lint --fix
+
+      - uses: autofix-ci/action@8caa572fd27b0019a65e4c695447089c8d3138b9
+        with:
+          commit-message: 'chore: autofix by ci'

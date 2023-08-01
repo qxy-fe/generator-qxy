@@ -57,6 +57,10 @@ Supported generators:
 
 - utils
 
+### Actions
+
+- autofix-ci
+
 ## Usage
 
 Install `yo` globally:

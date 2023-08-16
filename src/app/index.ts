@@ -86,7 +86,7 @@ export default class QxyGenerator extends BaseGenerator {
         { name: 'CommitLint', value: 'commitlint' },
         { name: 'Code Spell Check', value: 'cspell' },
         { name: 'Files & Directories Lint', value: 'ls-lint' },
-        { name: 'ESLint flat config', value: 'eslintFlatConfig' },
+        { name: 'ESLint flat config', value: 'eslint-flat-config' },
       ],
       default: ['eslint'],
     },
@@ -156,7 +156,7 @@ export default class QxyGenerator extends BaseGenerator {
       lsLint: answers.linter.includes('ls-lint'),
       publint: answers.linter.includes('publint'),
       commitlint: answers.linter.includes('commitlint'),
-      eslintFlatConfig: answers.linter.includes('eslintFlatConfig'),
+      eslintFlatConfig: answers.linter.includes('eslint-flat-config'),
 
       // Service
       vercel: answers.service.includes('vercel'),

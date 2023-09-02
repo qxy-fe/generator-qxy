@@ -19,7 +19,7 @@ describe('Generator editorconfig', () => {
   it('extends package.json', () => {
     assert.JSONFileContent('package.json', {
       scripts: {
-        lint: 'ESLINT_USE_FLAT_CONFIG=true eslint -c eslint.config.mjs --max-warnings 0 .',
+        lint: 'ESLINT_USE_FLAT_CONFIG=true eslint -c eslint.config.mjs .',
       },
       devDependencies: {
         eslint: '^0.0.0',

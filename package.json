@@ -1,7 +1,7 @@
 {
   "name": "generator-qxy",
   "type": "module",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "packageManager": "pnpm@8.7.1",
   "keywords": [
     "yeoman-generator",
@@ -25,7 +25,7 @@
     "copy": "copyfiles -a -u 1 -V src/*/templates/**/** generators",
     "coverage": "vitest --coverage",
     "dev": "tsup --watch src",
-    "lint": "ESLINT_USE_FLAT_CONFIG=true eslint 0 .",
+    "lint": "ESLINT_USE_FLAT_CONFIG=true eslint .",
     "prepare": "husky install",
     "prepublishOnly": "pnpm run build",
     "release": "bumpp && npm publish",

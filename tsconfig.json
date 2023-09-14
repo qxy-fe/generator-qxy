@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "outDir": "generators",
     "module": "ESNext",
+    "target": "ES2022",
     "moduleResolution": "Bundler",
     "noImplicitAny": true,
     "esModuleInterop": true,

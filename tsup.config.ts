@@ -7,7 +7,7 @@ export default defineConfig({
   shims: true,
   clean: true,
   format: ['esm'],
-  target: 'es2020',
+  target: 'es2022',
   define:
     process.env.NODE_ENV === 'test'
       ? {}

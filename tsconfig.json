@@ -1,15 +1,18 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "generators",
-    "module": "ESNext",
     "target": "ES2022",
+    "module": "ESNext",
     "moduleResolution": "Bundler",
-    "noImplicitAny": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
+    "baseUrl": ".",
+    "types": ["vitest/importMeta"],
+    "outDir": "generators",
     "removeComments": true,
-    "strictNullChecks": true
+    "esModuleInterop": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "noImplicitAny": true,
+    "skipLibCheck": true
   },
-  "include": ["./src", "./tests", "./vitest.config.ts", "./tsup.config.ts"]
+  "include": ["./src", "./tests", "./vitest.config.ts", "./tsup.config.ts"],
+  "exclude": ["node_modules", "generators", "dist", "coverage", "**/templates/**"]
 }

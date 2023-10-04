@@ -8,12 +8,6 @@ export default defineConfig({
   clean: true,
   format: ['esm'],
   target: 'es2022',
-  define:
-    process.env.NODE_ENV === 'test'
-      ? {}
-      : {
-          'process.env.NODE_ENV': `'undefined'`,
-        },
   treeshake: 'safest',
   onSuccess: 'npm run copy',
   esbuildOptions: options => {

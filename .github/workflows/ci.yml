@@ -42,7 +42,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run build:test
+      - run: pnpm run build
       - run: pnpm run test
 
   coverage:
@@ -57,7 +57,7 @@ jobs:
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run build:test
+      - run: pnpm run build
       - run: pnpm run coverage
 
       - uses: coverallsapp/github-action@master

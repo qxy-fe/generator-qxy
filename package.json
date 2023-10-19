@@ -35,7 +35,7 @@
     "@types/yeoman-generator": "^5.2.13",
     "ora": "^7.0.1",
     "sort-package-json": "^2.6.0",
-    "yeoman-generator": "^5.9.0"
+    "yeoman-generator": "^6.0.1"
   },
   "devDependencies": {
     "@ntnyq/eslint-config": "2.0.0-beta.21",

@@ -5,23 +5,20 @@ export default class ESLintFlatConfigGenerator extends BaseGenerator {
     // ===================
     // Generate config
     // ===================
-    this.fs.copy(this.templatePath('eslint.config.mjs'), this.destinationPath('eslint.config.mjs'))
+    this.fs.copy(this.templatePath('eslint.config.js'), this.destinationPath('eslint.config.js'))
 
     this.addFields({
       scripts: {
-        lint: 'ESLINT_USE_FLAT_CONFIG=true eslint -c eslint.config.mjs .',
+        lint: 'eslint .',
       },
       prettier: '@ntnyq/prettier-config',
     })
 
-    this.appendToFile(this.destinationPath('.npmrc'), 'shell-emulator=true')
-
     this.extendVSCodeSettings({
+      'eslint.enable': true,
+      'prettier.enable': true,
       'editor.formatOnSave': true,
       'eslint.experimental.useFlatConfig': true,
-      'eslint.options': {
-        overrideConfigFile: './eslint.config.mjs',
-      },
       'eslint.validate': [
         'vue',
         'yaml',
@@ -45,7 +42,6 @@ export default class ESLintFlatConfigGenerator extends BaseGenerator {
         'eslint',
         'prettier',
         'typescript',
-        'eslint-define-config',
         '@ntnyq/prettier-config',
         {
           name: '@ntnyq/eslint-config',

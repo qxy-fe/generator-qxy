@@ -1,6 +1,5 @@
 import { createRequire } from 'node:module'
 import BaseGenerator from '../base-generator'
-import type { Questions } from 'yeoman-generator'
 
 const require = createRequire(import.meta.url)
 
@@ -58,9 +57,9 @@ export default class QxyGenerator extends BaseGenerator {
     autofix: boolean
   }
 
-  protected questions: Questions = [
+  protected questions = [
     {
-      type: 'checkbox',
+      type: 'checkbox' as const,
       name: 'meta',
       message: 'Select meta files you wanna:',
       choices: [
@@ -76,7 +75,7 @@ export default class QxyGenerator extends BaseGenerator {
       default: ['git', 'readme', 'license', 'vscode', 'tsconfig', 'editorconfig'],
     },
     {
-      type: 'checkbox',
+      type: 'checkbox' as const,
       name: 'linter',
       message: 'Select linters you wanna:',
       choices: [
@@ -91,7 +90,7 @@ export default class QxyGenerator extends BaseGenerator {
       default: ['eslint'],
     },
     {
-      type: 'checkbox',
+      type: 'checkbox' as const,
       name: 'service',
       message: 'Select services you wanna:',
       choices: [
@@ -101,7 +100,7 @@ export default class QxyGenerator extends BaseGenerator {
       default: ['renovate'],
     },
     {
-      type: 'checkbox',
+      type: 'checkbox' as const,
       name: 'tool',
       message: 'Select tools you wanna:',
       choices: [
@@ -120,14 +119,14 @@ export default class QxyGenerator extends BaseGenerator {
       default: ['bumpp', 'husky', 'vitest', 'prettier', 'nano-staged'],
     },
     {
-      type: 'checkbox',
+      type: 'checkbox' as const,
       name: 'snippet',
       message: 'Select snippets you wanna:',
       choices: [{ name: 'Utils', value: 'utils' }],
       default: ['utils'],
     },
     {
-      type: 'checkbox',
+      type: 'checkbox' as const,
       name: 'action',
       message: 'Select actions you wanna:',
       choices: [{ name: 'AutoFix CI', value: 'autofix' }],
@@ -193,12 +192,7 @@ export default class QxyGenerator extends BaseGenerator {
     }
 
     if (this.props.readme) {
-      this.composeWith(require.resolve('../readme/index.js'), {
-        username: this.user.git.name(),
-        projectName: '',
-        projectDesc: '',
-        package: false,
-      })
+      this.composeWith(require.resolve('../readme/index.js'))
     }
 
     if (this.props.vscode) {
@@ -273,17 +267,11 @@ export default class QxyGenerator extends BaseGenerator {
     // Tool
     // ==================================
     if (this.props.prettier) {
-      this.composeWith(require.resolve('../prettier/index.js'), {
-        sharedConfig: '@qxy/prettier-config',
-      })
+      this.composeWith(require.resolve('../prettier/index.js'))
     }
 
     if (this.props.husky) {
-      this.composeWith(require.resolve('../husky/index.js'), {
-        commitlint: this.props.commitlint,
-        lintStaged: this.props.lintStaged,
-        nanoStaged: this.props.nanoStaged,
-      })
+      this.composeWith(require.resolve('../husky/index.js'))
     }
 
     if (this.props.svgo) {

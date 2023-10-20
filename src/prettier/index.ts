@@ -1,6 +1,5 @@
 import { ensurePrefix, ensureSuffix } from '../utils'
 import BaseGenerator from '../base-generator'
-import type { Questions } from 'yeoman-generator'
 
 interface PromptAnswers {
   sharedConfig: string
@@ -15,15 +14,15 @@ export default class PrettierGenerator extends BaseGenerator {
   protected sharedConfig: string
   protected overrides: boolean
 
-  private questions: Questions = [
+  private questions = [
     {
-      type: 'input',
+      type: 'input' as const,
       name: 'sharedConfig',
       message: 'sharedConfig to use',
       default: '@qxy/prettier-config',
     },
     {
-      type: 'confirm',
+      type: 'confirm' as const,
       name: 'overrides',
       message: 'overrides sharedConfig',
       default: false,

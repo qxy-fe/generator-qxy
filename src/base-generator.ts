@@ -4,7 +4,7 @@ import ora from 'ora'
 import Generator from 'yeoman-generator'
 import type { Dep } from './types'
 
-export default class BaseGenerator<T extends Record<string, any> = {}> extends Generator<T> {
+export default class BaseGenerator extends Generator {
   protected addFields(fields: Record<string, unknown>) {
     this.fs.extendJSON(this.destinationPath('package.json'), fields)
   }
@@ -32,7 +32,7 @@ export default class BaseGenerator<T extends Record<string, any> = {}> extends G
   }
 
   protected getStdoutString(cmd: string, args: string[]) {
-    const result = this.spawnCommandSync(cmd, args, { stdio: [process.stdout] })
+    const result = this.spawnSync(cmd, args, { stdio: [process.stdout] })
     return Buffer.from(result.stdout).toString()
   }
 

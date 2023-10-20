@@ -1,59 +1,12 @@
 import BaseGenerator from '../base-generator'
 
-interface Options {
-  commitlint: boolean
-  lintStaged: boolean
-  nanoStaged: boolean
-}
-
-export default class HuskyGenerator extends BaseGenerator<Options> {
-  protected commitlint: boolean
-
-  protected lintStaged: boolean
-
-  protected nanoStaged: boolean
-
-  constructor(args: string | string[], options: Options) {
-    super(args, options)
-
-    this.option('commitlint', {
-      type: Boolean,
-      default: false,
-      description: 'use commitlint or not',
-    })
-
-    this.option('lintStaged', {
-      type: Boolean,
-      default: false,
-      description: 'use lint-staged or not',
-    })
-
-    this.option('nanoStaged', {
-      type: Boolean,
-      default: false,
-      description: 'use nano-staged or not',
-    })
-
-    this.commitlint = this.options.commitlint
-    this.lintStaged = this.options.lintStaged
-    this.nanoStaged = this.options.nanoStaged
-  }
-
+export default class HuskyGenerator extends BaseGenerator {
   writing() {
     // ====================
     // Generate config
     // ====================
-    if (this.commitlint) {
-      this.fs.copy(this.templatePath('commit-msg'), this.destinationPath('.husky/commit-msg'))
-    }
 
-    if (this.lintStaged) {
-      this.fs.copy(this.templatePath('pre-commit-lint'), this.destinationPath('.husky/pre-commit'))
-    }
-
-    if (this.nanoStaged) {
-      this.fs.copy(this.templatePath('pre-commit-nano'), this.destinationPath('.husky/pre-commit'))
-    }
+    this.fs.copy(this.templatePath('pre-commit'), this.destinationPath('.husky/pre-commit'))
 
     // ====================
     // Add devDependencies

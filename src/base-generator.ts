@@ -2,14 +2,14 @@ import process from 'node:process'
 import { Buffer } from 'node:buffer'
 import ora from 'ora'
 import Generator from 'yeoman-generator'
-import type { Dep } from './types'
+import type { Dep, DepMap } from './types'
 
 export default class BaseGenerator extends Generator {
   protected addFields(fields: Record<string, unknown>) {
     this.fs.extendJSON(this.destinationPath('package.json'), fields)
   }
 
-  protected reduceDeps(deps: Dep[]): Record<string, string> {
+  protected reduceDeps(deps: Dep[]): DepMap {
     return deps.reduce(
       (obj, dep) => ({
         ...obj,
@@ -22,8 +22,8 @@ export default class BaseGenerator extends Generator {
   }
 
   protected addDeps({ deps = [], devDeps = [] }: { deps?: Dep[]; devDeps?: Dep[] }) {
-    const dependencies: Record<string, string> = this.reduceDeps(deps)
-    const devDependencies: Record<string, string> = this.reduceDeps(devDeps)
+    const dependencies: DepMap = this.reduceDeps(deps)
+    const devDependencies: DepMap = this.reduceDeps(devDeps)
 
     this.fs.extendJSON(this.destinationPath('package.json'), {
       dependencies,

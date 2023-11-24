@@ -24,7 +24,7 @@
     "typescriptreact"
   ],
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit"
+    "source.fixAll.eslint": "explicit"
   },
   "[html]": {
     "editor.formatOnSave": false

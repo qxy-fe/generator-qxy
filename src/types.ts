@@ -8,3 +8,5 @@ export interface DepMeta {
 }
 
 export type Dep = string | DepMeta
+
+export type DepMap = Record<string, string>

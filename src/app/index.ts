@@ -3,6 +3,8 @@ import BaseGenerator from '../base-generator'
 
 const require = createRequire(import.meta.url)
 
+type PromptQuestions = Parameters<InstanceType<typeof BaseGenerator>['prompt']>[0]
+
 interface PromptAnswers {
   meta: string[]
   linter: string[]
@@ -57,9 +59,9 @@ export default class QxyGenerator extends BaseGenerator {
     autofix: boolean
   }
 
-  protected questions = [
+  protected questions: PromptQuestions = [
     {
-      type: 'checkbox' as const,
+      type: 'checkbox',
       name: 'meta',
       message: 'Select meta files you wanna:',
       choices: [
@@ -75,7 +77,7 @@ export default class QxyGenerator extends BaseGenerator {
       default: ['git', 'readme', 'license', 'vscode', 'tsconfig', 'editorconfig'],
     },
     {
-      type: 'checkbox' as const,
+      type: 'checkbox',
       name: 'linter',
       message: 'Select linters you wanna:',
       choices: [
@@ -90,7 +92,7 @@ export default class QxyGenerator extends BaseGenerator {
       default: ['eslint'],
     },
     {
-      type: 'checkbox' as const,
+      type: 'checkbox',
       name: 'service',
       message: 'Select services you wanna:',
       choices: [
@@ -100,7 +102,7 @@ export default class QxyGenerator extends BaseGenerator {
       default: ['renovate'],
     },
     {
-      type: 'checkbox' as const,
+      type: 'checkbox',
       name: 'tool',
       message: 'Select tools you wanna:',
       choices: [
@@ -119,14 +121,14 @@ export default class QxyGenerator extends BaseGenerator {
       default: ['bumpp', 'husky', 'vitest', 'prettier', 'nano-staged'],
     },
     {
-      type: 'checkbox' as const,
+      type: 'checkbox',
       name: 'snippet',
       message: 'Select snippets you wanna:',
       choices: [{ name: 'Utils', value: 'utils' }],
       default: ['utils'],
     },
     {
-      type: 'checkbox' as const,
+      type: 'checkbox',
       name: 'action',
       message: 'Select actions you wanna:',
       choices: [{ name: 'AutoFix CI', value: 'autofix' }],
@@ -326,7 +328,7 @@ export default class QxyGenerator extends BaseGenerator {
   }
 
   install() {
-    this.spawnCommandSync('node', [
+    this.spawnSync('node', [
       require.resolve('sort-package-json'),
       this.destinationPath('package.json'),
     ])

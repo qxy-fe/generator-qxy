@@ -55,7 +55,7 @@
     "yeoman-test": "^8.2.0"
   },
   "engines": {
-    "node": ">=16.14.0"
+    "node": ">=18"
   },
   "pnpm": {
     "overrides": {

@@ -38,19 +38,19 @@
     "yeoman-generator": "^7.1.1"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "2.0.0-beta.22",
+    "@ntnyq/eslint-config": "2.0.0-beta.23",
     "@ntnyq/prettier-config": "^1.19.0",
     "@types/yeoman-assert": "^3.1.4",
-    "@vitest/coverage-v8": "^1.0.0-beta.5",
+    "@vitest/coverage-v8": "^1.0.0-beta.6",
     "bumpp": "^9.2.0",
     "copyfiles": "^2.4.1",
-    "eslint": "^8.54.0",
+    "eslint": "^8.55.0",
     "husky": "^8.0.3",
     "nano-staged": "^0.8.0",
     "prettier": "^3.1.0",
     "tsup": "^8.0.1",
     "typescript": "^5.3.2",
-    "vitest": "^1.0.0-beta.5",
+    "vitest": "^1.0.0-beta.6",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^8.2.0"
   },

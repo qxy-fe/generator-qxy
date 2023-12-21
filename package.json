@@ -41,7 +41,7 @@
     "@ntnyq/eslint-config": "2.0.0-beta.23",
     "@ntnyq/prettier-config": "^1.20.0",
     "@types/yeoman-assert": "^3.1.4",
-    "@vitest/coverage-v8": "^1.0.4",
+    "@vitest/coverage-v8": "^1.1.0",
     "bumpp": "^9.2.1",
     "copyfiles": "^2.4.1",
     "eslint": "^8.56.0",
@@ -50,7 +50,7 @@
     "prettier": "^3.1.1",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
-    "vitest": "^1.0.4",
+    "vitest": "^1.1.0",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^8.2.0"
   },

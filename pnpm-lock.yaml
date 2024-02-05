@@ -12,22 +12,22 @@ dependencies:
     specifier: ^8.0.1
     version: 8.0.1
   sort-package-json:
-    specifier: ^2.6.0
-    version: 2.6.0
+    specifier: ^2.7.0
+    version: 2.7.0
   yeoman-environment:
-    specifier: ^4.2.1
-    version: 4.2.1(@yeoman/types@1.1.1)(mem-fs@4.0.0)
+    specifier: ^4.3.0
+    version: 4.3.0(@yeoman/types@1.1.1)(mem-fs@4.0.0)
   yeoman-generator:
     specifier: ^7.1.1
-    version: 7.1.1(@yeoman/types@1.1.1)(mem-fs@4.0.0)(yeoman-environment@4.2.1)
+    version: 7.1.1(@yeoman/types@1.1.1)(mem-fs@4.0.0)(yeoman-environment@4.3.0)
 
 devDependencies:
   '@ntnyq/eslint-config':
     specifier: 2.0.0-beta.23
     version: 2.0.0-beta.23(eslint@8.56.0)(typescript@5.3.3)
   '@ntnyq/prettier-config':
-    specifier: ^1.20.2
-    version: 1.20.2
+    specifier: ^1.20.3
+    version: 1.20.3
   '@types/yeoman-assert':
     specifier: ^3.1.4
     version: 3.1.4
@@ -44,14 +44,14 @@ devDependencies:
     specifier: ^8.56.0
     version: 8.56.0
   husky:
-    specifier: ^9.0.6
-    version: 9.0.6
+    specifier: ^9.0.10
+    version: 9.0.10
   nano-staged:
     specifier: ^0.8.0
     version: 0.8.0
   prettier:
-    specifier: ^3.2.4
-    version: 3.2.4
+    specifier: ^3.2.5
+    version: 3.2.5
   tsup:
     specifier: ^8.0.1
     version: 8.0.1(typescript@5.3.3)
@@ -66,7 +66,7 @@ devDependencies:
     version: 3.1.1
   yeoman-test:
     specifier: ^8.2.0
-    version: 8.2.0(@yeoman/types@1.1.1)(mem-fs@4.0.0)(yeoman-environment@4.2.1)(yeoman-generator@7.1.1)
+    version: 8.2.0(@yeoman/types@1.1.1)(mem-fs@4.0.0)(yeoman-environment@4.3.0)(yeoman-generator@7.1.1)
 
 packages:
 
@@ -660,14 +660,14 @@ packages:
       eslint-plugin-jsonc: 2.10.0(eslint@8.56.0)
       eslint-plugin-markdown: 3.0.1(eslint@8.56.0)
       eslint-plugin-n: 16.3.1(eslint@8.56.0)
-      eslint-plugin-prettier: 5.0.1(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.4)
+      eslint-plugin-prettier: 5.0.1(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
       eslint-plugin-unicorn: 49.0.0(eslint@8.56.0)
       eslint-plugin-vue: 9.19.2(eslint@8.56.0)
       eslint-plugin-yml: 1.10.0(eslint@8.56.0)
       globals: 13.23.0
       jsonc-eslint-parser: 2.4.0
       local-pkg: 0.5.0
-      prettier: 3.2.4
+      prettier: 3.2.5
       vue-eslint-parser: 9.3.2(eslint@8.56.0)
       yaml-eslint-parser: 1.2.2
     transitivePeerDependencies:
@@ -678,8 +678,8 @@ packages:
       - typescript
     dev: true
 
-  /@ntnyq/prettier-config@1.20.2:
-    resolution: {integrity: sha512-d2RpljDOVPUGf9JXueGpWb5yWl5WZDjDW6IVrRfC2juBwOtPQZKSrIkvI2PUEK4FSwKxrzDQ3VKYbJcKFASwiA==}
+  /@ntnyq/prettier-config@1.20.3:
+    resolution: {integrity: sha512-sxnW1hQt/Qouek3B+DWtF0jLAMNaWyzX7qGXTS9yI0dPtBwaeWh+kZVZsyIBZazrzATtbSbSgs57cS+zmsWy7g==}
     dev: true
 
   /@octokit/auth-token@2.5.0:
@@ -1827,7 +1827,6 @@ packages:
   /cli-spinners@2.9.2:
     resolution: {integrity: sha512-ywqV+5MmyL4E7ybXgKys4DugZbX0FC6LnwrhjuykIjnK9k8OQacQ7axGKnjDXWNhns0xot3bZI5h55H8yo9cJg==}
     engines: {node: '>=6'}
-    dev: false
 
   /cli-table@0.3.11:
     resolution: {integrity: sha512-IqLQi4lO0nIB4tcdTpN4LCB9FI3uqrJZK7RC515EnhZ6qBaglkIgICb1wjeAqpdoOabm1+SuQtkXIPdYC93jhQ==}
@@ -2337,7 +2336,7 @@ packages:
       semver: 7.5.4
     dev: true
 
-  /eslint-plugin-prettier@5.0.1(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.4):
+  /eslint-plugin-prettier@5.0.1(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5):
     resolution: {integrity: sha512-m3u5RnR56asrwV/lDC4GHorlW75DsFfmUcjfCYylTUs85dBRnB7VM6xG8eCMJdeDRnppzmxZVf1GEPJvl1JmNg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -2353,7 +2352,7 @@ packages:
     dependencies:
       eslint: 8.56.0
       eslint-config-prettier: 9.1.0(eslint@8.56.0)
-      prettier: 3.2.4
+      prettier: 3.2.5
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.5
     dev: true
@@ -2589,16 +2588,6 @@ packages:
 
   /fast-fifo@1.3.2:
     resolution: {integrity: sha512-/d9sfos4yxzpwkDkuN7k2SqFKtYNmCTzgfEpz82x34IM9/zc8KGxQoXg1liNC/izpRM/MBdt44Nmx41ZWqk+FQ==}
-
-  /fast-glob@3.3.1:
-    resolution: {integrity: sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg==}
-    engines: {node: '>=8.6.0'}
-    dependencies:
-      '@nodelib/fs.stat': 2.0.5
-      '@nodelib/fs.walk': 1.2.8
-      glob-parent: 5.1.2
-      merge2: 1.4.1
-      micromatch: 4.0.5
 
   /fast-glob@3.3.2:
     resolution: {integrity: sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow==}
@@ -2897,7 +2886,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       dir-glob: 3.0.1
-      fast-glob: 3.3.1
+      fast-glob: 3.3.2
       ignore: 5.2.4
       merge2: 1.4.1
       slash: 4.0.0
@@ -3020,8 +3009,8 @@ packages:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
 
-  /husky@9.0.6:
-    resolution: {integrity: sha512-EEuw/rfTiMjOfuL7pGO/i9otg1u36TXxqjIA6D9qxVjd/UXoDOsLor/BSFf5hTK50shwzCU3aVVwdXDp/lp7RA==}
+  /husky@9.0.10:
+    resolution: {integrity: sha512-TQGNknoiy6bURzIO77pPRu+XHi6zI7T93rX+QnJsoYFf3xdjKOur+IlfqzJGMHIK/wXrLg+GsvMs8Op7vI2jVA==}
     engines: {node: '>=18'}
     hasBin: true
     dev: true
@@ -4063,7 +4052,7 @@ packages:
     dependencies:
       chalk: 5.3.0
       cli-cursor: 4.0.0
-      cli-spinners: 2.9.0
+      cli-spinners: 2.9.2
       is-interactive: 2.0.0
       is-unicode-supported: 1.3.0
       log-symbols: 5.1.0
@@ -4380,8 +4369,8 @@ packages:
       fast-diff: 1.3.0
     dev: true
 
-  /prettier@3.2.4:
-    resolution: {integrity: sha512-FWu1oLHKCrtpO1ypU6J0SbK2d9Ckwysq6bHj/uaCP26DxrPpppCLQRGVuqAxSTvhF00AcvDRyYrLNW7ocBhFFQ==}
+  /prettier@3.2.5:
+    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
@@ -4845,8 +4834,8 @@ packages:
     resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
     dev: false
 
-  /sort-package-json@2.6.0:
-    resolution: {integrity: sha512-XSQ+lY9bAYA8ZsoChcEoPlgcSMaheziEp1beox1JVxy1SV4F2jSq9+h2rJ+3mC/Dhu9Ius1DLnInD5AWcsDXZw==}
+  /sort-package-json@2.7.0:
+    resolution: {integrity: sha512-6AayF8bp6L+WROgpbhTMUtB9JSFmpGHjmW7DyaNPS1HwlTw2oSVlUUtlkHSEZmg5o89F3zvLBZNvMeZ1T4fjQg==}
     hasBin: true
     dependencies:
       detect-indent: 7.0.1
@@ -5681,8 +5670,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /yeoman-environment@4.2.1(@yeoman/types@1.1.1)(mem-fs@4.0.0):
-    resolution: {integrity: sha512-ZReZLcHM6TMUEY88k1/DhOljJ/z6cQyQ1UeS03xo4Qz7AGKjtyZEmeT7RSHw5f1jPC+aZXX3SLXjnSYeNBp5rQ==}
+  /yeoman-environment@4.3.0(@yeoman/types@1.1.1)(mem-fs@4.0.0):
+    resolution: {integrity: sha512-8cKRpZbOSx4wFP2B8XvZLOuPiYq9okcWuwL99K80QbSPGB7IymwHWyMvtXiv2nbQrNXX9SNRLhzCIY4oSimWcQ==}
     engines: {node: ^18.17.0 || >=20.5.0}
     hasBin: true
     peerDependencies:
@@ -5714,7 +5703,7 @@ packages:
       - bluebird
       - supports-color
 
-  /yeoman-generator@7.1.1(@yeoman/types@1.1.1)(mem-fs@4.0.0)(yeoman-environment@4.2.1):
+  /yeoman-generator@7.1.1(@yeoman/types@1.1.1)(mem-fs@4.0.0)(yeoman-environment@4.3.0):
     resolution: {integrity: sha512-vQ7ETaKIDmKNtpp97YFabE92ZaOTTs8NOr0wmmszyA1uAc2z5QXNZfU1WtXRFn76BiTf5mHWrOsCDls8N9nD6A==}
     engines: {node: ^18.17.0 || >=20.5.0}
     peerDependencies:
@@ -5744,12 +5733,12 @@ packages:
       simple-git: 3.20.0
       sort-keys: 5.0.0
       text-table: 0.2.0
-      yeoman-environment: 4.2.1(@yeoman/types@1.1.1)(mem-fs@4.0.0)
+      yeoman-environment: 4.3.0(@yeoman/types@1.1.1)(mem-fs@4.0.0)
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  /yeoman-test@8.2.0(@yeoman/types@1.1.1)(mem-fs@4.0.0)(yeoman-environment@4.2.1)(yeoman-generator@7.1.1):
+  /yeoman-test@8.2.0(@yeoman/types@1.1.1)(mem-fs@4.0.0)(yeoman-environment@4.3.0)(yeoman-generator@7.1.1):
     resolution: {integrity: sha512-P5F3LmUq94OiAYX5fcA2Avn0/4BjaUKMMH9nQN4o4QOASWmWdRxHd8jHjNCC8axC7UVXPcDta6GgjWA0Ok2PLw==}
     engines: {node: ^16.17.0 || >=18.12.0}
     peerDependencies:
@@ -5772,8 +5761,8 @@ packages:
       sinon: 16.1.3
       temp-dir: 3.0.0
       type-fest: 4.5.0
-      yeoman-environment: 4.2.1(@yeoman/types@1.1.1)(mem-fs@4.0.0)
-      yeoman-generator: 7.1.1(@yeoman/types@1.1.1)(mem-fs@4.0.0)(yeoman-environment@4.2.1)
+      yeoman-environment: 4.3.0(@yeoman/types@1.1.1)(mem-fs@4.0.0)
+      yeoman-generator: 7.1.1(@yeoman/types@1.1.1)(mem-fs@4.0.0)(yeoman-environment@4.3.0)
     dev: true
 
   /yocto-queue@0.1.0:

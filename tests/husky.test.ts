@@ -16,7 +16,7 @@ describe('Generator husky', () => {
     await helpers.run(GENERATOR)
     assert.JSONFileContent('package.json', {
       scripts: {
-        prepare: 'husky install',
+        prepare: 'husky',
       },
       devDependencies: {
         husky: '^0.0.0',

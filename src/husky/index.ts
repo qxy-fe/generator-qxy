@@ -18,7 +18,7 @@ export default class HuskyGenerator extends BaseGenerator {
     // ====================
     this.addFields({
       scripts: {
-        prepare: 'husky install',
+        prepare: 'husky',
       },
     })
   }

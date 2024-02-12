@@ -48,7 +48,7 @@
     "husky": "^9.0.10",
     "nano-staged": "^0.8.0",
     "prettier": "^3.2.5",
-    "tsup": "^8.0.1",
+    "tsup": "^8.0.2",
     "typescript": "^5.3.3",
     "vitest": "^1.2.2",
     "yeoman-assert": "^3.1.1",

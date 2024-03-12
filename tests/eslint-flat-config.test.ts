@@ -11,7 +11,7 @@ describe('Generator editorconfig', () => {
   })
 
   it('creates expected files', () => {
-    const expected = ['eslint.config.js', '.vscode/settings.json']
+    const expected = ['eslint.config.mjs', '.vscode/settings.json']
 
     assert.file(expected)
   })

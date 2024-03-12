@@ -5,7 +5,7 @@ export default class ESLintFlatConfigGenerator extends BaseGenerator {
     // ===================
     // Generate config
     // ===================
-    this.fs.copy(this.templatePath('eslint.config.js'), this.destinationPath('eslint.config.js'))
+    this.fs.copy(this.templatePath('eslint.config.mjs'), this.destinationPath('eslint.config.mjs'))
 
     this.addFields({
       scripts: {

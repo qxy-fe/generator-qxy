@@ -10,6 +10,7 @@ export default defineConfig({
     coverage: {
       reporter: ['lcov', 'html', 'json', 'text'],
       include: ['**/generators/**'],
+      exclude: ['**/templates/**'],
     },
   },
 })

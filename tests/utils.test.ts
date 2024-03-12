@@ -3,31 +3,24 @@ import assert from 'yeoman-assert'
 import { beforeEach, describe, it } from 'vitest'
 import { resolve } from './utils'
 
-const GENERATOR = resolve('generators/vitepress/index.js')
+const GENERATOR = resolve('generators/utils/index.js')
 
-describe('Generator vitepress', () => {
+describe('Generator utils', () => {
   beforeEach(async () => {
     await helpers.run(GENERATOR)
   })
 
   it('creates expected files', () => {
-    const expected = [
-      'docs/.vitepress/config.ts',
-      'docs/.vitepress/config/head.ts',
-      'docs/.vitepress/config/theme.ts',
-    ]
+    const expected = ['scripts/utils.ts']
 
     assert.file(expected)
   })
 
   it('extends package.json', () => {
     assert.JSONFileContent('package.json', {
-      scripts: {
-        'docs:dev': 'vitepress dev docs',
-        'docs:build': 'vitepress build docs',
-      },
       devDependencies: {
-        vitepress: '^0.0.0',
+        execa: '^0.0.0',
+        tsx: '^0.0.0',
       },
     })
   })

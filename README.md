@@ -86,8 +86,6 @@ npm i -g generator-qxy
 Use the generator:
 
 ```bash
-yo qxy
-
 # Run specifield generator
 yo qxy:eslint
 ```

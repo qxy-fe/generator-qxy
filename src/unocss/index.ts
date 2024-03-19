@@ -2,13 +2,11 @@ import BaseGenerator from '../base-generator'
 
 export default class UnoCSSGenerator extends BaseGenerator {
   writing() {
-    const devDeps = ['unocss', '@unocss/reset']
+    this.fs.copy(this.templatePath('uno.config.ts.ejs'), this.destinationPath('uno.config.ts'))
 
-    this.fs.copy(
-      this.templatePath('unocss.config.ts.ejs'),
-      this.destinationPath('unocss.config.ts'),
-    )
-
-    this.addDeps({ devDeps })
+    this.addDeps({
+      deps: ['@unocss/reset'],
+      devDeps: ['unocss'],
+    })
   }
 }

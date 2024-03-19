@@ -8,7 +8,7 @@ export default defineConfig({
     hookTimeout: 30_000,
     reporters: 'dot',
     coverage: {
-      reporter: ['lcov', 'html', 'json', 'text'],
+      reporter: ['lcov', 'json', 'text'],
       include: ['**/generators/**'],
       exclude: ['**/templates/**'],
     },

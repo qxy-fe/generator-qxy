@@ -2,13 +2,14 @@
  * @file VuePress 配置
  */
 
-import {
-  defaultTheme,
-  defineUserConfig,
-} from 'vuepress'
+import { defineUserConfig } from 'vuepress'
+import { viteBundler } from '@vuepress/bundler-vite'
+import { defaultTheme } from '@vuepress/theme-default'
 
 export default defineUserConfig({
   title: 'VuePress',
+
+  bundler: viteBundler(),
 
   theme: defaultTheme({
     repo: 'ntnyq/vuepress',

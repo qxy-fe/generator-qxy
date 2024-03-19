@@ -27,7 +27,11 @@ export default class VuepressGenerator extends BaseGenerator {
           tag: 'next',
         },
         {
-          name: '@vuepress/client',
+          name: '@vuepress/bundler-vite',
+          tag: 'next',
+        },
+        {
+          name: '@vuepress/theme-default',
           tag: 'next',
         },
       ],

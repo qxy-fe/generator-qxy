@@ -25,7 +25,8 @@ describe('Generator vuepress', () => {
       devDependencies: {
         vue: '^0.0.0',
         vuepress: '^0.0.0',
-        '@vuepress/client': '^0.0.0',
+        '@vuepress/bundler-vite': '^0.0.0',
+        '@vuepress/theme-default': '^0.0.0',
       },
     })
   })

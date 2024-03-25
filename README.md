@@ -56,6 +56,7 @@ Supported generators:
 ### Snippets
 
 - utils
+- vue-snippets
 
 ### Actions
 

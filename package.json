@@ -2,7 +2,7 @@
   "name": "generator-qxy",
   "type": "module",
   "version": "0.13.2",
-  "packageManager": "pnpm@8.15.5",
+  "packageManager": "pnpm@8.15.6",
   "keywords": [
     "yeoman-generator",
     "qxy-fe"
@@ -49,7 +49,7 @@
     "nano-staged": "^0.8.0",
     "prettier": "^3.2.5",
     "tsup": "^8.0.2",
-    "typescript": "^5.4.3",
+    "typescript": "^5.4.4",
     "vitest": "^1.4.0",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^8.2.0"

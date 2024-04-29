@@ -2,7 +2,7 @@
   "name": "generator-qxy",
   "type": "module",
   "version": "0.13.2",
-  "packageManager": "pnpm@9.0.5",
+  "packageManager": "pnpm@9.0.6",
   "keywords": [
     "yeoman-generator",
     "qxy-fe"
@@ -38,10 +38,10 @@
     "yeoman-generator": "^7.1.1"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "2.0.0-beta.25",
+    "@ntnyq/eslint-config": "2.0.1",
     "@ntnyq/prettier-config": "^1.21.2",
     "@types/yeoman-assert": "^3.1.4",
-    "@vitest/coverage-v8": "^1.4.0",
+    "@vitest/coverage-v8": "^1.5.2",
     "bumpp": "^9.4.0",
     "copyfiles": "^2.4.1",
     "eslint": "^8.57.0",
@@ -49,8 +49,8 @@
     "nano-staged": "^0.8.0",
     "prettier": "^3.2.5",
     "tsup": "^8.0.2",
-    "typescript": "^5.4.4",
-    "vitest": "^1.4.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.2",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^8.2.0"
   },
@@ -59,7 +59,7 @@
   },
   "pnpm": {
     "overrides": {
-      "mem-fs": "^4.0.0"
+      "mem-fs": "^4.1.0"
     }
   },
   "prettier": "@ntnyq/prettier-config",

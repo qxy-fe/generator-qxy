@@ -43,10 +43,7 @@ export default class ESLintFlatConfigGenerator extends BaseGenerator {
         'prettier',
         'typescript',
         '@ntnyq/prettier-config',
-        {
-          name: '@ntnyq/eslint-config',
-          tag: 'next',
-        },
+        '@ntnyq/eslint-config',
       ],
     })
   }

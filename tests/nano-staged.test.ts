@@ -13,7 +13,7 @@ describe('Generator nano-staged', () => {
   it('extends package.json', () => {
     assert.JSONFileContent('package.json', {
       'nano-staged': {
-        '*.{js,ts,cjs,vue,json,yaml,yml,md}': 'eslint --fix',
+        '*.{js,ts,cjs,mjs,vue,json,yaml,yml,md}': 'eslint --fix',
       },
       devDependencies: {
         'nano-staged': '^0.0.0',

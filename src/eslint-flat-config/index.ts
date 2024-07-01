@@ -18,7 +18,6 @@ export default class ESLintFlatConfigGenerator extends BaseGenerator {
       'eslint.enable': true,
       'prettier.enable': true,
       'editor.formatOnSave': true,
-      'eslint.experimental.useFlatConfig': true,
       'eslint.validate': [
         'vue',
         'yaml',

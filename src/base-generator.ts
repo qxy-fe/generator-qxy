@@ -36,13 +36,14 @@ export default class BaseGenerator extends Generator {
     return Buffer.from(result.stdout).toString()
   }
 
-  protected getPackageVersion(pkg: string) {
+  protected getPackageVersion(pkgName: string) {
     if (process.env.NODE_ENV === 'test') return '^0.0.0' // speedUp test
-    const spinner = ora(`Loading the latest version of package: ${pkg}`)
+    const spinner = ora(`Loading the latest version of package: ${pkgName}`)
     spinner.start()
-    const version = this.getStdoutString('npm', ['show', pkg, 'version'])
-    spinner.succeed(`${pkg}@${version}`)
-    return pkg.includes('@') ? version : `^${version}` // pin version for non latest pkg
+    const version = this.getStdoutString('npm', ['show', pkgName, 'version'])
+    spinner.succeed(`${pkgName}@${version}`)
+    // pin version for non latest pkg, exclude organization scope
+    return pkgName.includes('@') && !pkgName.startsWith('@') ? version : `^${version}`
   }
 
   protected extendVSCodeSettings(fields: Record<string, unknown>) {

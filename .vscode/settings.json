@@ -9,7 +9,6 @@
     ".gitignore.ejs": "ignore"
   },
   "editor.formatOnSave": true,
-  "eslint.experimental.useFlatConfig": true,
   "eslint.validate": [
     "vue",
     "yaml",
@@ -25,9 +24,6 @@
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
-  },
-  "[html]": {
-    "editor.formatOnSave": false
   },
   "cSpell.allowCompoundWords": true,
   "cSpell.words": [

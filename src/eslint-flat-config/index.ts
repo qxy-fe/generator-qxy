@@ -22,6 +22,7 @@ export default class ESLintFlatConfigGenerator extends BaseGenerator {
         'vue',
         'yaml',
         'html',
+        'toml',
         'json',
         'jsonc',
         'json5',

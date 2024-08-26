@@ -2,7 +2,7 @@
   "name": "generator-qxy",
   "type": "module",
   "version": "0.15.0",
-  "packageManager": "pnpm@9.7.1",
+  "packageManager": "pnpm@9.8.0",
   "keywords": [
     "yeoman-generator",
     "qxy-fe"
@@ -32,20 +32,20 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "ora": "^8.0.1",
-    "sort-package-json": "^2.10.0",
+    "ora": "^8.1.0",
+    "sort-package-json": "^2.10.1",
     "yeoman-environment": "^4.4.1",
     "yeoman-generator": "^7.3.2"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^3.0.0-beta.2",
+    "@ntnyq/eslint-config": "^3.0.0-beta.3",
     "@ntnyq/prettier-config": "^1.21.2",
     "@types/yeoman-assert": "^3.1.4",
     "@vitest/coverage-v8": "^2.0.5",
-    "bumpp": "^9.5.1",
+    "bumpp": "^9.5.2",
     "copyfiles": "^2.4.1",
-    "eslint": "^9.9.0",
-    "husky": "^9.1.4",
+    "eslint": "^9.9.1",
+    "husky": "^9.1.5",
     "nano-staged": "^0.8.0",
     "prettier": "^3.3.3",
     "tsup": "^8.2.4",

@@ -52,7 +52,7 @@
     "typescript": "^5.5.4",
     "vitest": "^2.0.5",
     "yeoman-assert": "^3.1.1",
-    "yeoman-test": "^8.3.0"
+    "yeoman-test": "^9.0.0"
   },
   "engines": {
     "node": ">=18.18"

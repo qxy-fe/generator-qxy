@@ -1,29 +1,20 @@
-import helpers from 'yeoman-test'
-import assert from 'yeoman-assert'
-import { beforeEach, describe, it } from 'vitest'
-import { resolve } from './utils'
+import { run } from '@ntnyq/generator-tester'
+import { resolve } from '../scripts/utils'
 
-const GENERATOR = resolve('generators/bumpp/index.js')
-
-describe('Generator bumpp', () => {
-  beforeEach(async () => {
-    await helpers.run(GENERATOR)
-  })
-
-  it('creates expected files', () => {
-    const expected = ['.github/workflows/release.yml']
-
-    assert.file(expected)
-  })
-
-  it('extends package.json', () => {
-    assert.JSONFileContent('package.json', {
-      scripts: {
-        release: 'bumpp && pnpm publish',
+run({
+  generator: resolve('generators/bumpp/index.js'),
+  file: ['.github/workflows/release.yml'],
+  jsonFileContent: [
+    {
+      filename: 'package.json',
+      content: {
+        scripts: {
+          release: 'bumpp && pnpm publish',
+        },
+        devDependencies: {
+          bumpp: '^0.0.0',
+        },
       },
-      devDependencies: {
-        bumpp: '^0.0.0',
-      },
-    })
-  })
+    },
+  ],
 })

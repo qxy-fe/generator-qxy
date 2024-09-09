@@ -1,18 +1,7 @@
-import helpers from 'yeoman-test'
-import assert from 'yeoman-assert'
-import { beforeEach, describe, it } from 'vitest'
-import { resolve } from './utils'
+import { run } from '@ntnyq/generator-tester'
+import { resolve } from '../scripts/utils'
 
-const GENERATOR = resolve('generators/autofix-ci/index.js')
-
-describe('Generator autofix-ci', () => {
-  beforeEach(async () => {
-    await helpers.run(GENERATOR)
-  })
-
-  it('creates expected files', () => {
-    const expected = ['.github/workflows/autofix-ci.yml']
-
-    assert.file(expected)
-  })
+run({
+  generator: resolve('generators/autofix-ci/index.js'),
+  file: ['.github/workflows/autofix-ci.yml'],
 })

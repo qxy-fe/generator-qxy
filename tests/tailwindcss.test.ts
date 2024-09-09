@@ -1,7 +1,7 @@
 import helpers from 'yeoman-test'
 import assert from 'yeoman-assert'
 import { beforeEach, describe, it } from 'vitest'
-import { resolve } from './utils'
+import { resolve } from '../scripts/utils'
 
 const GENERATOR = resolve('generators/tailwindcss/index.js')
 

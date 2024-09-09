@@ -1,23 +1,19 @@
-import helpers from 'yeoman-test'
-import assert from 'yeoman-assert'
-import { beforeEach, describe, it } from 'vitest'
-import { resolve } from './utils'
+import { run } from '@ntnyq/generator-tester'
+import { resolve } from '../scripts/utils'
 
-const GENERATOR = resolve('generators/lint-staged/index.js')
-
-describe('Generator lint-staged', () => {
-  beforeEach(async () => {
-    await helpers.run(GENERATOR)
-  })
-
-  it('extends package.json', () => {
-    assert.JSONFileContent('package.json', {
-      'lint-staged': {
-        '*.{js,ts,vue,json,yml,yaml,md}': 'eslint --fix',
+run({
+  generator: resolve('generators/lint-staged/index.js'),
+  jsonFileContent: [
+    {
+      filename: 'package.json',
+      content: {
+        'lint-staged': {
+          '*.{js,ts,cjs,mjs,vue,json,yml,yaml,md}': 'eslint --fix',
+        },
+        devDependencies: {
+          'lint-staged': '^0.0.0',
+        },
       },
-      devDependencies: {
-        'lint-staged': '^0.0.0',
-      },
-    })
-  })
+    },
+  ],
 })

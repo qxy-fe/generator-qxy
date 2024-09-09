@@ -1,23 +1,19 @@
-import helpers from 'yeoman-test'
-import assert from 'yeoman-assert'
-import { beforeEach, describe, it } from 'vitest'
-import { resolve } from './utils'
+import { run } from '@ntnyq/generator-tester'
+import { resolve } from '../scripts/utils'
 
-const GENERATOR = resolve('generators/publint/index.js')
-
-describe('Generator publint', () => {
-  beforeEach(async () => {
-    await helpers.run(GENERATOR)
-  })
-
-  it('extends package.json', () => {
-    assert.JSONFileContent('package.json', {
-      scripts: {
-        'lint:pkg': 'publint',
+run({
+  generator: resolve('generators/publint/index.js'),
+  jsonFileContent: [
+    {
+      filename: 'package.json',
+      content: {
+        scripts: {
+          'lint:pkg': 'publint',
+        },
+        devDependencies: {
+          publint: '^0.0.0',
+        },
       },
-      devDependencies: {
-        publint: '^0.0.0',
-      },
-    })
-  })
+    },
+  ],
 })

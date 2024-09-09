@@ -1,18 +1,7 @@
-import helpers from 'yeoman-test'
-import assert from 'yeoman-assert'
-import { beforeEach, describe, it } from 'vitest'
-import { resolve } from './utils'
+import { run } from '@ntnyq/generator-tester'
+import { resolve } from '../scripts/utils'
 
-const GENERATOR = resolve('generators/vscode/index.js')
-
-describe('Generator vscode', () => {
-  beforeEach(async () => {
-    await helpers.run(GENERATOR)
-  })
-
-  it('creates expected files', () => {
-    const expected = ['.vscode/settings.json']
-
-    assert.file(expected)
-  })
+run({
+  generator: resolve('generators/vscode/index.js'),
+  file: ['.vscode/settings.json'],
 })

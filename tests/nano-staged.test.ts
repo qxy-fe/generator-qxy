@@ -1,23 +1,19 @@
-import helpers from 'yeoman-test'
-import assert from 'yeoman-assert'
-import { beforeEach, describe, it } from 'vitest'
-import { resolve } from './utils'
+import { run } from '@ntnyq/generator-tester'
+import { resolve } from '../scripts/utils'
 
-const GENERATOR = resolve('generators/nano-staged/index.js')
-
-describe('Generator nano-staged', () => {
-  beforeEach(async () => {
-    await helpers.run(GENERATOR)
-  })
-
-  it('extends package.json', () => {
-    assert.JSONFileContent('package.json', {
-      'nano-staged': {
-        '*.{js,ts,cjs,mjs,vue,json,yaml,yml,md}': 'eslint --fix',
+run({
+  generator: resolve('generators/nano-staged/index.js'),
+  jsonFileContent: [
+    {
+      filename: 'package.json',
+      content: {
+        'nano-staged': {
+          '*.{js,ts,cjs,mjs,vue,json,yaml,yml,md}': 'eslint --fix',
+        },
+        devDependencies: {
+          'nano-staged': '^0.0.0',
+        },
       },
-      devDependencies: {
-        'nano-staged': '^0.0.0',
-      },
-    })
-  })
+    },
+  ],
 })

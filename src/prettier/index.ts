@@ -1,5 +1,5 @@
-import { ensurePrefix, ensureSuffix } from '../utils'
 import BaseGenerator from '../base-generator'
+import { ensurePrefix, ensureSuffix } from '../utils'
 
 interface PromptAnswers {
   sharedConfig: string

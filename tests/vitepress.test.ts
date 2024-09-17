@@ -1,6 +1,6 @@
-import helpers from 'yeoman-test'
-import assert from 'yeoman-assert'
 import { beforeEach, describe, it } from 'vitest'
+import assert from 'yeoman-assert'
+import helpers from 'yeoman-test'
 import { resolve } from '../scripts/utils'
 
 const GENERATOR = resolve('generators/vitepress/index.js')

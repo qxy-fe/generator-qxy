@@ -1,5 +1,5 @@
-import process from 'node:process'
 import { Buffer } from 'node:buffer'
+import process from 'node:process'
 import ora from 'ora'
 import Generator from 'yeoman-generator'
 import type { Dep, DepMap } from './types'

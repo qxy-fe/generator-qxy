@@ -1,6 +1,6 @@
 import { beforeEach, describe, it } from 'vitest'
-import helpers from 'yeoman-test'
 import assert from 'yeoman-assert'
+import helpers from 'yeoman-test'
 import { toArray } from './utils'
 import type { TestCasesOptions, Tester, TesterInitOptions } from './types'
 

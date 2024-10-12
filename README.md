@@ -51,6 +51,7 @@ Supported generators:
 - vuepress
 - vitepress
 - changeset
+- node-version
 - sort-package-json
 
 ### Snippets

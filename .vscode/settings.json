@@ -1,18 +1,16 @@
 {
-  "files.associations": {
-    "*.yml.ejs": "yaml",
-    "*.md.ejs": "markdown",
-    "*.json.ejs": "json",
-    "*.js.ejs": "plaintext",
-    "*.ts.ejs": "plaintext",
-    "LICENSE.ejs": "plaintext",
-    ".gitignore.ejs": "ignore"
-  },
+  "eslint.enable": true,
+  "prettier.enable": true,
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
   "eslint.validate": [
     "vue",
     "yaml",
     "html",
+    "toml",
     "json",
     "jsonc",
     "json5",
@@ -22,8 +20,14 @@
     "javascriptreact",
     "typescriptreact"
   ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+  "files.associations": {
+    "*.yml.ejs": "yaml",
+    "*.md.ejs": "markdown",
+    "*.json.ejs": "json",
+    "*.js.ejs": "plaintext",
+    "*.ts.ejs": "plaintext",
+    "LICENSE.ejs": "plaintext",
+    ".gitignore.ejs": "ignore"
   },
   "cSpell.allowCompoundWords": true,
   "cSpell.words": [

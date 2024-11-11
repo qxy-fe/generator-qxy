@@ -43,8 +43,8 @@ importers:
         specifier: ^1.5.0
         version: 1.5.0(@types/node@20.11.16)(@yeoman/adapter@1.6.0)(mem-fs-editor@10.0.3)(mem-fs@4.1.1)
       bumpp:
-        specifier: ^9.8.0
-        version: 9.8.0(magicast@0.3.5)
+        specifier: ^9.8.1
+        version: 9.8.1(magicast@0.3.5)
       copyfiles:
         specifier: ^2.4.1
         version: 2.4.1
@@ -1471,8 +1471,8 @@ packages:
   builtins@5.0.1:
     resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==}
 
-  bumpp@9.8.0:
-    resolution: {integrity: sha512-RKHjvOpN6RGhh7LNXGQCRRTPJ99PvVJRcX7EvKKpgj+3nKV8DWDM+8O1TMK0UvcGWhE74PRrQpISqFTcq8wPSg==}
+  bumpp@9.8.1:
+    resolution: {integrity: sha512-25W55DZI/rq6FboM0Q5y8eHbUk9eNn9oZ4bg/I5kiWn8/rdZCw6iqML076akQiUOQGhrm6QDvSSn4PgQ48bS4A==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -5470,7 +5470,7 @@ snapshots:
     dependencies:
       semver: 7.6.3
 
-  bumpp@9.8.0(magicast@0.3.5):
+  bumpp@9.8.1(magicast@0.3.5):
     dependencies:
       '@jsdevtools/ez-spawn': 3.0.4
       c12: 1.11.2(magicast@0.3.5)
@@ -7292,7 +7292,7 @@ snapshots:
 
   mlly@1.7.1:
     dependencies:
-      acorn: 8.12.0
+      acorn: 8.14.0
       pathe: 1.1.2
       pkg-types: 1.2.0
       ufo: 1.5.3

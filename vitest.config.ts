@@ -6,9 +6,9 @@ export default defineConfig({
     pool: 'forks',
     testTimeout: 30_000,
     hookTimeout: 30_000,
-    reporters: 'dot',
+    reporters: ['dot'],
     coverage: {
-      reporter: ['lcov', 'json', 'text'],
+      reporter: ['lcov', 'text'],
       include: ['**/generators/**'],
       exclude: ['**/templates/**'],
     },

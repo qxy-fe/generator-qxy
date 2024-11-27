@@ -4,8 +4,8 @@
   "version": "0.15.4",
   "packageManager": "pnpm@9.14.2",
   "keywords": [
-    "yeoman-generator",
-    "qxy-fe"
+    "qxy-fe",
+    "yeoman-generator"
   ],
   "license": "MIT",
   "author": {
@@ -38,21 +38,21 @@
     "yeoman-generator": "^7.3.3"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^3.3.1",
+    "@ntnyq/eslint-config": "^3.5.1",
     "@ntnyq/generator-tester": "workspace:*",
     "@ntnyq/prettier-config": "^1.22.0",
     "@types/yeoman-assert": "^3.1.4",
-    "@vitest/coverage-v8": "^2.1.5",
+    "@vitest/coverage-v8": "^2.1.6",
     "@yeoman/types": "^1.5.0",
     "bumpp": "^9.8.1",
     "copyfiles": "^2.4.1",
     "eslint": "^9.15.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.1",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2",
-    "vitest": "^2.1.5",
+    "vitest": "^2.1.6",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^10.0.1"
   },

@@ -1,8 +1,7 @@
 import { run } from '@ntnyq/generator-tester'
-import { resolve } from '../scripts/utils'
 
 run({
-  generator: resolve('generators/eslint/index.js'),
+  generator: 'generators/eslint/index.js',
   file: ['.eslintrc.json'],
   jsonFileContent: [
     {

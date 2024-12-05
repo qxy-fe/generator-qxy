@@ -1,8 +1,7 @@
 import { run } from '@ntnyq/generator-tester'
-import { resolve } from '../scripts/utils'
 
 run({
-  generator: resolve('generators/husky/index.js'),
+  generator: 'generators/husky/index.js',
   file: ['.husky/pre-commit'],
   jsonFileContent: [
     {

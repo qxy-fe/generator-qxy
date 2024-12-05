@@ -1,9 +1,8 @@
 /**
- * @file Stylelint config
+ * @type {import('stylelint').Config}
  */
-
 module.exports = {
-  root: true,
-
   extends: ['@qxy/stylelint-config'],
+
+  root: true,
 }

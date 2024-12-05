@@ -2,9 +2,8 @@
   "name": "generator-qxy",
   "type": "module",
   "version": "0.15.5",
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@9.14.4",
   "keywords": [
-    "qxy-fe",
     "yeoman-generator"
   ],
   "license": "MIT",
@@ -38,21 +37,21 @@
     "yeoman-generator": "^7.3.3"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^3.5.1",
+    "@ntnyq/eslint-config": "^3.8.1",
     "@ntnyq/generator-tester": "workspace:*",
     "@ntnyq/prettier-config": "^1.22.0",
     "@types/yeoman-assert": "^3.1.4",
-    "@vitest/coverage-v8": "^2.1.6",
+    "@vitest/coverage-v8": "^2.1.8",
     "@yeoman/types": "^1.5.0",
     "bumpp": "^9.8.1",
     "copyfiles": "^2.4.1",
-    "eslint": "^9.15.0",
+    "eslint": "^9.16.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
-    "prettier": "^3.4.1",
+    "prettier": "^3.4.2",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2",
-    "vitest": "^2.1.6",
+    "vitest": "^2.1.8",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^10.0.1"
   },
@@ -64,7 +63,6 @@
       "mem-fs": "^4.1.1"
     }
   },
-  "prettier": "@ntnyq/prettier-config",
   "nano-staged": {
     "*.{js,ts,cjs,mjs,json,jsonc,md,yaml,yml}": "eslint --fix"
   }

@@ -1,8 +1,7 @@
 import { run } from '@ntnyq/generator-tester'
-import { resolve } from '../scripts/utils'
 
 run({
-  generator: resolve('generators/svgo/index.js'),
+  generator: 'generators/svgo/index.js',
   file: ['svgo.config.mjs'],
   jsonFileContent: [
     {

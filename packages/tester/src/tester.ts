@@ -1,6 +1,8 @@
+import { isAbsolute } from 'node:path'
 import { beforeEach, describe, it } from 'vitest'
 import assert from 'yeoman-assert'
 import helpers from 'yeoman-test'
+import { resolve } from '../../../scripts/utils'
 import { toArray } from './utils'
 import type { TestCasesOptions, Tester, TesterInitOptions } from './types'
 
@@ -11,7 +13,9 @@ export async function createTester(options: TesterInitOptions): Promise<Tester> 
       const jsonFileContentCases = toArray(cases.jsonFileContent)
 
       beforeEach(async () => {
-        await helpers.run(options.generator)
+        await helpers.run(
+          isAbsolute(options.generator) ? options.generator : resolve(options.generator),
+        )
       })
 
       if (files.length) {

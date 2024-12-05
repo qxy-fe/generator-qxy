@@ -1,7 +1,6 @@
 import { run } from '@ntnyq/generator-tester'
-import { resolve } from '../scripts/utils'
 
 run({
-  generator: resolve('generators/readme/index.js'),
+  generator: 'generators/readme/index.js',
   file: ['README.md'],
 })

@@ -1,16 +1,16 @@
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-  entry: ['src/**/*.ts', '!**/templates/*.ts'],
-  ignoreWatch: ['src/**/templates/*'],
-  outDir: 'generators',
-  shims: true,
   clean: true,
-  format: ['esm'],
-  target: 'es2022',
-  treeshake: 'safest',
-  onSuccess: 'npm run copy',
+  entry: ['src/**/*.ts', '!**/templates/*.ts'],
   esbuildOptions: options => {
     options.charset = 'utf8'
   },
+  format: ['esm'],
+  ignoreWatch: ['src/**/templates/*'],
+  onSuccess: 'npm run copy',
+  outDir: 'generators',
+  shims: true,
+  target: 'es2022',
+  treeshake: 'safest',
 })

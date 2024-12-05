@@ -1,8 +1,7 @@
 import { run } from '@ntnyq/generator-tester'
-import { resolve } from '../scripts/utils'
 
 run({
-  generator: resolve('generators/bumpp/index.js'),
+  generator: 'generators/bumpp/index.js',
   file: ['.github/workflows/release.yml'],
   jsonFileContent: [
     {

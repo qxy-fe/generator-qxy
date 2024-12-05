@@ -1,8 +1,7 @@
 import { run } from '@ntnyq/generator-tester'
-import { resolve } from '../scripts/utils'
 
 run({
-  generator: resolve('generators/nano-staged/index.js'),
+  generator: 'generators/nano-staged/index.js',
   jsonFileContent: [
     {
       filename: 'package.json',

@@ -1,8 +1,7 @@
 import { run } from '@ntnyq/generator-tester'
-import { resolve } from '../scripts/utils'
 
 run({
-  generator: resolve('generators/cspell/index.js'),
+  generator: 'generators/cspell/index.js',
   file: ['cspell.json'],
   jsonFileContent: [
     {

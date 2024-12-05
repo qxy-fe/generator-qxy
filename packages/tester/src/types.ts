@@ -1,13 +1,17 @@
 export type Arrayable<T> = T | T[]
 
 export interface FileContentMatch {
-  filename: string
   content: Record<string, any>
+  filename: string
 }
 
 export interface TestCasesOptions {
   file?: Arrayable<string>
   jsonFileContent?: Arrayable<FileContentMatch>
+}
+
+export interface Tester {
+  run: (options: TestCasesOptions) => void
 }
 
 export interface TesterInitOptions {
@@ -20,8 +24,4 @@ export interface TesterInitOptions {
    * The path of the generator to test
    */
   generator: string
-}
-
-export interface Tester {
-  run: (options: TestCasesOptions) => void
 }

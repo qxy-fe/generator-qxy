@@ -1,8 +1,7 @@
 import { run } from '@ntnyq/generator-tester'
-import { resolve } from '../scripts/utils'
 
 run({
-  generator: resolve('generators/eslint-flat-config/index.js'),
+  generator: 'generators/eslint-flat-config/index.js',
   file: ['eslint.config.mjs', '.vscode/settings.json'],
   jsonFileContent: [
     {

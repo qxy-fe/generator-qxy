@@ -1,31 +1,21 @@
-import { beforeEach, describe, it } from 'vitest'
-import assert from 'yeoman-assert'
-import helpers from 'yeoman-test'
-import { resolve } from '../scripts/utils'
+import { run } from '@ntnyq/generator-tester'
 
-const GENERATOR = resolve('generators/vitest/index.js')
-
-describe('Generator vitest', () => {
-  beforeEach(async () => {
-    await helpers.run(GENERATOR)
-  })
-
-  it('creates expected files', () => {
-    const expected = ['vitest.config.ts']
-
-    assert.file(expected)
-  })
-
-  it('extends package.json', () => {
-    assert.JSONFileContent('package.json', {
-      scripts: {
-        test: 'vitest',
-        coverage: 'vitest --coverage',
+run({
+  generator: 'generators/vitest/index.js',
+  file: ['vitest.config.ts'],
+  jsonFileContent: [
+    {
+      filename: 'package.json',
+      content: {
+        scripts: {
+          test: 'vitest',
+          coverage: 'vitest --coverage',
+        },
+        devDependencies: {
+          vitest: '^0.0.0',
+          '@vitest/coverage-v8': '^0.0.0',
+        },
       },
-      devDependencies: {
-        vitest: '^0.0.0',
-        '@vitest/coverage-v8': '^0.0.0',
-      },
-    })
-  })
+    },
+  ],
 })

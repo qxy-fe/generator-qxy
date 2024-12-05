@@ -1,8 +1,7 @@
 import { run } from '@ntnyq/generator-tester'
-import { resolve } from '../scripts/utils'
 
 run({
-  generator: resolve('generators/commitlint/index.js'),
+  generator: 'generators/commitlint/index.js',
   jsonFileContent: [
     {
       filename: 'package.json',

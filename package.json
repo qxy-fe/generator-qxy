@@ -1,7 +1,7 @@
 {
   "name": "generator-qxy",
   "type": "module",
-  "version": "0.15.5",
+  "version": "0.16.0",
   "packageManager": "pnpm@9.15.0",
   "keywords": [
     "yeoman-generator"

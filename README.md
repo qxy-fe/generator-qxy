@@ -15,6 +15,7 @@ Supported generators:
 ### Metas
 
 - git
+- jsr
 - readme
 - vscode
 - yarnrc
@@ -25,6 +26,7 @@ Supported generators:
 
 ### Linters
 
+- biome
 - cspell
 - eslint
 - publint

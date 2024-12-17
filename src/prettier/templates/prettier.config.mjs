@@ -1,3 +1,5 @@
+// @ts-check
+
 import { config, defineConfig } from '@ntnyq/prettier-config'
 
 export default defineConfig({
@@ -10,6 +12,7 @@ export default defineConfig({
         singleAttributePerLine: false,
       },
     },
+
     {
       files: ['*.{css,scss}'],
       options: {

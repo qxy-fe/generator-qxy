@@ -1,6 +1,6 @@
 import { Buffer } from 'node:buffer'
 import process from 'node:process'
-import ora from 'ora'
+import { createSpinner } from 'nanospinner'
 import Generator from 'yeoman-generator'
 import type { Dep, DepMap } from './types'
 
@@ -38,10 +38,10 @@ export default class BaseGenerator extends Generator {
 
   protected getPackageVersion(pkgName: string) {
     if (process.env.NODE_ENV === 'test') return '^0.0.0' // speedUp test
-    const spinner = ora(`Loading the latest version of package: ${pkgName}`)
+    const spinner = createSpinner(`Loading the latest version of package: ${pkgName}`)
     spinner.start()
     const version = this.getStdoutString('npm', ['show', pkgName, 'version'])
-    spinner.succeed(`${pkgName}@${version}`)
+    spinner.success(`${pkgName}@${version}`)
     // pin version for non latest pkg, exclude organization scope
     return pkgName.includes('@') && !pkgName.startsWith('@') ? version : `^${version}`
   }

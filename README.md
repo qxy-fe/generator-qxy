@@ -38,6 +38,7 @@ Supported generators:
 
 - vercel
 - renovate
+- stackblitz
 
 ### Tools
 

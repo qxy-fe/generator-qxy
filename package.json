@@ -2,7 +2,7 @@
   "name": "generator-qxy",
   "type": "module",
   "version": "0.16.0",
-  "packageManager": "pnpm@9.15.1",
+  "packageManager": "pnpm@9.15.2",
   "keywords": [
     "yeoman-generator"
   ],
@@ -37,7 +37,7 @@
     "yeoman-generator": "^7.4.0"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^3.10.1",
+    "@ntnyq/eslint-config": "^3.10.4",
     "@ntnyq/generator-tester": "workspace:*",
     "@ntnyq/prettier-config": "^1.22.0",
     "@types/yeoman-assert": "^3.1.4",

@@ -1,4 +1,4 @@
-name: AutoFix
+name: autofix.ci # must named autofix.ci
 
 on:
   push:

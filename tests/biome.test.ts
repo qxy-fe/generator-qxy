@@ -8,7 +8,7 @@ run({
       filename: 'package.json',
       content: {
         scripts: {
-          check: 'biome check --write',
+          check: 'biome check',
           format: 'biome format --write',
         },
         devDependencies: {

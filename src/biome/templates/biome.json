@@ -1,43 +1,40 @@
 {
   "$schema": "https://biomejs.dev/schemas/latest/schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
-  "files": {
-    "ignoreUnknown": true,
-    "ignore": ["**/node_modules/**", "**/dist/**"]
-  },
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
-  "formatter": {
-    "indentStyle": "space"
-  },
-  "javascript": {
-    "globals": [],
-    "formatter": {
-      "quoteStyle": "single",
-      "semicolons": "asNeeded",
-      "trailingCommas": "all",
-      "indentWidth": 2,
-      "indentStyle": "space",
-      "arrowParentheses": "asNeeded",
-      "lineEnding": "lf"
-    }
-  },
   "css": {
-    "parser": {
-      "cssModules": true
-    },
     "formatter": {
       "enabled": true,
-      "quoteStyle": "double",
-      "indentWidth": 2,
-      "indentStyle": "space",
-      "lineEnding": "lf"
+      "quoteStyle": "double"
+    },
+    "parser": {
+      "cssModules": true
     }
+  },
+  "files": {
+    "ignore": ["**/node_modules/**", "**/dist/**"],
+    "ignoreUnknown": true
+  },
+  "formatter": {
+    "attributePosition": "auto",
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "asNeeded",
+      "attributePosition": "auto",
+      "bracketSameLine": false,
+      "bracketSpacing": true,
+      "jsxQuoteStyle": "single",
+      "quoteProperties": "asNeeded",
+      "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "trailingCommas": "all"
+    },
+    "globals": []
   },
   "json": {
     "formatter": {
@@ -48,11 +45,37 @@
   "linter": {
     "enabled": true,
     "rules": {
+      "complexity": { "useArrowFunction": "error" },
+      "correctness": {
+        "noUnsafeFinally": "error",
+        "noUnusedImports": "error",
+        "noUnusedVariables": "error"
+      },
       "recommended": true,
-      "complexity": {},
-      "style": {},
-      "suspicious": {}
+      "security": { "noGlobalEval": "error" },
+      "style": {
+        "noVar": "error",
+        "useBlockStatements": "off",
+        "useConst": "error",
+        "useNamingConvention": {
+          "level": "error",
+          "options": { "strictCase": false }
+        }
+      },
+      "suspicious": {
+        "noDoubleEquals": "error",
+        "noExplicitAny": "error",
+        "useNamespaceKeyword": "error"
+      }
     }
   },
-  "overrides": []
+  "organizeImports": {
+    "enabled": true
+  },
+  "overrides": [],
+  "vcs": {
+    "clientKind": "git",
+    "enabled": true,
+    "useIgnoreFile": true
+  }
 }

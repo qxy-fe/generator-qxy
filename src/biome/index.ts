@@ -4,7 +4,7 @@ export default class BiomeGenerator extends BaseGenerator {
   writing() {
     this.addFields({
       scripts: {
-        check: 'biome check --write',
+        check: 'biome check',
         format: 'biome format --write',
       },
     })

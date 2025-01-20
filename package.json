@@ -41,7 +41,7 @@
     "@ntnyq/generator-tester": "workspace:*",
     "@ntnyq/prettier-config": "^1.22.1",
     "@types/yeoman-assert": "^3.1.4",
-    "@vitest/coverage-v8": "^3.0.0-beta.4",
+    "@vitest/coverage-v8": "^3.0.2",
     "@yeoman/types": "^1.5.0",
     "bumpp": "^9.10.1",
     "copyfiles": "^2.4.1",
@@ -51,7 +51,7 @@
     "prettier": "^3.4.2",
     "tsup": "^8.3.5",
     "typescript": "^5.7.3",
-    "vitest": "^3.0.0-beta.4",
+    "vitest": "^3.0.2",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^10.0.1"
   },

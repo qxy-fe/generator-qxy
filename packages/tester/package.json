@@ -1,5 +1,5 @@
 {
-  "name": "@ntnyq/generator-tester",
+  "name": "@generator-qxy/tester",
   "version": "0.0.0",
   "private": true,
   "exports": "./src/index.ts",

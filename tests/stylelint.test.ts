@@ -1,4 +1,4 @@
-import { run } from '@ntnyq/generator-tester'
+import { run } from '@generator-qxy/tester'
 
 run({
   generator: 'generators/stylelint/index.js',

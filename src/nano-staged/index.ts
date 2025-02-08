@@ -8,6 +8,7 @@ export default class NanoStagedGenerator extends BaseGenerator {
     this.addFields({
       'nano-staged': {
         '*.{js,ts,cjs,mjs,vue,json,yaml,yml,md}': 'eslint --fix',
+        '*.{css,scss,html}': 'prettier -uw',
       },
     })
 

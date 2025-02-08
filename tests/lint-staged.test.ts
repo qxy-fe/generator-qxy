@@ -7,7 +7,8 @@ run({
       filename: 'package.json',
       content: {
         'lint-staged': {
-          '*.{js,ts,cjs,mjs,vue,json,yml,yaml,md}': 'eslint --fix',
+          '*.{js,ts,cjs,mjs,vue,json,yaml,yml,md}': 'eslint --fix',
+          '*.{css,scss,html}': 'prettier -uw',
         },
         devDependencies: {
           'lint-staged': '^0.0.0',

@@ -17,10 +17,8 @@ Supported generators:
 - jsr
 - readme
 - vscode
-- yarnrc
 - license
 - tsconfig
-- jsconfig
 - editorconfig
 
 ### Linters
@@ -50,16 +48,13 @@ Supported generators:
 - lint-staged
 - nano-staged
 - prettier
-- vuepress
 - vitepress
 - changeset
 - node-version
-- sort-package-json
 
 ### Snippets
 
 - utils
-- vue-snippets
 
 ### Actions
 

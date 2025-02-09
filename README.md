@@ -59,6 +59,7 @@ Supported generators:
 ### Actions
 
 - autofix-ci
+- pkg-pr-new
 
 ## Usage
 

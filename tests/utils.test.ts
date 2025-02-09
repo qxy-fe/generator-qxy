@@ -8,7 +8,7 @@ run({
       filename: 'package.json',
       content: {
         devDependencies: {
-          execa: '^0.0.0',
+          tinyexec: '^0.0.0',
           tsx: '^0.0.0',
         },
       },

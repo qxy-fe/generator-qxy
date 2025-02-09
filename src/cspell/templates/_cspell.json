@@ -13,6 +13,7 @@
     "**/.git/objects/**",
     "**/*.tsbuildinfo",
     "**/yarn.lock",
+    "**/bun.lock",
     "**/pnpm-lock.yaml",
     "**/package-lock.json",
     "**/composer.json",

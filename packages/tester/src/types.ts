@@ -16,12 +16,12 @@ export interface Tester {
 
 export interface TesterInitOptions {
   /**
-   * Name of the generator to test
-   */
-  name?: string
-
-  /**
    * The path of the generator to test
    */
   generator: string
+
+  /**
+   * Name of the generator to test
+   */
+  name?: string
 }

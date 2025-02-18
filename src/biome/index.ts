@@ -11,6 +11,9 @@ export default class BiomeGenerator extends BaseGenerator {
 
     this.addDeps({ devDeps: ['@biomejs/biome'] })
 
-    this.fs.copy(this.templatePath('biome.json'), this.destinationPath('biome.json'))
+    this.fs.copy(
+      this.templatePath('biome.json'),
+      this.destinationPath('biome.json'),
+    )
   }
 }

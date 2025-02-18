@@ -6,7 +6,10 @@ export default class HuskyGenerator extends BaseGenerator {
     // Generate config
     // ====================
 
-    this.fs.copy(this.templatePath('pre-commit'), this.destinationPath('.husky/pre-commit'))
+    this.fs.copy(
+      this.templatePath('pre-commit'),
+      this.destinationPath('.husky/pre-commit'),
+    )
 
     // ====================
     // Add devDependencies

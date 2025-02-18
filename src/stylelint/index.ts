@@ -2,7 +2,12 @@ import BaseGenerator from '../base-generator'
 
 export default class StylelintGenerator extends BaseGenerator {
   writing() {
-    const devDeps = ['stylelint', 'prettier', 'postcss', '@qxy/stylelint-config']
+    const devDeps = [
+      'stylelint',
+      'prettier',
+      'postcss',
+      '@qxy/stylelint-config',
+    ]
 
     this.fs.copy(
       this.templatePath('stylelint.config.cjs'),

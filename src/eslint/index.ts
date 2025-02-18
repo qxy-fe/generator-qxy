@@ -5,7 +5,10 @@ export default class ESLintGenerator extends BaseGenerator {
     // ===================
     // Generate config
     // ===================
-    this.fs.copy(this.templatePath('eslint.config.mjs'), this.destinationPath('eslint.config.mjs'))
+    this.fs.copy(
+      this.templatePath('eslint.config.mjs'),
+      this.destinationPath('eslint.config.mjs'),
+    )
 
     this.addFields({
       scripts: {

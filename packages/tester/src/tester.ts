@@ -6,7 +6,9 @@ import { resolve } from '../../../scripts/utils'
 import { toArray } from './utils'
 import type { TestCasesOptions, Tester, TesterInitOptions } from './types'
 
-export async function createTester(options: TesterInitOptions): Promise<Tester> {
+export async function createTester(
+  options: TesterInitOptions,
+): Promise<Tester> {
   function run(cases: TestCasesOptions) {
     describe(options.name || 'generator-to-test', () => {
       const files = toArray(cases.file)
@@ -14,7 +16,9 @@ export async function createTester(options: TesterInitOptions): Promise<Tester> 
 
       beforeEach(async () => {
         await helpers.run(
-          isAbsolute(options.generator) ? options.generator : resolve(options.generator),
+          isAbsolute(options.generator)
+            ? options.generator
+            : resolve(options.generator),
         )
       })
 

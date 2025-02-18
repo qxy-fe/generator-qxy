@@ -2,7 +2,11 @@ import { run } from '@generator-qxy/tester'
 
 run({
   generator: 'generators/changeset/index.js',
-  file: ['.github/workflows/release.yml', '.changeset/README.md', '.changeset/config.json'],
+  file: [
+    '.github/workflows/release.yml',
+    '.changeset/README.md',
+    '.changeset/config.json',
+  ],
   jsonFileContent: [
     {
       filename: 'package.json',

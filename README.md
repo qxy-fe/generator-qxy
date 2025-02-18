@@ -25,6 +25,7 @@ Supported generators:
 
 - biome
 - cspell
+- dprint
 - eslint
 - publint
 - ls-lint

@@ -21,7 +21,13 @@ export default class BaseGenerator extends Generator {
     )
   }
 
-  protected addDeps({ deps = [], devDeps = [] }: { deps?: Dep[]; devDeps?: Dep[] }) {
+  protected addDeps({
+    deps = [],
+    devDeps = [],
+  }: {
+    deps?: Dep[]
+    devDeps?: Dep[]
+  }) {
     const dependencies: DepMap = this.reduceDeps(deps)
     const devDependencies: DepMap = this.reduceDeps(devDeps)
 
@@ -38,12 +44,16 @@ export default class BaseGenerator extends Generator {
 
   protected getPackageVersion(pkgName: string) {
     if (process.env.NODE_ENV === 'test') return '^0.0.0' // speedUp test
-    const spinner = createSpinner(`Loading the latest version of package: ${pkgName}`)
+    const spinner = createSpinner(
+      `Loading the latest version of package: ${pkgName}`,
+    )
     spinner.start()
     const version = this.getStdoutString('npm', ['show', pkgName, 'version'])
     spinner.success(`${pkgName}@${version}`)
     // pin version for non latest pkg, exclude organization scope
-    return pkgName.includes('@') && !pkgName.startsWith('@') ? version : `^${version}`
+    return pkgName.includes('@') && !pkgName.startsWith('@')
+      ? version
+      : `^${version}`
   }
 
   protected extendVSCodeSettings(fields: Record<string, unknown>) {

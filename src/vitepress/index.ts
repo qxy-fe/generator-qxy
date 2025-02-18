@@ -4,7 +4,10 @@ export default class VitePressGenerator extends BaseGenerator {
   write() {
     const targetDir = 'docs'
 
-    this.fs.copy(this.templatePath('index.md'), this.destinationPath(targetDir, 'index.md'))
+    this.fs.copy(
+      this.templatePath('index.md'),
+      this.destinationPath(targetDir, 'index.md'),
+    )
     this.fs.copy(
       this.templatePath('.vitepress/config.ts.ejs'),
       this.destinationPath(targetDir, '.vitepress/config.ts'),

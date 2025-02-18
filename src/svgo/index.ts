@@ -2,7 +2,10 @@ import BaseGenerator from '../base-generator'
 
 export default class SVGOGenerator extends BaseGenerator {
   writing() {
-    this.fs.copy(this.templatePath('svgo.config.mjs'), this.destinationPath('svgo.config.mjs'))
+    this.fs.copy(
+      this.templatePath('svgo.config.mjs'),
+      this.destinationPath('svgo.config.mjs'),
+    )
 
     this.addFields({
       scripts: {

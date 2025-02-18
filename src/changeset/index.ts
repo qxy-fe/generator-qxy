@@ -7,9 +7,15 @@ export default class ChangesetGenerator extends BaseGenerator {
       this.destinationPath('.github/workflows/release.yml'),
     )
 
-    this.fs.copy(this.templatePath('README.md'), this.destinationPath('.changeset/README.md'))
+    this.fs.copy(
+      this.templatePath('README.md'),
+      this.destinationPath('.changeset/README.md'),
+    )
 
-    this.fs.copy(this.templatePath('config.json'), this.destinationPath('.changeset/config.json'))
+    this.fs.copy(
+      this.templatePath('config.json'),
+      this.destinationPath('.changeset/config.json'),
+    )
 
     this.addFields({
       scripts: {
@@ -17,6 +23,8 @@ export default class ChangesetGenerator extends BaseGenerator {
       },
     })
 
-    this.addDeps({ devDeps: ['@changesets/cli', '@changesets/changelog-github'] })
+    this.addDeps({
+      devDeps: ['@changesets/cli', '@changesets/changelog-github'],
+    })
   }
 }

@@ -4,7 +4,10 @@ export default class VitestGenerator extends BaseGenerator {
   writing() {
     const devDeps = ['vitest', '@vitest/coverage-v8']
 
-    this.fs.copy(this.templatePath('vitest.config.ts'), this.destinationPath('vitest.config.ts'))
+    this.fs.copy(
+      this.templatePath('vitest.config.ts'),
+      this.destinationPath('vitest.config.ts'),
+    )
 
     this.addFields({
       scripts: {

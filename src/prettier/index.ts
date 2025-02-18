@@ -11,6 +11,9 @@ export default class PrettierGenerator extends BaseGenerator {
 
     // prettierIgnore in package.json is not supported
     // https://github.com/prettier/prettier/issues/3460
-    this.fs.copy(this.templatePath('_prettierignore'), this.destinationPath('.prettierignore'))
+    this.fs.copy(
+      this.templatePath('_prettierignore'),
+      this.destinationPath('.prettierignore'),
+    )
   }
 }

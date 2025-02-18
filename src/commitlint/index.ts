@@ -8,6 +8,8 @@ export default class CommitlintGenerator extends BaseGenerator {
       },
     })
 
-    this.addDeps({ devDeps: ['@commitlint/cli', '@commitlint/config-conventional'] })
+    this.addDeps({
+      devDeps: ['@commitlint/cli', '@commitlint/config-conventional'],
+    })
   }
 }

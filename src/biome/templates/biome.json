@@ -6,11 +6,19 @@
       "quoteStyle": "double"
     },
     "parser": {
-      "cssModules": true
+      "cssModules": false
     }
   },
   "files": {
-    "ignore": ["**/node_modules/**", "**/dist/**"],
+    "ignore": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/.vercel/**",
+      "**/.netlify/**",
+      "**/.nitro/**",
+      "**/.output/**",
+      "bun.lock"
+    ],
     "ignoreUnknown": true
   },
   "formatter": {
@@ -20,7 +28,7 @@
     "indentStyle": "space",
     "indentWidth": 2,
     "lineEnding": "lf",
-    "lineWidth": 100
+    "lineWidth": 80
   },
   "javascript": {
     "formatter": {

@@ -24,7 +24,7 @@
     "build": "tsup",
     "copy": "copyfiles -a -u 1 -V src/*/templates/**/** generators",
     "dev": "tsup --watch src",
-    "lint": "eslint .",
+    "lint": "eslint",
     "prepare": "husky",
     "prepublishOnly": "npm run build",
     "release": "bumpp && npm publish",
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@generator-qxy/tester": "workspace:*",
-    "@ntnyq/eslint-config": "^4.0.0-beta.8",
+    "@ntnyq/eslint-config": "^4.0.0-beta.9",
     "@ntnyq/prettier-config": "^2.0.0",
     "@types/yeoman-assert": "^3.1.4",
     "@yeoman/types": "^1.5.0",

@@ -5,6 +5,9 @@
       "enabled": true,
       "quoteStyle": "double"
     },
+    "linter": {
+      "enabled": true
+    },
     "parser": {
       "cssModules": false
     }
@@ -42,7 +45,10 @@
       "semicolons": "asNeeded",
       "trailingCommas": "all"
     },
-    "globals": []
+    "globals": [],
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
   },
   "json": {
     "formatter": {
@@ -57,11 +63,13 @@
       "correctness": {
         "noUnsafeFinally": "error",
         "noUnusedImports": "error",
-        "noUnusedVariables": "error"
+        "noUnusedVariables": "error",
+        "useHookAtTopLevel": "error"
       },
       "recommended": true,
       "security": { "noGlobalEval": "error" },
       "style": {
+        "noNonNullAssertion": "off",
         "noVar": "error",
         "useBlockStatements": "off",
         "useConst": "error",

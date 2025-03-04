@@ -8,7 +8,7 @@ run({
       filename: 'package.json',
       content: {
         scripts: {
-          lint: 'eslint .',
+          lint: 'eslint',
         },
         devDependencies: {
           eslint: '^0.0.0',

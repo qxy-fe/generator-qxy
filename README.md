@@ -48,6 +48,7 @@ Supported generators:
 - vitest
 - lint-staged
 - nano-staged
+- lefthook
 - prettier
 - vitepress
 - changeset

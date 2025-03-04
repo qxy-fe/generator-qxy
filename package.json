@@ -1,7 +1,7 @@
 {
   "name": "generator-qxy",
   "type": "module",
-  "version": "0.18.0",
+  "version": "0.18.1",
   "workspaces": [
     "packages/*"
   ],

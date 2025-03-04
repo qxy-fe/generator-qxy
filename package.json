@@ -63,7 +63,7 @@
     "mem-fs": "^4.1.2"
   },
   "nano-staged": {
-    "*.{js,ts,cjs,mjs,json,jsonc,md,yaml,yml}": "eslint --fix",
+    "*.{js,ts,cjs,mjs,md,yaml,yml,json,jsonc}": "eslint --fix",
     "*.{css,html}": "prettier -uw"
   }
 }

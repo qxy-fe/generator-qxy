@@ -12,15 +12,15 @@ export default class ESLintGenerator extends BaseGenerator {
 
     this.addFields({
       scripts: {
-        lint: 'eslint .',
+        lint: 'eslint',
       },
-      prettier: '@ntnyq/prettier-config',
     })
 
     this.extendVSCodeSettings({
       'eslint.enable': true,
       'prettier.enable': true,
       'editor.formatOnSave': true,
+      'prettier.configPath': './prettier.config.mjs',
       'editor.defaultFormatter': 'esbenp.prettier-vscode',
       'editor.codeActionsOnSave': {
         'source.fixAll.eslint': 'explicit',

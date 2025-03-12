@@ -54,6 +54,10 @@ Supported generators:
 - changeset
 - node-version
 
+### Bundler
+
+- unbuild
+
 ### Snippets
 
 - utils

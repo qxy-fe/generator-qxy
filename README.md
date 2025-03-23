@@ -61,6 +61,7 @@ Supported generators:
 ### Snippets
 
 - utils
+- vue-shims
 
 ### Actions
 

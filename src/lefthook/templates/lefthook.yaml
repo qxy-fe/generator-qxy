@@ -1,4 +1,4 @@
-# yaml-language-server:$schema=./node_modules/lefthook/schema.json
+# yaml-language-server:$schema=https://unpkg.com/lefthook/schema.json
 # https://evilmartians.github.io/lefthook/configuration/
 
 pre-commit:

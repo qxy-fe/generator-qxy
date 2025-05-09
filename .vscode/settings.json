@@ -49,7 +49,7 @@
     "stackblitzrc",
     "svgo",
     "tsbuildinfo",
-    "tsup",
+    "tsdown",
     "vite",
     "vitepress",
     "vitest",

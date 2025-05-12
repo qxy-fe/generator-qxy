@@ -51,7 +51,7 @@
     "nano-staged": "^0.8.0",
     "prettier": "^3.5.3",
     "tinyexec": "^1.0.1",
-    "tsdown": "^0.11.1",
+    "tsdown": "^0.11.3",
     "typescript": "^5.8.3",
     "vitest": "^3.1.3",
     "yeoman-assert": "^3.1.1",

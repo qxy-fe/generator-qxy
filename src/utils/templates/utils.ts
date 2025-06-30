@@ -1,10 +1,8 @@
 import path from 'node:path'
-import { fileURLToPath, URL } from 'node:url'
 import { x } from 'tinyexec'
 import type { Options } from 'tinyexec'
 
-const __dirname = fileURLToPath(new URL('.', import.meta.url))
-const rootPath = path.resolve(__dirname, '..')
+const rootPath = path.resolve(import.meta.dirname, '..')
 
 export const resolve = (...args: string[]) => path.resolve(rootPath, ...args)
 

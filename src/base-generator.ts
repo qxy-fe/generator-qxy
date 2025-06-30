@@ -43,7 +43,9 @@ export default class BaseGenerator extends Generator {
   }
 
   protected getPackageVersion(pkgName: string) {
-    if (process.env.NODE_ENV === 'test') return '^0.0.0' // speedUp test
+    if (process.env.NODE_ENV === 'test') {
+      return '^0.0.0'
+    } // speedUp test
     const spinner = createSpinner(
       `Loading the latest version of package: ${pkgName}`,
     )

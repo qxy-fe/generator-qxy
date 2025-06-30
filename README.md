@@ -57,6 +57,7 @@ Supported generators:
 ### Bundler
 
 - unbuild
+- tsdown
 
 ### Snippets
 

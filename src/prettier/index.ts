@@ -2,6 +2,12 @@ import BaseGenerator from '../base-generator'
 
 export default class PrettierGenerator extends BaseGenerator {
   writing() {
+    this.addFields({
+      scripts: {
+        format: 'prettier -uw .',
+      },
+    })
+
     this.addDeps({ devDeps: ['prettier', '@ntnyq/prettier-config'] })
 
     this.fs.copyTpl(

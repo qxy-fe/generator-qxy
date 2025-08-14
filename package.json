@@ -16,7 +16,6 @@
   "repository": "qxy-fe/generator-qxy",
   "exports": "./generators/app/index.js",
   "main": "./generators/app/index.js",
-  "module": "./generators/app/index.js",
   "files": [
     "generators"
   ],
@@ -27,7 +26,10 @@
     "lint": "eslint",
     "prepare": "husky",
     "prepublishOnly": "npm run build",
-    "release": "bumpp && npm publish",
+    "release": "run-s release:check release:version release:publish",
+    "release:check": "run-s build lint typecheck test",
+    "release:publish": "npm publish",
+    "release:version": "bumpp",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
@@ -49,6 +51,7 @@
     "eslint": "^9.33.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
+    "npm-run-all2": "^8.0.4",
     "prettier": "^3.6.2",
     "tinyexec": "^1.0.1",
     "tsdown": "^0.14.1",

@@ -26,9 +26,8 @@
     "lint": "eslint",
     "prepare": "husky",
     "prepublishOnly": "npm run build",
-    "release": "run-s release:check release:version release:publish",
+    "release": "run-s release:check release:version",
     "release:check": "run-s build lint typecheck test",
-    "release:publish": "npm publish",
     "release:version": "bumpp",
     "test": "vitest",
     "typecheck": "tsc --noEmit"

@@ -1,5 +1,12 @@
 {
   "$schema": "https://biomejs.dev/schemas/latest/schema.json",
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
   "css": {
     "formatter": {
       "enabled": true,
@@ -31,7 +38,8 @@
     "indentStyle": "space",
     "indentWidth": 2,
     "lineEnding": "lf",
-    "lineWidth": 80
+    "lineWidth": 80,
+    "useEditorconfig": true
   },
   "javascript": {
     "formatter": {
@@ -59,7 +67,10 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "complexity": { "useArrowFunction": "error" },
+      "complexity": {
+        "noStaticOnlyClass": "warn",
+        "useArrowFunction": "error"
+      },
       "correctness": {
         "noUnsafeFinally": "error",
         "noUnusedImports": "error",
@@ -70,6 +81,7 @@
       "security": { "noGlobalEval": "error" },
       "style": {
         "noNonNullAssertion": "off",
+        "noUselessElse": "error",
         "useBlockStatements": "off",
         "useConst": "error",
         "useNamingConvention": {

@@ -9,13 +9,15 @@ export default class BumppGenerator extends BaseGenerator {
 
     this.addFields({
       scripts: {
-        release: 'bumpp && pnpm publish',
+        release: 'run-s release:check release:version',
+        'release:check': 'run-s lint typecheck test',
+        'release:version': 'bumpp',
       },
     })
 
     // ==================
     // Add devDependencies
     // ==================
-    this.addDeps({ devDeps: ['bumpp'] })
+    this.addDeps({ devDeps: ['bumpp', 'npm-run-all2'] })
   }
 }

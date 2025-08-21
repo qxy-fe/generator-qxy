@@ -8,10 +8,13 @@ run({
       filename: 'package.json',
       content: {
         scripts: {
-          release: 'bumpp && pnpm publish',
+          release: 'run-s release:check release:version',
+          'release:check': 'run-s lint typecheck test',
+          'release:version': 'bumpp',
         },
         devDependencies: {
           bumpp: '^0.0.0',
+          'npm-run-all2': '^0.0.0',
         },
       },
     },

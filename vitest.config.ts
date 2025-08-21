@@ -5,8 +5,8 @@ export default defineConfig({
     hookTimeout: 30_000,
     // required for test generators
     pool: 'forks',
-    reporters: ['dot'],
     testTimeout: 30_000,
+    watch: false,
     coverage: {
       exclude: ['**/templates/**'],
       include: ['**/generators/**'],

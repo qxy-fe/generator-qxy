@@ -6,5 +6,5 @@ export default defineConfig({
   onSuccess: 'npm run copy',
   outDir: 'generators',
   shims: true,
-  target: ['es2022', 'node18'],
+  target: ['es2023', 'node18'],
 })

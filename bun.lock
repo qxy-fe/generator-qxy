@@ -13,7 +13,7 @@
         "@generator-qxy/tester": "workspace:*",
         "@ntnyq/eslint-config": "^5.6.0",
         "@ntnyq/prettier-config": "^3.0.1",
-        "@types/node": "^24.7.0",
+        "@types/node": "^24.7.2",
         "@types/yeoman-assert": "^3.1.4",
         "@yeoman/types": "^1.8.0",
         "bumpp": "^10.3.1",

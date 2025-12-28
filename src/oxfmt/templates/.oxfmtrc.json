@@ -1,0 +1,25 @@
+{
+  "arrowParens": "avoid",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "embeddedLanguageFormatting": "auto",
+  "endOfLine": "lf",
+  "jsxSingleQuote": true,
+  "objectWrap": "preserve",
+  "printWidth": 100,
+  "quoteProps": "as-needed",
+  "semi": false,
+  "singleAttributePerLine": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false,
+  "insertFinalNewline": true,
+  "experimentalSortPackageJson": false,
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "pnpm-lock.yaml",
+    "**/*.min.*"
+  ]
+}

@@ -2,7 +2,7 @@ import { run } from '@generator-qxy/tester'
 
 run({
   generator: 'generators/oxfmt/index.js',
-  file: ['.oxfmtrc.json'],
+  file: ['.oxfmtrc.jsonc'],
   jsonFileContent: [
     {
       filename: 'package.json',

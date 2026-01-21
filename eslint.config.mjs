@@ -7,7 +7,7 @@ export default defineESLintConfig({
   specials: {
     specialCaseConfigs: [
       {
-        files: ['**/biome.json?([c5])'],
+        files: ['**/biome.json?([c5])', '**/.oxfmtrc.json?([c])'],
         name: 'ntnyq/specials/sort-json-keys',
         rules: {
           'jsonc/sort-keys': [

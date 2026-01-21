@@ -22,8 +22,8 @@ export default class OxfmtGenerator extends BaseGenerator {
     // ====================
 
     this.fs.copy(
-      this.templatePath('.oxfmtrc.json'),
-      this.destinationPath('.oxfmtrc.json'),
+      this.templatePath('.oxfmtrc.jsonc'),
+      this.destinationPath('.oxfmtrc.jsonc'),
     )
   }
 }

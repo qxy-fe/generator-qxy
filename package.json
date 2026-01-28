@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "nanospinner": "^1.2.2",
-    "sort-package-json": "^3.6.0",
+    "sort-package-json": "^3.6.1",
     "yeoman-environment": "^5.1.2",
     "yeoman-generator": "^7.5.1"
   },
@@ -42,7 +42,7 @@
     "@generator-qxy/tester": "workspace:*",
     "@ntnyq/eslint-config": "^5.9.0",
     "@ntnyq/prettier-config": "^3.0.1",
-    "@types/node": "^25.0.9",
+    "@types/node": "^25.0.10",
     "@types/yeoman-assert": "^3.1.4",
     "@yeoman/types": "^1.9.1",
     "bumpp": "^10.4.0",
@@ -51,11 +51,11 @@
     "husky": "^9.1.7",
     "nano-staged": "^0.9.0",
     "npm-run-all2": "^8.0.4",
-    "prettier": "^3.8.0",
+    "prettier": "^3.8.1",
     "tinyexec": "^1.0.2",
-    "tsdown": "^0.20.0-beta.4",
+    "tsdown": "^0.20.1",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.17",
+    "vitest": "^4.0.18",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^11.2.0"
   },

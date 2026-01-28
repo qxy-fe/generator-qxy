@@ -1,0 +1,22 @@
+{
+  "$schema": "https://unpkg.com/oxlint/configuration_schema.json",
+  "plugins": [
+    "typescript",
+    "unicorn",
+    "vue",
+    "import",
+    "node",
+    "promise",
+    "vitest",
+  ],
+  "categories": {
+    "correctness": "error",
+  },
+  "globals": {},
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/tests/fixtures/**",
+  ],
+  "rules": {},
+}

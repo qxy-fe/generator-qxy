@@ -47,6 +47,8 @@
     "ntvs",
     "Oxfmt",
     "oxfmtrc",
+    "oxlint",
+    "oxlintrc",
     "pnpm",
     "stackblitzrc",
     "svgo",

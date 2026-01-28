@@ -16,6 +16,7 @@
     "**/dist/**",
     "pnpm-lock.yaml",
     "**/*.min.*",
+    "**/tests/fixtures/**",
   ],
   "insertFinalNewline": true,
   "jsxSingleQuote": true,

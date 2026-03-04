@@ -11,12 +11,12 @@ export default class BaseGenerator extends Generator {
 
   protected reduceDeps(deps: Dep[]): DepMap {
     return deps.reduce(
-      (obj, dep) => ({
-        ...obj,
-        [typeof dep === 'string' ? dep : dep.name]: this.getPackageVersion(
-          typeof dep === 'string' ? dep : `${dep.name}@${dep.tag}`,
-        ),
-      }),
+      (obj, dep) =>
+        Object.assign(obj, {
+          [typeof dep === 'string' ? dep : dep.name]: this.getPackageVersion(
+            typeof dep === 'string' ? dep : `${dep.name}@${dep.tag}`,
+          ),
+        }),
       {},
     )
   }
@@ -38,7 +38,9 @@ export default class BaseGenerator extends Generator {
   }
 
   protected getStdoutString(cmd: string, args: string[]) {
+    // @ts-expect-error - spawnSync is not typed in Generator
     const result = this.spawnSync(cmd, args, { stdio: [process.stdout] })
+    // @ts-expect-error - stdout is Buffer | string
     return Buffer.from(result.stdout).toString()
   }
 

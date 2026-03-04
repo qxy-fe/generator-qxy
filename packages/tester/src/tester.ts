@@ -3,8 +3,8 @@ import { beforeEach, describe, it } from 'vitest'
 import assert from 'yeoman-assert'
 import helpers from 'yeoman-test'
 import { resolve } from '../../../scripts/utils'
-import { toArray } from './utils'
 import type { TestCasesOptions, Tester, TesterInitOptions } from './types'
+import { toArray } from './utils'
 
 export async function createTester(
   options: TesterInitOptions,
@@ -22,7 +22,7 @@ export async function createTester(
         )
       })
 
-      if (files.length) {
+      if (files.length > 0) {
         describe('files', () => {
           it('files', () => {
             assert.file(files)
@@ -30,7 +30,7 @@ export async function createTester(
         })
       }
 
-      if (jsonFileContentCases.length) {
+      if (jsonFileContentCases.length > 0) {
         describe('jsonFileContent', () => {
           jsonFileContentCases.forEach(({ filename, content }, idx) => {
             it(`jsonFileContent - ${idx}`, () => {

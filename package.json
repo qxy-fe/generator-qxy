@@ -52,7 +52,7 @@
     "oxlint": "^1.56.0",
     "tinyexec": "^1.0.4",
     "tsdown": "^0.21.4",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.2",
     "vitest": "^4.1.0",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^11.3.1"

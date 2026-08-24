@@ -58,7 +58,7 @@
     "yeoman-test": "^11.3.1"
   },
   "resolutions": {
-    "mem-fs": "^4.1.4"
+    "mem-fs": "^5.0.0"
   },
   "nano-staged": {
     "*.{js,ts,tsx,mjs}": "oxlint --fix",

@@ -18,8 +18,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4)
       yeoman-generator:
-        specifier: ^8.1.2
-        version: 8.1.2(@types/node@25.5.0)(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4)
+        specifier: ^9.2.0
+        version: 9.2.0(@types/node@25.5.0)(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4)
     devDependencies:
       '@generator-qxy/tester':
         specifier: workspace:*
@@ -74,7 +74,7 @@ importers:
         version: 3.1.1
       yeoman-test:
         specifier: ^11.3.1
-        version: 11.3.1(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4)(yeoman-environment@6.0.0(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4))(yeoman-generator@8.1.2(@types/node@25.5.0)(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4))
+        version: 11.3.1(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4)(yeoman-environment@6.0.0(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4))(yeoman-generator@9.2.0(@types/node@25.5.0)(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4))
 
   packages/tester: {}
 
@@ -1036,6 +1036,12 @@ packages:
     resolution: {integrity: sha512-mNe0Iigql08YupSOGv197YdHpPPr+EzDZmfCgMc7RPNaZTw5aLN01nBl6CHJOh3BGtnMIj83EeN4butBchc8Ag==}
     engines: {node: ^20.17.0 || >=22.9.0}
 
+  '@simple-git/args-pathspec@1.0.3':
+    resolution: {integrity: sha512-ngJMaHlsWDTfjyq9F3VIQ8b7NXbBLq5j9i5bJ6XLYtD6qlDXT7fdKY2KscWWUF8t18xx052Y/PUO1K1TRc9yKA==}
+
+  '@simple-git/argv-parser@1.1.1':
+    resolution: {integrity: sha512-Q9lBcfQ+VQCpQqGJFHe5yooOS5hGdLFFbJ5R+R5aDsnkPCahtn1hSkMcORX65J2Z5lxSkD0lQorMsncuBQxYUw==}
+
   '@sindresorhus/merge-streams@4.0.0':
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
     engines: {node: '>=18'}
@@ -1057,8 +1063,8 @@ packages:
   '@types/chai@5.2.3':
     resolution: {integrity: sha512-Mw558oeA9fFbv65/y4mHtXDs9bPnFMZAL/jxdPFUpOHHIXX91mcgEHbS5Lahr+pwZFR8A7GQleRWeI6cGFC2UA==}
 
-  '@types/debug@4.1.12':
-    resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
+  '@types/debug@4.1.13':
+    resolution: {integrity: sha512-KSVgmQmzMwPlmtljOomayoR89W4FynCAi3E8PPs7vmDVPe84hT+vGPKkJfThkmXs0x0jAaa9U8uW8bbfyS2fWw==}
 
   '@types/deep-eql@4.0.2':
     resolution: {integrity: sha512-c9h9dVVMigMPc4bwTvC5dxqtqJZwQPePsWjPlpSOnojbor6pGqdk541lfA7AqFQr5pB1BRdq0juY9db81BwyFw==}
@@ -1303,6 +1309,10 @@ packages:
     resolution: {integrity: sha512-XGdYL0HCoPvrzW7T8bxD6RbCY/B8uvR2jpOzJc/yEwTueKHwoVhjSLjVXkokQAO0LNl8nQFLVZ1aKfr2eFWZeA==}
     engines: {node: ^16.13.0 || >=18.12.0}
 
+  '@yeoman/namespace@2.1.0':
+    resolution: {integrity: sha512-/BxsZlALPRp34juAzzh9QUr2hR9w9o+dBSw8sF/iv7NfUU/A/QI0xOyVtQJz2uCPuvtY6nkGDxYxZoKI/lnFQg==}
+    engines: {node: ^16.13.0 || >=18.12.0}
+
   '@yeoman/transform@2.1.0':
     resolution: {integrity: sha512-dAgDEMa8S+0ORAmrfFtufUccZpvwj6ZsZLZqMS86bxLUnB9h4n4dZN9IOHJHJfuOY+PAiLrEHgQYQvJ9R6IU6A==}
     engines: {node: '>=18.19.0'}
@@ -1420,6 +1430,10 @@ packages:
   brace-expansion@2.0.2:
     resolution: {integrity: sha512-Jt0vHyM+jmUBqojB7E1NIYadt0vI0Qxjxd2TErW94wDz+E2LAm5vKMXXwg6ZZBTHPuUlDgQHKXvjGBdfcF1ZDQ==}
 
+  brace-expansion@5.0.12:
+    resolution: {integrity: sha512-YovQ3rzhaLMIrDjNDMkNS01tea93qhEhG5xy8f6+R0l+dw3Ki+5sCoIoI942iuLZTHWogWktgwVDhU09iNEimQ==}
+    engines: {node: 20 || >=22}
+
   brace-expansion@5.0.4:
     resolution: {integrity: sha512-h+DEnpVvxmfVefa4jFbCf5HdH5YMDXRsmKflpf1pILZWRFlTbJpxeU55nJl4Smt5HQaGzg1o6RHFPJaOqnmBDg==}
     engines: {node: 18 || 20 || >=22}
@@ -1448,6 +1462,10 @@ packages:
   chalk@5.6.2:
     resolution: {integrity: sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+
+  chalk@6.0.0:
+    resolution: {integrity: sha512-2uNTXIuTTxk7ciZgAU1BQcgnchcG0xXnrs6jzkQfj9SsRa9M2s5zE8WT96hS6KmG4MzWHSrvH43DF1m4XRkrFg==}
+    engines: {node: '>=22'}
 
   chardet@2.1.1:
     resolution: {integrity: sha512-PsezH1rqdV9VvyNhxxOW32/d75r01NY7TQCmOqomRo15ZSOKbpTFVsfjghxo6JloQUCGnH4k1LGu0R4yCLlWQQ==}
@@ -1580,6 +1598,11 @@ packages:
     engines: {node: '>=0.12.18'}
     hasBin: true
 
+  ejs@6.0.1:
+    resolution: {integrity: sha512-UaaM14yby8U3k02ihS1Bmj5Kz2d7CCQM1scxpgs4Mhkq8F1wR2gl3+Ts4h5Ne4Mnt7M9m4Dw7jsuMr3+xO4vZA==}
+    engines: {node: '>=0.12.18'}
+    hasBin: true
+
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
 
@@ -1618,6 +1641,10 @@ packages:
 
   events-universal@1.0.1:
     resolution: {integrity: sha512-LUd5euvbMLpwOF8m6ivPCbhQeSiYVNb8Vs0fQ8QjXo0JTkEHpz8pxdQf0gStltaPpw0Cca8b39KxvK9cfKRiAw==}
+
+  execa@10.0.1:
+    resolution: {integrity: sha512-ge98qjkRK4IB7tL7Ju/6qmm5LHoH1eEMt5FNZrz3f4UIYhF28lggX20z3FaX1sgc67msLEn0N0BscOs29iuwyw==}
+    engines: {node: '>=22'}
 
   execa@9.6.1:
     resolution: {integrity: sha512-9Be3ZoN4LmYR90tUoVu2te2BsbzHfhJyfEiAVfz7N5/zv+jduIfLrV2xdQXOHbaD6KgpGdO9PRPM1Y4Q9QkPkA==}
@@ -1939,6 +1966,9 @@ packages:
   lodash-es@4.17.23:
     resolution: {integrity: sha512-kVI48u3PZr38HdYz98UmfPnXl2DXrpdctLrFLCd3kOx1xUkOmpFPx7gCWWM5MPkL/fD8zb+Ph0QzjGFs4+hHWg==}
 
+  lodash-es@4.18.1:
+    resolution: {integrity: sha512-J8xewKD/Gk22OZbhpOVSwcs60zhd95ESDwezOFuA3/099925PdHJ7OFHNTGtajL3AlZkykD32HykiMo+BIBI8A==}
+
   log-symbols@7.0.1:
     resolution: {integrity: sha512-ja1E3yCr9i/0hmBVaM0bfwDjnGy8I/s6PP4DFp+yP+a+mrHO4Rm7DtmnqROTUkHIkqffC84YY7AeqX6oFk0WFg==}
     engines: {node: '>=18'}
@@ -1960,6 +1990,16 @@ packages:
     peerDependencies:
       '@types/node': '>=20'
       mem-fs: ^4.0.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+
+  mem-fs-editor@12.0.9:
+    resolution: {integrity: sha512-KxqAoF6EOH0cKp+eh1uE2lkrrkdf/oqbfq+qiWFVCT1t9k5uUsC19noYYeK7PS5k08E3Ym0YJnbGyNXYSgr2fg==}
+    engines: {node: 20 || >=22}
+    peerDependencies:
+      '@types/node': '>=20'
+      mem-fs: '>=4.0.0'
     peerDependenciesMeta:
       '@types/node':
         optional: true
@@ -1986,6 +2026,10 @@ packages:
 
   minimatch@10.2.4:
     resolution: {integrity: sha512-oRjTw/97aTBN0RHbYCdtF1MQfvusSIBQM0IZEgzl6426+8jSC0nF1a/GmnVLpfB9yyr6g6FTqWqiZVbxrtaCIg==}
+    engines: {node: 18 || 20 || >=22}
+
+  minimatch@10.2.6:
+    resolution: {integrity: sha512-vpLQEs+VLCr1nU0BXS07maYoFwlDAH0gngQuuttxIwutDFEMHq2blX+8vpgxDdK3J1PwjCJiep77OitTZ4Ll1A==}
     engines: {node: 18 || 20 || >=22}
 
   minimatch@3.1.5:
@@ -2421,6 +2465,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.8.5:
+    resolution: {integrity: sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
     engines: {node: '>=8'}
@@ -2444,8 +2493,8 @@ packages:
     resolution: {integrity: sha512-/fUgUhYghuLzVT/gaJoeVehLCgZiUxPCPMcyVNY0lIf/cTCz58K/WTI7PefDarXxp9nUKpEwg1yyz3eSBMTtgA==}
     engines: {node: ^20.17.0 || >=22.9.0}
 
-  simple-git@3.32.3:
-    resolution: {integrity: sha512-56a5oxFdWlsGygOXHWrG+xjj5w9ZIt2uQbzqiIGdR/6i5iococ7WQ/bNPzWxCJdEUGUCmyMH0t9zMpRJTaKxmw==}
+  simple-git@3.36.0:
+    resolution: {integrity: sha512-cGQjLjK8bxJw4QuYT7gxHw3/IouVESbhahSsHrX97MzCL1gu2u7oy38W6L2ZIGECEfIBG4BabsWDPjBxJENv9Q==}
 
   slash@5.1.0:
     resolution: {integrity: sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==}
@@ -2463,8 +2512,8 @@ packages:
     resolution: {integrity: sha512-HLpt+uLy/pxB+bum/9DzAgiKS8CX1EvbWxI4zlmgGCExImLdiad2iCwXT5Z4c9c3Eq8rP2318mPW2c+QbtjK8A==}
     engines: {node: '>= 10.0.0', npm: '>= 3.0.0'}
 
-  sort-keys@6.0.0:
-    resolution: {integrity: sha512-ueSlHJMwpIw42CJ4B11Uxzh/S0p0AlOyiNktlv2KOu5e1JpUE6DlC4AAUjXqesHdBRv/g0wC9Q4vwq0NP2pA9w==}
+  sort-keys@6.0.1:
+    resolution: {integrity: sha512-w7xWRu8U9MneKNna8ptG194jp9PLtbd/Rl6gwrmbK4yUeKbE66a64rHgl0iKTBBDr/hpanx7zMGP1Qo8MRkc/w==}
     engines: {node: '>=20'}
 
   sort-object-keys@2.1.0:
@@ -2651,6 +2700,10 @@ packages:
     resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
     engines: {node: '>=16'}
 
+  type-fest@5.10.0:
+    resolution: {integrity: sha512-NoSdpq/WEiAg5sjmBkmV/hfxv6HJH4NqPNrqjtSO5CwRmpsDfaf4begxW34KdJykH/l1yHtwBWQkCRdoXO8mPA==}
+    engines: {node: '>=20'}
+
   type-fest@5.4.4:
     resolution: {integrity: sha512-JnTrzGu+zPV3aXIUhnyWJj4z/wigMsdYajGLIYakqyOW1nPllzXEJee0QQbHj+CTIQtXGlAjuK0UY+2xTyjVAw==}
     engines: {node: '>=20'}
@@ -2812,6 +2865,11 @@ packages:
     resolution: {integrity: sha512-3hu+tD8YzSLGuFYtPRb48vdhKMi0KQV5sn+uWr8+7dMEq/2G/dtLrdDinkLjqq5TIbIBjYJ4Ax/n3YiaW7QM8A==}
     engines: {node: 20 || >=22}
 
+  which-command@0.1.0:
+    resolution: {integrity: sha512-XZyoF5/5hZtXitIwzrU4NKK+Wtbb9aB9CezUEw2Q0wlYK8NUYQxC1rRXgNueYLtBAJwXIb+/tFVk4dozciNJMA==}
+    engines: {node: '>=22'}
+    hasBin: true
+
   which-package-manager@1.0.1:
     resolution: {integrity: sha512-Nse2rVsL302dkEhCyyS1U3iEQ9FRYPPkWJNk188xUVkKIGXjMmDPlA3L1VettE+T2z7SGLsJiDaZw//8CHUQwQ==}
     engines: {node: '>=18'}
@@ -2889,13 +2947,13 @@ packages:
       '@yeoman/types': ^1.10.3
       mem-fs: ^4.1.4
 
-  yeoman-generator@8.1.2:
-    resolution: {integrity: sha512-5e9jK2EPm6/c/zaYnuKnCLbRWfD9XwJYup1VzdJMgj010cgDn3YJWDfOIczabLfSoRSXRFxTDHfx1MEdIJEcGQ==}
-    engines: {node: ^20.17.0 || >=22.9.0}
+  yeoman-generator@9.2.0:
+    resolution: {integrity: sha512-ynyFY2BIEE21+feOeDJb8BUrv0C8G/+PWqk7mmf1y1CSKRxBzyyOrrB5eeO96nwvCMiZ2KYjdMFAw5tn+FMy9Q==}
+    engines: {node: ^22.18.0 || >=24.11.0}
     peerDependencies:
       '@types/node': '>=20.19.35'
       '@yeoman/types': ^1.1.1
-      mem-fs: ^4.0.0
+      mem-fs: '>=4.0.0'
     peerDependenciesMeta:
       '@types/node':
         optional: true
@@ -3632,6 +3690,12 @@ snapshots:
       '@sigstore/core': 3.1.0
       '@sigstore/protobuf-specs': 0.5.0
 
+  '@simple-git/args-pathspec@1.0.3': {}
+
+  '@simple-git/argv-parser@1.1.1':
+    dependencies:
+      '@simple-git/args-pathspec': 1.0.3
+
   '@sindresorhus/merge-streams@4.0.0': {}
 
   '@standard-schema/spec@1.1.0': {}
@@ -3653,7 +3717,7 @@ snapshots:
       '@types/deep-eql': 4.0.2
       assertion-error: 2.0.1
 
-  '@types/debug@4.1.12':
+  '@types/debug@4.1.13':
     dependencies:
       '@types/ms': 2.1.0
 
@@ -3861,6 +3925,8 @@ snapshots:
 
   '@yeoman/namespace@1.0.1': {}
 
+  '@yeoman/namespace@2.1.0': {}
+
   '@yeoman/transform@2.1.0(@types/node@25.5.0)':
     dependencies:
       '@types/node': 25.5.0
@@ -3940,6 +4006,10 @@ snapshots:
     dependencies:
       balanced-match: 1.0.2
 
+  brace-expansion@5.0.12:
+    dependencies:
+      balanced-match: 4.0.4
+
   brace-expansion@5.0.4:
     dependencies:
       balanced-match: 4.0.4
@@ -3979,6 +4049,8 @@ snapshots:
   chai@6.2.2: {}
 
   chalk@5.6.2: {}
+
+  chalk@6.0.0: {}
 
   chardet@2.1.1: {}
 
@@ -4075,6 +4147,8 @@ snapshots:
     dependencies:
       jake: 10.9.4
 
+  ejs@6.0.1: {}
+
   emoji-regex@8.0.0: {}
 
   empathic@2.0.0: {}
@@ -4129,6 +4203,21 @@ snapshots:
       bare-events: 2.8.2
     transitivePeerDependencies:
       - bare-abort-controller
+
+  execa@10.0.1:
+    dependencies:
+      '@sindresorhus/merge-streams': 4.0.0
+      figures: 6.1.0
+      get-stream: 9.0.1
+      human-signals: 8.0.1
+      is-plain-obj: 4.1.0
+      is-stream: 4.0.1
+      npm-run-path: 6.0.0
+      pretty-ms: 9.3.0
+      signal-exit: 4.1.0
+      strip-final-newline: 4.0.0
+      which-command: 0.1.0
+      yoctocolors: 2.1.2
 
   execa@9.6.1:
     dependencies:
@@ -4409,6 +4498,8 @@ snapshots:
 
   lodash-es@4.17.23: {}
 
+  lodash-es@4.18.1: {}
+
   log-symbols@7.0.1:
     dependencies:
       is-unicode-supported: 2.1.0
@@ -4460,6 +4551,30 @@ snapshots:
       - react-native-b4a
       - supports-color
 
+  mem-fs-editor@12.0.9(@types/node@25.5.0)(mem-fs@4.1.4):
+    dependencies:
+      '@types/ejs': 3.1.5
+      '@types/picomatch': 4.0.2
+      binaryextensions: 6.11.0
+      commondir: 1.0.1
+      debug: 4.4.3
+      deep-extend: 0.6.0
+      ejs: 6.0.1
+      isbinaryfile: 5.0.7
+      mem-fs: 4.1.4
+      minimatch: 10.2.6
+      multimatch: 8.0.0
+      normalize-path: 3.0.0
+      textextensions: 6.11.0
+      tinyglobby: 0.2.17
+      vinyl: 3.0.1
+    optionalDependencies:
+      '@types/node': 25.5.0
+    transitivePeerDependencies:
+      - bare-abort-controller
+      - react-native-b4a
+      - supports-color
+
   mem-fs@4.1.4:
     dependencies:
       '@types/node': 25.5.0
@@ -4484,6 +4599,10 @@ snapshots:
   minimatch@10.2.4:
     dependencies:
       brace-expansion: 5.0.4
+
+  minimatch@10.2.6:
+    dependencies:
+      brace-expansion: 5.0.12
 
   minimatch@3.1.5:
     dependencies:
@@ -5015,6 +5134,8 @@ snapshots:
 
   semver@7.7.4: {}
 
+  semver@7.8.5: {}
+
   shebang-command@2.0.0:
     dependencies:
       shebang-regex: 3.0.0
@@ -5038,10 +5159,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  simple-git@3.32.3:
+  simple-git@3.36.0:
     dependencies:
       '@kwsites/file-exists': 1.1.1
       '@kwsites/promise-deferred': 1.1.1
+      '@simple-git/args-pathspec': 1.0.3
+      '@simple-git/argv-parser': 1.1.1
       debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
@@ -5063,7 +5186,7 @@ snapshots:
       ip-address: 10.1.0
       smart-buffer: 4.2.0
 
-  sort-keys@6.0.0:
+  sort-keys@6.0.1:
     dependencies:
       is-plain-obj: 4.1.0
 
@@ -5258,6 +5381,10 @@ snapshots:
 
   type-fest@4.41.0: {}
 
+  type-fest@5.10.0:
+    dependencies:
+      tagged-tag: 1.0.0
+
   type-fest@5.4.4:
     dependencies:
       tagged-tag: 1.0.0
@@ -5362,7 +5489,7 @@ snapshots:
       picomatch: 4.0.4
       postcss: 8.5.8
       rollup: 4.59.0
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.17
     optionalDependencies:
       '@types/node': 25.5.0
       fsevents: 2.3.3
@@ -5397,6 +5524,8 @@ snapshots:
       - msw
 
   walk-up-path@4.0.0: {}
+
+  which-command@0.1.0: {}
 
   which-package-manager@1.0.1:
     dependencies:
@@ -5485,26 +5614,26 @@ snapshots:
       - react-native-b4a
       - supports-color
 
-  yeoman-generator@8.1.2(@types/node@25.5.0)(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4):
+  yeoman-generator@9.2.0(@types/node@25.5.0)(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4):
     dependencies:
-      '@types/debug': 4.1.12
+      '@types/debug': 4.1.13
       '@types/lodash-es': 4.17.12
-      '@yeoman/namespace': 1.0.1
+      '@yeoman/namespace': 2.1.0
       '@yeoman/types': 1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4)
-      chalk: 5.6.2
+      chalk: 6.0.0
       debug: 4.4.3
-      execa: 9.6.1
+      execa: 10.0.1
       latest-version: 9.0.0
-      lodash-es: 4.17.23
+      lodash-es: 4.18.1
       mem-fs: 4.1.4
-      mem-fs-editor: 12.0.2(@types/node@25.5.0)(mem-fs@4.1.4)
+      mem-fs-editor: 12.0.9(@types/node@25.5.0)(mem-fs@4.1.4)
       minimist: 1.2.8
       read-package-up: 12.0.0
-      semver: 7.7.4
-      simple-git: 3.32.3
-      sort-keys: 6.0.0
+      semver: 7.8.5
+      simple-git: 3.36.0
+      sort-keys: 6.0.1
       text-table: 0.2.0
-      type-fest: 5.4.4
+      type-fest: 5.10.0
     optionalDependencies:
       '@types/node': 25.5.0
     transitivePeerDependencies:
@@ -5512,7 +5641,7 @@ snapshots:
       - react-native-b4a
       - supports-color
 
-  yeoman-test@11.3.1(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4)(yeoman-environment@6.0.0(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4))(yeoman-generator@8.1.2(@types/node@25.5.0)(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4)):
+  yeoman-test@11.3.1(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4)(yeoman-environment@6.0.0(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4))(yeoman-generator@9.2.0(@types/node@25.5.0)(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4)):
     dependencies:
       '@yeoman/types': 1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4)
       lodash-es: 4.17.23
@@ -5523,7 +5652,7 @@ snapshots:
       '@yeoman/adapter': 4.0.2(@types/node@25.5.0)
       mem-fs: 4.1.4
       yeoman-environment: 6.0.0(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4)
-      yeoman-generator: 8.1.2(@types/node@25.5.0)(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4)
+      yeoman-generator: 9.2.0(@types/node@25.5.0)(@yeoman/types@1.10.3(@types/node@25.5.0)(@yeoman/adapter@4.0.2(@types/node@25.5.0))(mem-fs@4.1.4))(mem-fs@4.1.4)
     transitivePeerDependencies:
       - '@types/node'
       - bare-abort-controller

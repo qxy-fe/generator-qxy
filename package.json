@@ -35,7 +35,7 @@
     "nanospinner": "^1.2.2",
     "sort-package-json": "^4.0.0",
     "yeoman-environment": "^6.0.0",
-    "yeoman-generator": "^8.1.2"
+    "yeoman-generator": "^10.2.1"
   },
   "devDependencies": {
     "@generator-qxy/tester": "workspace:*",
